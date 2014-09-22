@@ -23,6 +23,11 @@ mrproper: clean
 	@echo "Remove $(EXEC) file"
 	rm -rf $(EXEC)
 
+doxygen:
+	@echo "Generate Doxygen documentation !"
+	rm -rf documentation/*
+	doxygen config_doxygen.conf
+
 rebuild:
 	@echo " --- Cleaning --- "
 	make clean
