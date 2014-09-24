@@ -30,7 +30,7 @@ doxygen:
 
 rebuild:
 	@echo " --- Cleaning --- "
-	make clean
+	make mrproper
 	@echo " \n\n--- Building --- "
 	make all
 

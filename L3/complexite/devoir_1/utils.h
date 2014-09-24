@@ -15,7 +15,7 @@
  * \fn int * genererTableau( int size, bool init )
  * \param taille La taille du tableau généré
  * \param init Indique si les valeur du tableau doivent être initialisées à la valeur par défaut (ex. 0, NULL, ...)
- * \return le tableau généré
+ * \return le tableau généré initialisé
  */
 int * genererTableau( int size, bool init )
 {
@@ -24,6 +24,7 @@ int * genererTableau( int size, bool init )
     else
         return (int*)calloc(size, sizeof( int ) );
 }
+
 
 
 #endif

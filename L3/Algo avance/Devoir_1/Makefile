@@ -1,12 +1,25 @@
+SRC=$(wildcard src/*/*.d)
+OBJ=$(SRC:.d=.o)
 EXEC=devoir1
 
-make:
-	dmd src/utils/randomcoin.d -c
-	
-	dmd src/structure/node.d -c
-	dmd src/structure/skiplist.d node.o -c	
-	
-	dmd src/main/main.d skiplist.o randomcoin.o -of$(EXEC)
+all: $(EXEC)
+
+$(EXEC): $(OBJ)
+	dmd $(notdir $^) -of$(EXEC)
+
+%.o:%.d
+		dmd $< -c
 
 clean:
+	@echo "Clean .o files"
 	rm *.o
+
+mrproper: clean
+	@echo "Remove $(EXEC) file"
+	rm -rf $(EXEC)
+
+rebuild:
+	@echo " --- Cleaning --- "
+	make mrproper
+	@echo "\n\n --- Building --- "
+	make all

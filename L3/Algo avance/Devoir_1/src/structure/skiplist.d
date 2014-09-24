@@ -29,10 +29,10 @@ class SkipList(T)
 
     public bool contains( T key )
     {
-        return contains( level, head, key );
+        return contains( level, new Node!T(head), key );
     }
 
-    private bool contains( int lvl, Node!T cursor, T key )
+    private bool contains( int lvl,  Node!T * cursor, T key )
     {
         if( cursor is null )
             return false;
@@ -52,23 +52,32 @@ class SkipList(T)
     }
 
     public void add( T key )
-!T    {
+    {
         Node!T node = new Node!T( key, 32);
+        //
+        //for( int i = 0; i < 32; ++i)
+        //{
+        //    node.next[i] = head.next[i];
+        //    head.next[i] = node;
+        //}
+        //
+        //++sizeList;
+        //level = to!int( log( to!(real)(sizeList) ) );
         
-        for( int i = 0; i < 32; ++i)
-        {
-            node.next[i] = head.next[i];
-            head.next[i] = node;
-        }
-        
-        ++sizeList;
-        level = to!int( log( to!(real)(sizeList) ) );
-        //TODO
+        add( level, new Node!T( head ), node );
     }
 
-    private void add( int lvl, Node!T cursor, Node!T * value )
+    private void add( int lvl, Node!T * cursor, Node!T * value )
     {
+        //if( lvl == 0 && (cursor.next[0] is null || cursor.next[0].key > value.key ))
+        //{
+        //    //TODO : Ajout de l'élément ICI
+        //}
 
+        if( cursor.next[lvl].key is null || cursor.next[lvl].key > value.key )
+        {
+            add( lvl - 1, cursor, value );
+        }
     }
 
     public void remove( T key )
