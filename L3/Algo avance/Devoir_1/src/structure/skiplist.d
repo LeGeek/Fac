@@ -46,7 +46,6 @@ class SkipList(T)
 
     public void add( T key )
     {
-        writeln( key );
         Node!T cursor = head;
         Node!T value = new Node!T( key, 32 );
         
