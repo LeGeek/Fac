@@ -18,7 +18,7 @@ public class CompteurSimple {
         minValue = cpt.getMinValue();
         maxValue = cpt.getMaxValue();
         value = cpt.getValue();
-        nom = cpt.getNom();
+        nom = new String( cpt.getNom() );
     }
 
     public boolean inc(){
