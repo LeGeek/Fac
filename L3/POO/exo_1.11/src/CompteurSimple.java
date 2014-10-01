@@ -54,6 +54,6 @@ public class CompteurSimple {
         return  nom.equals( toCompare.getNom() ) &&
                 value == toCompare.getValue() &&
                 minValue == toCompare.getMinValue() &&
-                maxValue == toCompare.getMaxValue());
+                maxValue == toCompare.getMaxValue();
     }
 }
