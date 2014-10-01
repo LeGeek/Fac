@@ -54,7 +54,7 @@ class SkipList(T)
 
         for( int lvl = level; lvl >= 0; )
         {
-            if( cursor.next[lvl] is null || cursor.next[lvl].key >  value.key )
+            if( cursor.next[lvl] is null || cursor.next[lvl].key > key )
             {
                 insertPoint[lvl] = cursor;
                 --lvl;
@@ -65,8 +65,11 @@ class SkipList(T)
             }
         }
         
-        int rnd = alea.next( 1, 32 );
-        if( rnd > level)
+        int rnd = 1; 
+        while( alea.flipCoin() )
+            ++rnd;
+
+        if( rnd > level )
             level = rnd;
 
         for( int i = 0; i < rnd; ++i )
@@ -97,7 +100,10 @@ class SkipList(T)
         }
 
         if( cursor.key != key )
+        {
+            writeln( "Pas correspondance entre ", cursor.key, " et ", key );
             return;
+        }
 
         int i = 0;
         do
@@ -113,13 +119,12 @@ class SkipList(T)
     public T[] toList()
     {
         T[] tab;
+        tab.length = sizeList;
         Node!T cursor = head.next[0];
 
-        while( cursor !is null )
+        for( int i = 0; i < sizeList && cursor !is null; ++i )
         {
-            tab.length = tab.length + 1;
-            tab[ tab.length - 1 ] = cursor.key;
-
+            tab[i] = cursor.key;
             cursor = cursor.next[0];
         }
 

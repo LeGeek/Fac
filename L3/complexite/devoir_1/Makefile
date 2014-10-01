@@ -1,8 +1,8 @@
 CC=gcc
-CCFLAGS=-W -Wall -pedantic -std=c99 -I.
+CCFLAGS=-W -Wall -pedantic -std=c99 -I./include
 LDFLAGS=
 
-SRC=$(wildcard *.c)
+SRC=$(wildcard src/*.c)
 OBJ=$(SRC:.c=.o)
 
 EXEC=devoir_tris
@@ -17,14 +17,14 @@ $(EXEC): $(OBJ)
 
 clean:
 	@echo "Clean .o files"
-	rm -rf *.o
+	rm -rf */*.o
 
 mrproper: clean
 	@echo "Remove $(EXEC) file"
 	rm -rf $(EXEC)
 
 doxygen:
-	@echo "Generate Doxygen documentation !"
+	@echo "Generate Doxygen documentation"
 	rm -rf documentation/*
 	doxygen config_doxygen.conf
 

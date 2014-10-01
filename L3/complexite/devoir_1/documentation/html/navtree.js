@@ -1,11 +1,12 @@
 var NAVTREE =
 [
   [ "Devoir", "index.html", [
-    [ "Files", null, [
-      [ "File List", "files.html", "files" ],
-      [ "File Members", "globals.html", [
-        [ "All", "globals.html", null ],
-        [ "Functions", "globals_func.html", null ],
+    [ "Fichiers", null, [
+      [ "Liste des fichiers", "files.html", "files" ],
+      [ "Membres de fichier", "globals.html", [
+        [ "Tout", "globals.html", null ],
+        [ "Fonctions", "globals_func.html", null ],
+        [ "Variables", "globals_vars.html", null ],
         [ "Macros", "globals_defs.html", null ]
       ] ]
     ] ]
@@ -14,11 +15,11 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"files.html"
+"dir_68267d1309a1af8e8297ef4c3efbcdba.html"
 ];
 
-var SYNCONMSG = 'click to disable panel synchronisation';
-var SYNCOFFMSG = 'click to enable panel synchronisation';
+var SYNCONMSG = 'cliquez pour désactiver la synchronisation du panel';
+var SYNCOFFMSG = 'cliquez pour activer la synchronisation du panel';
 var SYNCONMSG = 'click to disable panel synchronisation';
 var SYNCOFFMSG = 'click to enable panel synchronisation';
 var navTreeSubIndices = new Array();

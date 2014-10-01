@@ -7,10 +7,11 @@
 
 var indexSectionsWithContent =
 {
-  0: "_gimu",
+  0: "_cdgimrsu",
   1: "imu",
-  2: "gm",
-  3: "_"
+  2: "cdgimrs",
+  3: "u",
+  4: "_"
 };
 
 var indexSectionNames =
@@ -18,7 +19,8 @@ var indexSectionNames =
   0: "all",
   1: "files",
   2: "functions",
-  3: "defines"
+  3: "variables",
+  4: "defines"
 };
 
 function convertToId(search)
