@@ -18,7 +18,7 @@ public class CompteurSimple {
         minValue = cpt.getMinValue();
         maxValue = cpt.getMaxValue();
         value = cpt.getValue();
-        nom = cpt.getNom();
+        nom = new String( cpt.getNom() );
     }
 
     public boolean inc(){
@@ -51,12 +51,9 @@ public class CompteurSimple {
     }
 
     public boolean equals( CompteurSimple toCompare ){
-        if( nom.equals( toCompare.getNom() ) &&
-            value == toCompare.getValue() &&
-            minValue == toCompare.getMinValue() &&
-            maxValue == toCompare.getMaxValue())
-                return true;
-
-        return false;
+        return  nom.equals( toCompare.getNom() ) &&
+                value == toCompare.getValue() &&
+                minValue == toCompare.getMinValue() &&
+                maxValue == toCompare.getMaxValue();
     }
 }
