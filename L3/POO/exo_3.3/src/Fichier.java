@@ -1,0 +1,3 @@
+interface Fichier{
+    String getNom();
+}

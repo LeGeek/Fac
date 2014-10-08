@@ -14,11 +14,14 @@ class SkipList(T)
 
     this()
     {
-        head = new Node!(T)( null, 32 );
+        head = new Node!(T)( 0, 32 );
         level = 0;
         alea = new RandomGenerator();
         sizeList = 0;
         proba = 0.5;
+        
+        for( int i = 0; i < insertPoint.length; ++i )
+            insertPoint[i] = head;
     }
 
     public long size()
@@ -48,11 +51,9 @@ class SkipList(T)
     {
         Node!T cursor = head;
         Node!T value = new Node!T( key, 32 );
-        
-        for( int i = 0; i < insertPoint.length; ++i )
-            insertPoint[i] = head;
 
-        for( int lvl = level; lvl >= 0; )
+        int lvl = level;
+        while( lvl >= 0 && cursor.key != key )
         {
             if( cursor.next[lvl] is null || cursor.next[lvl].key > key )
             {
@@ -63,10 +64,12 @@ class SkipList(T)
             {
                 cursor = cursor.next[lvl];
             }
+
+            --lvl;
         }
         
         int rnd = 1; 
-        while( alea.flipCoin() )
+        while( alea.flipCoin() && rnd < 31 )
             ++rnd;
 
         if( rnd > level )
@@ -76,6 +79,8 @@ class SkipList(T)
         {
             value.next[i] = insertPoint[i].next[i];
             insertPoint[i].next[i] = value;
+
+            insertPoint[i] = head;
         }
         
         ++sizeList;

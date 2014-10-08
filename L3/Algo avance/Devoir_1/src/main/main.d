@@ -3,10 +3,10 @@ import std.stdio, std.container, std.conv, std.string;
 import src.structure.skiplist;
 import src.utils.randomgenerator;
 
+
 int main()
 {
 	writeln("Création SkipList");
-    SkipList!(int*) sl = new SkipList!(int*)();
 
     tester_add();
     //tester_final();
@@ -17,20 +17,19 @@ int main()
 
 void tester_add()
 {
-    SkipList!(int*) skiplist = new SkipList!(int*)();
-    long X = 1;
-    foreach( i; 0 .. 1600000 )
+    SkipList!(int) skiplist = new SkipList!(int)();
+    for(int i =0; i < 1600000; ++i )
     {
-        X = X*16807 % 2147483647;
-        skiplist.add( cast(int*)(X) );
-    }
+        skiplist.add( i );
+    }   
 }
 
 void tester_final()
 {
-    SkipList!(int*) skiplist = new SkipList!(int*)();
+    /*SkipList!(int*) skiplist = new SkipList!(int*)();
     long X = 1;
-    foreach( i; 0 .. 1600000 )
+    
+    for( int i = 0; i < 1600000; ++i )
     {
         X = X*16807 % 2147483647;
         skiplist.add( cast(int*)(X) );
@@ -65,5 +64,5 @@ void tester_final()
     }
 
     writeln( "Nombre d'éléments final de la SkipList : ", skiplist.size() );
-    writeln( skiplist.toString() );
+    writeln( skiplist.toString() );*/
 }

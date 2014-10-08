@@ -5,10 +5,10 @@ EXEC=devoir1
 all: $(EXEC)
 
 $(EXEC): $(OBJ)
-	dmd $(notdir $^) -of$(EXEC)
+	dmd $(notdir $^) -of$(EXEC) -O
 
 %.o:%.d
-		dmd $< -c
+		dmd $< -c -O
 
 clean:
 	@echo "Clean .o files"
