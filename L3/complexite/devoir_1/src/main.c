@@ -1,13 +1,16 @@
 #include <stdio.h>
+
 #include "utils.h"
 #include "insertseq.h"
+
+#define TAB_TEST_SIZE   20
 
 int main( int argc, char** argv )
 {
     (void) argc;
     (void) argv;
     printf( "TODO:\
-            \n\t1. Tri par insertion séquentieli **TEST**\
+            \n\t1. Tri par insertion séquentieli **DONE**\
             \n\t2. Tri par insertion dichotomique\
             \n\t3. Tri par selection-permutation\
             \n\t4. Tri à bulle\
@@ -17,8 +20,21 @@ int main( int argc, char** argv )
             \n\t8. Tri par tas\
             \n\n\nAu BOULOT !!!!!\n\n" );
     
-    int t[5] = {21, 8, 4, 61, 384};
-    insertionSequentielle( t, 5 );
+    printf( " TEST : \n" );
+
+    int t[TAB_TEST_SIZE];
+    for( int i = 0; i < TAB_TEST_SIZE; ++i )
+        t[i] = random( 0, 65536 );
+
+    for( int i = 0; i < TAB_TEST_SIZE; ++i)
+        printf( "%d ", t[i] );
+    printf( "\n" );
+
+    printf (" TRI ICI " );
+    
+    for( int i = 0; i < TAB_TEST_SIZE; ++i)
+        printf( "%d ", t[i] );
+    printf( "\n" );
 
     return 0;
 }

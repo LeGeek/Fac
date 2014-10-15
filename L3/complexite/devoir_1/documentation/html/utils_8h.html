@@ -28,9 +28,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="amu_logo_xsmall.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Devoir
    </div>
+   <div id="projectbrief">Devoir de complexité</div>
   </td>
  </tr>
  </tbody>
@@ -66,7 +68,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
-      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+      <li><a href="globals.html"><span>Variables&#160;globale</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -89,7 +91,7 @@ $(document).ready(function(){initNavTree('utils_8h.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -100,8 +102,7 @@ $(document).ready(function(){initNavTree('utils_8h.html','');});
 
 <div class="header">
   <div class="summary">
-<a href="#func-members">Fonctions</a> &#124;
-<a href="#var-members">Variables</a>  </div>
+<a href="#func-members">Fonctions</a>  </div>
   <div class="headertitle">
 <div class="title">Référence du fichier utils.h</div>  </div>
 </div><!--header-->
@@ -124,14 +125,55 @@ Fonctions</h2></td></tr>
 <tr class="memitem:acf8a7708934f619e4efba30329f9431d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#acf8a7708934f619e4efba30329f9431d">swapi</a> (int *a, int *b)</td></tr>
 <tr class="memdesc:acf8a7708934f619e4efba30329f9431d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Echange deux éléments entre eux.  <a href="#acf8a7708934f619e4efba30329f9431d">Plus de détails...</a><br/></td></tr>
 <tr class="separator:acf8a7708934f619e4efba30329f9431d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
-Variables</h2></td></tr>
-<tr class="memitem:aaff34e710246d03e94604e9eeb1bed58"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#aaff34e710246d03e94604e9eeb1bed58">utils_seedChange</a> = false</td></tr>
-<tr class="memdesc:aaff34e710246d03e94604e9eeb1bed58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Permet de savoir si la Seed de rand a été paramétrée.  <a href="#aaff34e710246d03e94604e9eeb1bed58">Plus de détails...</a><br/></td></tr>
-<tr class="separator:aaff34e710246d03e94604e9eeb1bed58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1a1574a2081496a53830c609ab4908c8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8h.html#a1a1574a2081496a53830c609ab4908c8">decalerTableau</a> (int *tab, int debut, int fin)</td></tr>
+<tr class="memdesc:a1a1574a2081496a53830c609ab4908c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Décale le contenue d'un tableau à partir d'un indice de début, jusqu'a l'indice de fin.  <a href="#a1a1574a2081496a53830c609ab4908c8">Plus de détails...</a><br/></td></tr>
+<tr class="separator:a1a1574a2081496a53830c609ab4908c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Documentation des fonctions</h2>
+<a class="anchor" id="a1a1574a2081496a53830c609ab4908c8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">decalerTableau </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>tab</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>debut</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fin</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Décale le contenue d'un tableau à partir d'un indice de début, jusqu'a l'indice de fin. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">tab</td><td>Le tableau sur lequel effectuer le décalage </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">debut</td><td>L'indice de début du décalage </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fin</td><td>L'indice de fin du décalage </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Définition à la ligne <a class="el" href="utils_8c_source.html#l00030">30</a> du fichier <a class="el" href="utils_8c_source.html">utils.c</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a0a754587804d0a60c2055a2bd8df5caa"></a>
 <div class="memitem">
 <div class="memproto">
@@ -165,6 +207,8 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>le tableau généré initialisé </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="utils_8c_source.html#l00004">4</a> du fichier <a class="el" href="utils_8c_source.html">utils.c</a>.</p>
 
 </div>
 </div>
@@ -202,14 +246,13 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>Un nombre compris dans l'intervalle min, max </dd></dl>
 
+<p>Définition à la ligne <a class="el" href="utils_8c_source.html#l00012">12</a> du fichier <a class="el" href="utils_8c_source.html">utils.c</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="acf8a7708934f619e4efba30329f9431d"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void swapi </td>
@@ -229,11 +272,6 @@ Variables</h2></td></tr>
           <td></td><td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
 
 <p>Echange deux éléments entre eux. </p>
@@ -245,20 +283,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-</div>
-</div>
-<h2 class="groupheader">Documentation des variables</h2>
-<a class="anchor" id="aaff34e710246d03e94604e9eeb1bed58"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool utils_seedChange = false</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Permet de savoir si la Seed de rand a été paramétrée. </p>
+<p>Définition à la ligne <a class="el" href="utils_8c_source.html#l00023">23</a> du fichier <a class="el" href="utils_8c_source.html">utils.c</a>.</p>
 
 </div>
 </div>
@@ -268,7 +293,7 @@ Variables</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="utils_8h.html">utils.h</a></li>
-    <li class="footer">Généré le Lundi 29 Septembre 2014 15:03:40 pour Devoir par
+    <li class="footer">Généré le Lundi 13 Octobre 2014 17:01:11 pour Devoir par
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

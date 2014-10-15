@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.6"/>
-<title>Devoir: Membres de fichier</title>
+<title>Devoir: Variables globale</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -28,9 +28,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="amu_logo_xsmall.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Devoir
    </div>
+   <div id="projectbrief">Devoir de complexité</div>
   </td>
  </tr>
  </tbody>
@@ -66,14 +68,13 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
-      <li class="current"><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+      <li class="current"><a href="globals.html"><span>Variables&#160;globale</span></a></li>
     </ul>
   </div>
   <div id="navrow3" class="tabs2">
     <ul class="tablist">
       <li class="current"><a href="globals.html"><span>Tout</span></a></li>
       <li><a href="globals_func.html"><span>Fonctions</span></a></li>
-      <li><a href="globals_vars.html"><span>Variables</span></a></li>
       <li><a href="globals_defs.html"><span>Macros</span></a></li>
     </ul>
   </div>
@@ -97,7 +98,7 @@ $(document).ready(function(){initNavTree('globals.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -107,34 +108,45 @@ $(document).ready(function(){initNavTree('globals.html','');});
 </div>
 
 <div class="contents">
-<div class="textblock">Liste de tous les membres de fichier avec des liens vers les fichiers auxquels ils appartiennent :</div><ul>
+<div class="textblock">Liste de toutes les fonctions, variables, macros, enumérations, et définitions de type avec des liens vers les fichiers auxquels ils appartiennent :</div><ul>
 <li>__INSERTSEG_H__
 : <a class="el" href="insertseq_8h.html#af61cdcaa8606dff922393191f0e1779a">insertseq.h</a>
 </li>
-<li>cherchePetit()
-: <a class="el" href="insertseq_8h.html#acd394de6ad385c75abf0c8d1adc05563">insertseq.h</a>
-</li>
-<li>decaler()
-: <a class="el" href="insertseq_8h.html#a42b1453679eb9ea49bd584933c8897c4">insertseq.h</a>
+<li>decalerTableau()
+: <a class="el" href="utils_8h.html#a1a1574a2081496a53830c609ab4908c8">utils.h</a>
+, <a class="el" href="utils_8c.html#a1b624c10f970bee26820dc80f360daa3">utils.c</a>
 </li>
 <li>genererTableau()
 : <a class="el" href="utils_8h.html#a0a754587804d0a60c2055a2bd8df5caa">utils.h</a>
+, <a class="el" href="utils_8c.html#acbe96940be2926c2bfdc678eaee10691">utils.c</a>
 </li>
-<li>insertionSequentielle()
-: <a class="el" href="insertseq_8h.html#af63846717c8dc7c6685444e764c05d3e">insertseq.h</a>
-, <a class="el" href="insertseq_8c.html#a195a9de661689367c3dbe98e79ce419a">insertseq.c</a>
+<li>ID_chercherPetit()
+: <a class="el" href="insertdicho_8h.html#a709bfdeff8747b94da1f1daa20ed6b96">insertdicho.h</a>
+</li>
+<li>ID_insertionDichotomique()
+: <a class="el" href="insertdicho_8h.html#a00be457c228f467289a5b60526867967">insertdicho.h</a>
+</li>
+<li>IS_cherchePetit()
+: <a class="el" href="insertseq_8h.html#a17992e55644d9131fdae7e47f617873d">insertseq.h</a>
+, <a class="el" href="insertseq_8c.html#a17992e55644d9131fdae7e47f617873d">insertseq.c</a>
+</li>
+<li>IS_insertionSequentielle()
+: <a class="el" href="insertseq_8h.html#a249be3f8ac4b8917c04118309c781c85">insertseq.h</a>
+, <a class="el" href="insertseq_8c.html#a249be3f8ac4b8917c04118309c781c85">insertseq.c</a>
 </li>
 <li>main()
 : <a class="el" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627">main.c</a>
 </li>
 <li>random()
 : <a class="el" href="utils_8h.html#ad5755de87d8b9181d2d4f9915dd918b4">utils.h</a>
+, <a class="el" href="utils_8c.html#ad5755de87d8b9181d2d4f9915dd918b4">utils.c</a>
 </li>
 <li>swapi()
 : <a class="el" href="utils_8h.html#acf8a7708934f619e4efba30329f9431d">utils.h</a>
+, <a class="el" href="utils_8c.html#acf8a7708934f619e4efba30329f9431d">utils.c</a>
 </li>
-<li>utils_seedChange
-: <a class="el" href="utils_8h.html#aaff34e710246d03e94604e9eeb1bed58">utils.h</a>
+<li>TAB_TEST_SIZE
+: <a class="el" href="main_8c.html#aaa2aa31eb5255a9c1f11df20ad0f0a82">main.c</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -142,7 +154,7 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Généré le Lundi 29 Septembre 2014 15:03:40 pour Devoir par
+    <li class="footer">Généré le Lundi 13 Octobre 2014 17:01:11 pour Devoir par
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

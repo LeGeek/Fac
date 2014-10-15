@@ -28,9 +28,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="amu_logo_xsmall.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Devoir
    </div>
+   <div id="projectbrief">Devoir de complexité</div>
   </td>
  </tr>
  </tbody>
@@ -66,7 +68,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
-      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+      <li><a href="globals.html"><span>Variables&#160;globale</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -89,7 +91,7 @@ $(document).ready(function(){initNavTree('insertseq_8h_source.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -106,23 +108,20 @@ $(document).ready(function(){initNavTree('insertseq_8h_source.html','');});
 <a href="insertseq_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __INSERTSEQ_H__</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno"><a class="line" href="insertseq_8h.html#af61cdcaa8606dff922393191f0e1779a">    2</a></span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define __INSERTSEG_H__</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keywordtype">void</span> <a class="code" href="insertseq_8h.html#af63846717c8dc7c6685444e764c05d3e">insertionSequentielle</a>( <span class="keywordtype">int</span> * tab, <span class="keywordtype">int</span> taille );</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keywordtype">void</span> <a class="code" href="insertseq_8h.html#a249be3f8ac4b8917c04118309c781c85">IS_insertionSequentielle</a>( <span class="keywordtype">int</span> * tab, <span class="keywordtype">int</span> taille );</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">int</span> <a class="code" href="insertseq_8h.html#acd394de6ad385c75abf0c8d1adc05563">cherchePetit</a>( <span class="keyword">const</span> <span class="keywordtype">int</span> * tab, <span class="keywordtype">int</span> debut, <span class="keywordtype">int</span> fin );</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">int</span> <a class="code" href="insertseq_8h.html#a17992e55644d9131fdae7e47f617873d">IS_cherchePetit</a>( <span class="keyword">const</span> <span class="keywordtype">int</span> * tab, <span class="keywordtype">int</span> debut, <span class="keywordtype">int</span> fin );</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keywordtype">void</span> <a class="code" href="insertseq_8h.html#a42b1453679eb9ea49bd584933c8897c4">decaler</a>( <span class="keywordtype">int</span> * tab, <span class="keywordtype">int</span> debut, <span class="keywordtype">int</span> fin );</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="insertseq_8h_html_af63846717c8dc7c6685444e764c05d3e"><div class="ttname"><a href="insertseq_8h.html#af63846717c8dc7c6685444e764c05d3e">insertionSequentielle</a></div><div class="ttdeci">void insertionSequentielle(int *tab, int taille)</div><div class="ttdoc">Tri le tableau avec l&#39;algorithme de l&#39;insertion séquentielle. </div></div>
-<div class="ttc" id="insertseq_8h_html_acd394de6ad385c75abf0c8d1adc05563"><div class="ttname"><a href="insertseq_8h.html#acd394de6ad385c75abf0c8d1adc05563">cherchePetit</a></div><div class="ttdeci">int cherchePetit(const int *tab, int debut, int fin)</div><div class="ttdoc">Cherche l&#39;élément le plus petit dans le tableau à partir d&#39;une position de départ jusqu&#39;à une positio...</div></div>
-<div class="ttc" id="insertseq_8h_html_a42b1453679eb9ea49bd584933c8897c4"><div class="ttname"><a href="insertseq_8h.html#a42b1453679eb9ea49bd584933c8897c4">decaler</a></div><div class="ttdeci">void decaler(int *tab, int debut, int fin)</div><div class="ttdoc">Décale une partie d&#39;un tableau. </div></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="insertseq_8h_html_a249be3f8ac4b8917c04118309c781c85"><div class="ttname"><a href="insertseq_8h.html#a249be3f8ac4b8917c04118309c781c85">IS_insertionSequentielle</a></div><div class="ttdeci">void IS_insertionSequentielle(int *tab, int taille)</div><div class="ttdoc">Tri le tableau avec l&#39;algorithme de l&#39;insertion séquentielle. </div><div class="ttdef"><b>Definition:</b> <a href="insertseq_8c_source.html#l00004">insertseq.c:4</a></div></div>
+<div class="ttc" id="insertseq_8h_html_a17992e55644d9131fdae7e47f617873d"><div class="ttname"><a href="insertseq_8h.html#a17992e55644d9131fdae7e47f617873d">IS_cherchePetit</a></div><div class="ttdeci">int IS_cherchePetit(const int *tab, int debut, int fin)</div><div class="ttdoc">Cherche l&#39;élément le plus petit dans le tableau à partir d&#39;une position de départ jusqu&#39;à une positio...</div><div class="ttdef"><b>Definition:</b> <a href="insertseq_8c_source.html#l00017">insertseq.c:17</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="insertseq_8h.html">insertseq.h</a></li>
-    <li class="footer">Généré le Lundi 29 Septembre 2014 15:03:40 pour Devoir par
+    <li class="footer">Généré le Lundi 13 Octobre 2014 17:01:11 pour Devoir par
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

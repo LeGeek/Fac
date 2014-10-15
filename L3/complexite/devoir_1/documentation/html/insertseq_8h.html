@@ -28,9 +28,11 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="amu_logo_xsmall.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">Devoir
    </div>
+   <div id="projectbrief">Devoir de complexité</div>
   </td>
  </tr>
  </tbody>
@@ -66,7 +68,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
   <div id="navrow2" class="tabs2">
     <ul class="tablist">
       <li><a href="files.html"><span>Liste&#160;des&#160;fichiers</span></a></li>
-      <li><a href="globals.html"><span>Membres&#160;de&#160;fichier</span></a></li>
+      <li><a href="globals.html"><span>Variables&#160;globale</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -89,7 +91,7 @@ $(document).ready(function(){initNavTree('insertseq_8h.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -116,15 +118,12 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Fonctions</h2></td></tr>
-<tr class="memitem:af63846717c8dc7c6685444e764c05d3e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="insertseq_8h.html#af63846717c8dc7c6685444e764c05d3e">insertionSequentielle</a> (int *tab, int taille)</td></tr>
-<tr class="memdesc:af63846717c8dc7c6685444e764c05d3e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tri le tableau avec l'algorithme de l'insertion séquentielle.  <a href="#af63846717c8dc7c6685444e764c05d3e">Plus de détails...</a><br/></td></tr>
-<tr class="separator:af63846717c8dc7c6685444e764c05d3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acd394de6ad385c75abf0c8d1adc05563"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="insertseq_8h.html#acd394de6ad385c75abf0c8d1adc05563">cherchePetit</a> (const int *tab, int debut, int fin)</td></tr>
-<tr class="memdesc:acd394de6ad385c75abf0c8d1adc05563"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cherche l'élément le plus petit dans le tableau à partir d'une position de départ jusqu'à une position de fin.  <a href="#acd394de6ad385c75abf0c8d1adc05563">Plus de détails...</a><br/></td></tr>
-<tr class="separator:acd394de6ad385c75abf0c8d1adc05563"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42b1453679eb9ea49bd584933c8897c4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="insertseq_8h.html#a42b1453679eb9ea49bd584933c8897c4">decaler</a> (int *tab, int debut, int fin)</td></tr>
-<tr class="memdesc:a42b1453679eb9ea49bd584933c8897c4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Décale une partie d'un tableau.  <a href="#a42b1453679eb9ea49bd584933c8897c4">Plus de détails...</a><br/></td></tr>
-<tr class="separator:a42b1453679eb9ea49bd584933c8897c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a249be3f8ac4b8917c04118309c781c85"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="insertseq_8h.html#a249be3f8ac4b8917c04118309c781c85">IS_insertionSequentielle</a> (int *tab, int taille)</td></tr>
+<tr class="memdesc:a249be3f8ac4b8917c04118309c781c85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tri le tableau avec l'algorithme de l'insertion séquentielle.  <a href="#a249be3f8ac4b8917c04118309c781c85">Plus de détails...</a><br/></td></tr>
+<tr class="separator:a249be3f8ac4b8917c04118309c781c85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17992e55644d9131fdae7e47f617873d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="insertseq_8h.html#a17992e55644d9131fdae7e47f617873d">IS_cherchePetit</a> (const int *tab, int debut, int fin)</td></tr>
+<tr class="memdesc:a17992e55644d9131fdae7e47f617873d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cherche l'élément le plus petit dans le tableau à partir d'une position de départ jusqu'à une position de fin.  <a href="#a17992e55644d9131fdae7e47f617873d">Plus de détails...</a><br/></td></tr>
+<tr class="separator:a17992e55644d9131fdae7e47f617873d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Documentation des macros</h2>
 <a class="anchor" id="af61cdcaa8606dff922393191f0e1779a"></a>
@@ -137,15 +136,17 @@ Fonctions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Définition à la ligne <a class="el" href="insertseq_8h_source.html#l00002">2</a> du fichier <a class="el" href="insertseq_8h_source.html">insertseq.h</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Documentation des fonctions</h2>
-<a class="anchor" id="acd394de6ad385c75abf0c8d1adc05563"></a>
+<a class="anchor" id="a17992e55644d9131fdae7e47f617873d"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int cherchePetit </td>
+          <td class="memname">int IS_cherchePetit </td>
           <td>(</td>
           <td class="paramtype">const int *&#160;</td>
           <td class="paramname"><em>tab</em>, </td>
@@ -173,64 +174,24 @@ Fonctions</h2></td></tr>
 <p>Cherche l'élément le plus petit dans le tableau à partir d'une position de départ jusqu'à une position de fin. </p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">tab</td><td>Le tableau dans lequel il faut rechercher </td></tr>
-    <tr><td class="paramname">debut</td><td>La position de départ </td></tr>
-    <tr><td class="paramname">fin</td><td>La position de fin </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">tab</td><td>Le tableau dans lequel il faut rechercher </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">debut</td><td>La position de départ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fin</td><td>La position de fin </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>L'indice de la plus petite valeur </dd></dl>
 
+<p>Définition à la ligne <a class="el" href="insertseq_8c_source.html#l00017">17</a> du fichier <a class="el" href="insertseq_8c_source.html">insertseq.c</a>.</p>
+
 </div>
 </div>
-<a class="anchor" id="a42b1453679eb9ea49bd584933c8897c4"></a>
+<a class="anchor" id="a249be3f8ac4b8917c04118309c781c85"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void decaler </td>
-          <td>(</td>
-          <td class="paramtype">int *&#160;</td>
-          <td class="paramname"><em>tab</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>debut</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>fin</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Décale une partie d'un tableau. </p>
-<dl class="params"><dt>Paramètres</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">tab</td><td>Le tableau dans lequel le décalage doit s'effectuer </td></tr>
-    <tr><td class="paramname">debut</td><td>L'indice de début du décalage </td></tr>
-    <tr><td class="paramname">fin</td><td>L'indice de fin du décalage </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="af63846717c8dc7c6685444e764c05d3e"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void insertionSequentielle </td>
+          <td class="memname">void IS_insertionSequentielle </td>
           <td>(</td>
           <td class="paramtype">int *&#160;</td>
           <td class="paramname"><em>tab</em>, </td>
@@ -252,11 +213,13 @@ Fonctions</h2></td></tr>
 <p>Tri le tableau avec l'algorithme de l'insertion séquentielle. </p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">tab</td><td>Le tableau à trier </td></tr>
-    <tr><td class="paramname">taille</td><td>La taille du tableau </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">tab</td><td>Le tableau à trier </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">taille</td><td>La taille du tableau </td></tr>
   </table>
   </dd>
 </dl>
+
+<p>Définition à la ligne <a class="el" href="insertseq_8c_source.html#l00004">4</a> du fichier <a class="el" href="insertseq_8c_source.html">insertseq.c</a>.</p>
 
 </div>
 </div>
@@ -266,7 +229,7 @@ Fonctions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="insertseq_8h.html">insertseq.h</a></li>
-    <li class="footer">Généré le Lundi 29 Septembre 2014 15:03:40 pour Devoir par
+    <li class="footer">Généré le Lundi 13 Octobre 2014 17:01:11 pour Devoir par
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

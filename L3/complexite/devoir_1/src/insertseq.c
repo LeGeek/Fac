@@ -1,19 +1,20 @@
 #include "insertseq.h"
+#include "utils.h"
 
-void insertionSequentielle( int * tab, int taille )
+void IS_insertionSequentielle( int * tab, int taille )
 {
     int x, p;
     for(int i = 0; i < taille; ++i )
     {
-        p = cherchePetit( tab, i, taille );
+        p = IS_cherchePetit( tab, i, taille );
         x = tab[p];
 
-        decaler( tab, i, p );
+        decalerTableau( tab, i, p );
         tab[i] = x;
     }
 }
 
-int cherchePetit( const int * tab, int debut, int fin )
+int IS_cherchePetit( const int * tab, int debut, int fin )
 {
     int p = debut;
 
@@ -25,10 +26,3 @@ int cherchePetit( const int * tab, int debut, int fin )
     return p;
 }
 
-void decaler( int * tab, int debut, int fin )
-{
-    for( int i = fin; i >= debut; --i )
-    {
-        tab[i] = tab[i-1];
-    }
-}

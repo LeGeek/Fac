@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['main',['main',['../main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main.c']]],
-  ['main_2ec',['main.c',['../main_8c.html',1,'']]]
+  ['random',['random',['../utils_8h.html#ad5755de87d8b9181d2d4f9915dd918b4',1,'random(int min, int max):&#160;utils.c'],['../utils_8c.html#ad5755de87d8b9181d2d4f9915dd918b4',1,'random(int min, int max):&#160;utils.c']]]
 ];

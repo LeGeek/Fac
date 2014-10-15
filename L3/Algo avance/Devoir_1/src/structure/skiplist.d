@@ -69,7 +69,7 @@ class SkipList(T)
         }
         
         int rnd = 1; 
-        while( alea.flipCoin() && rnd < 31 )
+        while( alea.flipCoin() && rnd < 32 )
             ++rnd;
 
         if( rnd > level )
