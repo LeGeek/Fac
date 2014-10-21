@@ -1,0 +1,50 @@
+digraph G {
+NULL0 [shape=point];
+10 -> NULL0;
+NULL1 [shape=point];
+10 -> NULL1;
+}
+
+digraph G {
+10 -> 5;
+5 -> 2;
+NULL2 [shape=point];
+2 -> NULL2;
+NULL3 [shape=point];
+2 -> NULL3;
+5 -> 7;
+NULL4 [shape=point];
+7 -> NULL4;
+NULL5 [shape=point];
+7 -> NULL5;
+10 -> 15;
+15 -> 12;
+NULL6 [shape=point];
+12 -> NULL6;
+12 -> 13;
+NULL7 [shape=point];
+13 -> NULL7;
+NULL8 [shape=point];
+13 -> NULL8;
+15 -> 20;
+NULL9 [shape=point];
+20 -> NULL9;
+20 -> 50;
+50 -> 43;
+NULL10 [shape=point];
+43 -> NULL10;
+NULL11 [shape=point];
+43 -> NULL11;
+50 -> 135;
+135 -> 79;
+NULL12 [shape=point];
+79 -> NULL12;
+NULL13 [shape=point];
+79 -> NULL13;
+135 -> 798;
+NULL14 [shape=point];
+798 -> NULL14;
+NULL15 [shape=point];
+798 -> NULL15;
+}
+

@@ -1,5 +1,7 @@
 #include "treeavl.h"
 
+#include <iostream>
+
 #ifndef NULL
 #define NULL 0
 #endif
@@ -7,8 +9,8 @@
 /* --- PUBLIC --- */
 
 template< typename T >
-TreeAVL<T>::TreeAVL( T value, TreeAVL * left, TreeAVL * right ) : value( value ), 
-    left( left ), right( right )
+TreeAVL<T>::TreeAVL( T value, TreeAVL * parent, TreeAVL * left, TreeAVL * right ) : value( value ), 
+    parent( parent ), left( left ), right( right )
 {
     level = 0;
     updateLevel();
@@ -75,46 +77,49 @@ void TreeAVL<T>::insert( T val )
 template< typename T>
 void TreeAVL<T>::affiche()
 {
-    std::vector<T> * tab = new std::vector<T>[ level + 1 ];
-   
-    affiche( tab );
-
-    for( int i = level; i >= 0; --i )
-    {
-        std::cout << "[" << i << "]\t";
-        for( int j = 0; j < tab[i].size(); ++j )
-            std::cout << tab[i][j] << " ";
-        std::cout << std::endl;
-    }
-}
-
-template< typename T>
-void TreeAVL<T>::affiche( std::vector<T> * tab )
-{
+    static int nullnb = 0;
     if( left != NULL )
-        left->affiche( tab );
-    
-    tab[level].push_back( value );
+    {
+        std::cout << value << " -> " << left->value << ";" << std::endl;
+        left->affiche();
+    }
+    else
+    {
+        std::cout << "NULL" << nullnb << " [shape=point];" << std::endl;
+        std::cout << value << " -> NULL" << nullnb << ";" << std::endl;
+        ++nullnb;
+    }
 
     if( right != NULL )
-        right->affiche( tab );
+    {
+        std::cout << value << " -> " << right->value << ";" << std::endl;
+        right->affiche();
+    }
+    else
+    {
+        std::cout << "NULL" << nullnb << " [shape=point];" << std::endl;
+        std::cout << value << " -> NULL" << nullnb << ";" << std::endl;
+        ++nullnb;
+    }
 }
 
 /* --- PRIVATE --- */
 template< typename T >
-void TreeAVL<T>::updateLevel()
+int TreeAVL<T>::updateLevel()
 {
     int levelLeft = 0;
     int levelRight = 0;
 
     if( left != NULL )
-        levelLeft = left->getLevel();
+        levelLeft = left->updateLevel();
 
     if( right != NULL )
-        levelRight = right->getLevel();
+        levelRight = right->updateLevel();
 
-    if( levelLeft < levelRight )
+    if( levelLeft > levelRight )
         level = levelLeft + 1;
     else
         level = levelRight + 1;
+    
+    return level;
 }
