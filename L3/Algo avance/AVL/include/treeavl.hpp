@@ -10,9 +10,9 @@
 
 template< typename T >
 TreeAVL<T>::TreeAVL( T value, TreeAVL * parent, TreeAVL * left, TreeAVL * right ) : value( value ), 
-    parent( parent ), left( left ), right( right )
+    left( left ), right( right ), parent( parent )
 {
-    level = 0;
+    level = 1;
     updateLevel();
 }
 
@@ -53,7 +53,8 @@ void TreeAVL<T>::insert( T val )
         {
             if( cursor->left == NULL )
             {
-                cursor->left = new TreeAVL( val );
+                cursor->left = new TreeAVL( val, cursor );
+                cursor->left->updateLevel();
                 break;
             }
 
@@ -63,7 +64,8 @@ void TreeAVL<T>::insert( T val )
         {
             if( cursor->right == NULL )
             {
-                cursor->right = new TreeAVL( val );
+                cursor->right = new TreeAVL( val, cursor );
+                cursor->right->updateLevel();
                 break;
             }
 
@@ -71,12 +73,15 @@ void TreeAVL<T>::insert( T val )
         }
     }
 
-    updateLevel();
 }
 
 template< typename T>
 void TreeAVL<T>::affiche()
 {
+    std::cout << value << "[label=\"" << value << " (" << level << ")\"]" << std::endl;
+    if( left == NULL && right == NULL )
+        return;
+
     static int nullnb = 0;
     if( left != NULL )
     {
@@ -85,7 +90,7 @@ void TreeAVL<T>::affiche()
     }
     else
     {
-        std::cout << "NULL" << nullnb << " [shape=point];" << std::endl;
+        std::cout << "NULL" << nullnb << " [shape=none, fontsize=0];" << std::endl;
         std::cout << value << " -> NULL" << nullnb << ";" << std::endl;
         ++nullnb;
     }
@@ -97,29 +102,47 @@ void TreeAVL<T>::affiche()
     }
     else
     {
-        std::cout << "NULL" << nullnb << " [shape=point];" << std::endl;
+        std::cout << "NULL" << nullnb << " [shape=none, fontsize=0];" << std::endl;
         std::cout << value << " -> NULL" << nullnb << ";" << std::endl;
         ++nullnb;
     }
 }
 
-/* --- PRIVATE --- */
 template< typename T >
-int TreeAVL<T>::updateLevel()
+void TreeAVL<T>::updateLevel()
 {
-    int levelLeft = 0;
-    int levelRight = 0;
+    int lvlLeft = 0;
+    int lvlRight = 0;
 
     if( left != NULL )
-        levelLeft = left->updateLevel();
+        lvlLeft = left->getLevel();
 
     if( right != NULL )
-        levelRight = right->updateLevel();
+        lvlRight = right->getLevel();
 
-    if( levelLeft > levelRight )
-        level = levelLeft + 1;
+    if( lvlRight > lvlLeft )
+        level = lvlRight + 1;
     else
-        level = levelRight + 1;
-    
-    return level;
+        level = lvlLeft + 1;
+
+    if( parent != NULL )
+        parent->updateLevel();
 }
+
+template< typename T >
+void TreeAVL<T>::balance()
+{
+    if( left != NULL || right != NULL )
+    {
+        if( parent != NULL )
+            parent->balance();
+    }
+    else
+    {
+        if( left->getLevel() - right->getLevel() > 1 ||
+            right->getLevel() - left->getLevel() > 1 )
+            std::cout << value << " unbalanced !" << std::endl;
+            return;
+    }
+}
+

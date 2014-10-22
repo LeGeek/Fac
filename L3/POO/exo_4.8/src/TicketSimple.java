@@ -2,9 +2,9 @@
  * Created by legeek on 15/10/14.
  */
 public class TicketSimple {
-    Date validite;
-    int tempsValidite;
-    float prix;
+    private Date validite;
+    private int tempsValidite;
+    private float prix;
 
     TicketSimple( int tpsValid, float prix ){
         validite = null;
@@ -12,6 +12,7 @@ public class TicketSimple {
         this.prix = prix;
     }
 
+    int tempsValidite() { return tempsValidite; }
     float prix() {
         return prix;
     }

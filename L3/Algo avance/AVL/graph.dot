@@ -1,50 +1,36 @@
 digraph G {
-NULL0 [shape=point];
-10 -> NULL0;
-NULL1 [shape=point];
-10 -> NULL1;
+10[label="10 (1)"]
 }
 
 digraph G {
+10[label="10 (6)"]
 10 -> 5;
+5[label="5 (2)"]
 5 -> 2;
-NULL2 [shape=point];
-2 -> NULL2;
-NULL3 [shape=point];
-2 -> NULL3;
+2[label="2 (1)"]
 5 -> 7;
-NULL4 [shape=point];
-7 -> NULL4;
-NULL5 [shape=point];
-7 -> NULL5;
+7[label="7 (1)"]
 10 -> 15;
+15[label="15 (5)"]
 15 -> 12;
-NULL6 [shape=point];
-12 -> NULL6;
+12[label="12 (2)"]
+NULL0 [shape=none, fontsize=0];
+12 -> NULL0;
 12 -> 13;
-NULL7 [shape=point];
-13 -> NULL7;
-NULL8 [shape=point];
-13 -> NULL8;
+13[label="13 (1)"]
 15 -> 20;
-NULL9 [shape=point];
-20 -> NULL9;
+20[label="20 (4)"]
+NULL1 [shape=none, fontsize=0];
+20 -> NULL1;
 20 -> 50;
+50[label="50 (3)"]
 50 -> 43;
-NULL10 [shape=point];
-43 -> NULL10;
-NULL11 [shape=point];
-43 -> NULL11;
+43[label="43 (1)"]
 50 -> 135;
+135[label="135 (2)"]
 135 -> 79;
-NULL12 [shape=point];
-79 -> NULL12;
-NULL13 [shape=point];
-79 -> NULL13;
+79[label="79 (1)"]
 135 -> 798;
-NULL14 [shape=point];
-798 -> NULL14;
-NULL15 [shape=point];
-798 -> NULL15;
+798[label="798 (1)"]
 }
 

@@ -49,6 +49,12 @@ class TreeAVL
          * \param val Valeur à ajouter
          **/
         void insert( T val );
+
+        /**
+         * \fn void updateLevel()
+         * \brief Calcule le niveau du noeud
+         **/
+        void updateLevel();
         
         /**
          * \fn void afficher()
@@ -64,11 +70,6 @@ class TreeAVL
     private:
         int level;  ///< Hauteur du noeud
 
-        /**
-         * \fn int updateLevel()
-         * \brief Calcule le niveau du noeud
-         **/
-        int updateLevel();
 };
 
 #include "treeavl.hpp"
