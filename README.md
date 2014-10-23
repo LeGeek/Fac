@@ -7,5 +7,6 @@ Dans Divers.... des choses diverses...
 Documentation externe :
 =======================
 
-+ http://www.graphviz.org/  
-+ http://www.graphviz.org/Documentation/dotguide.pdf  
++ Graph'Viz
+  - http://www.graphviz.org/  
+  - http://www.graphviz.org/Documentation/dotguide.pdf  
