@@ -15,8 +15,8 @@ Documentation externe :
 
 + Graph'Viz
   - http://www.graphviz.org/  
-  - http://www.graphviz.org/Documentation/dotguide.pdf 
-  - 
+  - http://www.graphviz.org/Documentation/dotguide.pdf
+
 + Java
   - http://docs.oracle.com/javase/7/docs/api/
  
