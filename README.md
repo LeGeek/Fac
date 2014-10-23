@@ -13,6 +13,10 @@ Documentation externe :
 + D
   - http://dlang.org/
 
++ Doxygen
+  - http://www.doxygen.org/index.html
+  - http://franckh.developpez.com/tutoriels/outils/doxygen/
+
 + Graph'Viz
   - http://www.graphviz.org/  
   - http://www.graphviz.org/Documentation/dotguide.pdf
