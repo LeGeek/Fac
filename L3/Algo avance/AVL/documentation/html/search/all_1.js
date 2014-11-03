@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['getlevel',['getLevel',['../da/d53/class_tree_a_v_l.html#a92bb11a553775814dfee115f2aa5e16d',1,'TreeAVL']]]
+  ['balance',['balance',['../db/d15/class_a_v_l.html#a88990625197e11f57df2e7bcf559e8f9',1,'AVL']]]
 ];

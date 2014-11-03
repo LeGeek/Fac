@@ -76,7 +76,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
     <ul class="tablist">
       <li class="current"><a href="globals.html"><span>Tout</span></a></li>
       <li><a href="globals_func.html"><span>Fonctions</span></a></li>
-      <li><a href="globals_defs.html"><span>Macros</span></a></li>
     </ul>
   </div>
 </div><!-- top -->
@@ -99,7 +98,7 @@ $(document).ready(function(){initNavTree('globals.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -113,8 +112,20 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <li>main()
 : <a class="el" href="df/d0a/main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main.cpp</a>
 </li>
-<li>NULL
-: <a class="el" href="d3/d2e/treeavl_8cpp.html#a070d2ce7b6bb7e5c05602aa8c308d0c4">treeavl.cpp</a>
+<li>unbalancedLeft()
+: <a class="el" href="df/d0a/main_8cpp.html#a60a697d1134730bb35b3eab65e6f8521">main.cpp</a>
+</li>
+<li>unbalancedLeft2()
+: <a class="el" href="df/d0a/main_8cpp.html#a2901e4bbd97653c94cfd97f0e9399d39">main.cpp</a>
+</li>
+<li>unbalancedLeftIntern()
+: <a class="el" href="df/d0a/main_8cpp.html#a0f3a3438105a5692aa58baa5be84c699">main.cpp</a>
+</li>
+<li>unbalancedRight()
+: <a class="el" href="df/d0a/main_8cpp.html#ab37fb4ef56612f41f58b95098ad22e1d">main.cpp</a>
+</li>
+<li>unbalancedRight2()
+: <a class="el" href="df/d0a/main_8cpp.html#a4d4c227bfca929902174e0e8fff72c3d">main.cpp</a>
 </li>
 </ul>
 </div><!-- contents -->
@@ -122,7 +133,7 @@ $(document).ready(function(){initNavTree('globals.html','');});
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="footer">Généré le Vendredi 10 Octobre 2014 08:49:19 pour TP Arbre AVL par
+    <li class="footer">Généré le Lundi 3 Novembre 2014 10:23:25 pour TP Arbre AVL par
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['null',['NULL',['../d3/d2e/treeavl_8cpp.html#a070d2ce7b6bb7e5c05602aa8c308d0c4',1,'treeavl.cpp']]]
+  ['getlevel',['getLevel',['../db/d15/class_a_v_l.html#a2c7b07714a761de62798b87856d5827a',1,'AVL']]]
 ];

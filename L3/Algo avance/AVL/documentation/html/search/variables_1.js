@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['right',['right',['../da/d53/class_tree_a_v_l.html#aa66f75a7f4a244d08beaaf100987ccc1',1,'TreeAVL']]]
+  ['left',['left',['../db/d15/class_a_v_l.html#aa1ea6df15798ce98461729e2b1deeb87',1,'AVL']]],
+  ['level',['level',['../db/d15/class_a_v_l.html#aa5309553367542c5683df0fae61bfc0a',1,'AVL']]]
 ];

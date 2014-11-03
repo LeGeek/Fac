@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['right',['right',['../da/d53/class_tree_a_v_l.html#aa66f75a7f4a244d08beaaf100987ccc1',1,'TreeAVL']]]
+  ['head',['head',['../da/d53/class_tree_a_v_l.html#a7d77c489adc9149acc336c101086ca24',1,'TreeAVL']]]
 ];

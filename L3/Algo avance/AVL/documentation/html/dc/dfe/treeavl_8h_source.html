@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('dc/dfe/treeavl_8h_source.html','../../
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -106,56 +106,54 @@ $(document).ready(function(){initNavTree('dc/dfe/treeavl_8h_source.html','../../
 <div class="title">treeavl.h</div>  </div>
 </div><!--header-->
 <div class="contents">
-<a href="../../dc/dfe/treeavl_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __ARBREAVL_H__</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define __ARBREAVL_H__</span></div>
+<a href="../../dc/dfe/treeavl_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __TREEAVL_H__</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define __TREEAVL_H__</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">class</span> T &gt; </div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="../../da/d53/class_tree_a_v_l.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../da/d53/class_tree_a_v_l.html">TreeAVL</a></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <a class="code" href="../../da/d53/class_tree_a_v_l.html#a8fa918caad020a81710097d8d3d3f532">TreeAVL</a>( T <a class="code" href="../../da/d53/class_tree_a_v_l.html#a334f2f454d7d64bdc3271fd55d0bda94">value</a> );</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <a class="code" href="../../da/d53/class_tree_a_v_l.html#a8fa918caad020a81710097d8d3d3f532">TreeAVL</a>( T value, <a class="code" href="../../da/d53/class_tree_a_v_l.html">TreeAVL</a> <a class="code" href="../../da/d53/class_tree_a_v_l.html#aeffecf910a25fcd4a2ec1f568db34935">left</a> );</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <a class="code" href="../../da/d53/class_tree_a_v_l.html#a8fa918caad020a81710097d8d3d3f532">TreeAVL</a>( T value, <a class="code" href="../../da/d53/class_tree_a_v_l.html">TreeAVL</a> left, <a class="code" href="../../da/d53/class_tree_a_v_l.html">TreeAVL</a> <a class="code" href="../../da/d53/class_tree_a_v_l.html#aa66f75a7f4a244d08beaaf100987ccc1">right</a>);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keyword">virtual</span> <a class="code" href="../../da/d53/class_tree_a_v_l.html#a2dc6a2719238fbbe39a5e62385aae57f">~TreeAVL</a>();</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="../../da/d53/class_tree_a_v_l.html#a92bb11a553775814dfee115f2aa5e16d">getLevel</a>();</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="../../da/d53/class_tree_a_v_l.html#a7f5167c9fbbbb74301698fb96194d66d">contains</a>( T val );</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                </div>
-<div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="../../da/d53/class_tree_a_v_l.html#aeffecf910a25fcd4a2ec1f568db34935">   61</a></span>&#160;        <a class="code" href="../../da/d53/class_tree_a_v_l.html">TreeAVL</a> * <a class="code" href="../../da/d53/class_tree_a_v_l.html#aeffecf910a25fcd4a2ec1f568db34935">left</a>;    </div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="../../da/d53/class_tree_a_v_l.html#aa66f75a7f4a244d08beaaf100987ccc1">   62</a></span>&#160;        <a class="code" href="../../da/d53/class_tree_a_v_l.html">TreeAVL</a> * <a class="code" href="../../da/d53/class_tree_a_v_l.html#aa66f75a7f4a244d08beaaf100987ccc1">right</a>;   </div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="../../da/d53/class_tree_a_v_l.html#a334f2f454d7d64bdc3271fd55d0bda94">   63</a></span>&#160;        T <a class="code" href="../../da/d53/class_tree_a_v_l.html#a334f2f454d7d64bdc3271fd55d0bda94">value</a>;            </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="../../da/d53/class_tree_a_v_l.html#a22045a3be7202957c5029defd4312d07">   66</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="../../da/d53/class_tree_a_v_l.html#a22045a3be7202957c5029defd4312d07">level</a>;  </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../da/d53/class_tree_a_v_l.html#a3ce7e7ba815fbcc2be3b439334d03bec">updateLevel</a>();</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;};</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="class_tree_a_v_l_html_a2dc6a2719238fbbe39a5e62385aae57f"><div class="ttname"><a href="../../da/d53/class_tree_a_v_l.html#a2dc6a2719238fbbe39a5e62385aae57f">TreeAVL::~TreeAVL</a></div><div class="ttdeci">virtual ~TreeAVL()</div><div class="ttdoc">Destructeur de la classe. </div><div class="ttdef"><b>Definition:</b> treeavl.cpp:33</div></div>
-<div class="ttc" id="class_tree_a_v_l_html"><div class="ttname"><a href="../../da/d53/class_tree_a_v_l.html">TreeAVL</a></div><div class="ttdoc">Structure minimal d&#39;un arbre AVL. </div><div class="ttdef"><b>Definition:</b> treeavl.h:10</div></div>
-<div class="ttc" id="class_tree_a_v_l_html_aeffecf910a25fcd4a2ec1f568db34935"><div class="ttname"><a href="../../da/d53/class_tree_a_v_l.html#aeffecf910a25fcd4a2ec1f568db34935">TreeAVL::left</a></div><div class="ttdeci">TreeAVL * left</div><div class="ttdoc">Arbre enfant positionné à droite. </div><div class="ttdef"><b>Definition:</b> treeavl.h:61</div></div>
-<div class="ttc" id="class_tree_a_v_l_html_a3ce7e7ba815fbcc2be3b439334d03bec"><div class="ttname"><a href="../../da/d53/class_tree_a_v_l.html#a3ce7e7ba815fbcc2be3b439334d03bec">TreeAVL::updateLevel</a></div><div class="ttdeci">void updateLevel()</div><div class="ttdoc">Calcule le niveau du noeud. </div><div class="ttdef"><b>Definition:</b> treeavl.cpp:61</div></div>
-<div class="ttc" id="class_tree_a_v_l_html_a8fa918caad020a81710097d8d3d3f532"><div class="ttname"><a href="../../da/d53/class_tree_a_v_l.html#a8fa918caad020a81710097d8d3d3f532">TreeAVL::TreeAVL</a></div><div class="ttdeci">TreeAVL(T value)</div><div class="ttdoc">Créé une structure d&#39;arbre AVL avec uniquement une valeur. </div><div class="ttdef"><b>Definition:</b> treeavl.cpp:10</div></div>
-<div class="ttc" id="class_tree_a_v_l_html_a334f2f454d7d64bdc3271fd55d0bda94"><div class="ttname"><a href="../../da/d53/class_tree_a_v_l.html#a334f2f454d7d64bdc3271fd55d0bda94">TreeAVL::value</a></div><div class="ttdeci">T value</div><div class="ttdoc">Valeur de la noeud. </div><div class="ttdef"><b>Definition:</b> treeavl.h:63</div></div>
-<div class="ttc" id="class_tree_a_v_l_html_a22045a3be7202957c5029defd4312d07"><div class="ttname"><a href="../../da/d53/class_tree_a_v_l.html#a22045a3be7202957c5029defd4312d07">TreeAVL::level</a></div><div class="ttdeci">int level</div><div class="ttdoc">Hauteur du noeud. </div><div class="ttdef"><b>Definition:</b> treeavl.h:66</div></div>
-<div class="ttc" id="class_tree_a_v_l_html_a7f5167c9fbbbb74301698fb96194d66d"><div class="ttname"><a href="../../da/d53/class_tree_a_v_l.html#a7f5167c9fbbbb74301698fb96194d66d">TreeAVL::contains</a></div><div class="ttdeci">bool contains(T val)</div><div class="ttdoc">Recherche la présence d&#39;un élément dans l&#39;arbre. </div><div class="ttdef"><b>Definition:</b> treeavl.cpp:45</div></div>
-<div class="ttc" id="class_tree_a_v_l_html_aa66f75a7f4a244d08beaaf100987ccc1"><div class="ttname"><a href="../../da/d53/class_tree_a_v_l.html#aa66f75a7f4a244d08beaaf100987ccc1">TreeAVL::right</a></div><div class="ttdeci">TreeAVL * right</div><div class="ttdoc">Arbre enfant positionné à gauche. </div><div class="ttdef"><b>Definition:</b> treeavl.h:62</div></div>
-<div class="ttc" id="class_tree_a_v_l_html_a92bb11a553775814dfee115f2aa5e16d"><div class="ttname"><a href="../../da/d53/class_tree_a_v_l.html#a92bb11a553775814dfee115f2aa5e16d">TreeAVL::getLevel</a></div><div class="ttdeci">int getLevel()</div><div class="ttdoc">Accesseur à la donnée membre level. </div><div class="ttdef"><b>Definition:</b> treeavl.cpp:39</div></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d3/d51/avl_8h.html">avl.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="../../da/d53/class_tree_a_v_l.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="../../da/d53/class_tree_a_v_l.html">TreeAVL</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <a class="code" href="../../da/d53/class_tree_a_v_l.html#a43c4c69a41c5dc84010d2a265def4120">TreeAVL</a>();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../da/d53/class_tree_a_v_l.html#a4a6c318a68ff6823d5ff8a5cb662b5b1">insert</a>( T value );</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="../../da/d53/class_tree_a_v_l.html#a7f5167c9fbbbb74301698fb96194d66d">contains</a>( T val );</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../da/d53/class_tree_a_v_l.html#ab065c613fb398873257f3ec2aa708fd6">drawGraph</a>( std::ofstream &amp; fs );</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../da/d53/class_tree_a_v_l.html#a0fe5b522c1b6e620e3a6092c3a96b76c">clear</a>();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../da/d53/class_tree_a_v_l.html#af511d72bca244f41fc2bc86ad4348d3f">relocateHead</a>();</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="../../da/d53/class_tree_a_v_l.html#a7d77c489adc9149acc336c101086ca24">   60</a></span>&#160;        <a class="code" href="../../db/d15/class_a_v_l.html">AVL&lt;T&gt;</a> * <a class="code" href="../../da/d53/class_tree_a_v_l.html#a7d77c489adc9149acc336c101086ca24">head</a>; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;};</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../d5/de7/treeavl_8hpp.html">treeavl.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_tree_a_v_l_html_a7d77c489adc9149acc336c101086ca24"><div class="ttname"><a href="../../da/d53/class_tree_a_v_l.html#a7d77c489adc9149acc336c101086ca24">TreeAVL::head</a></div><div class="ttdeci">AVL&lt; T &gt; * head</div><div class="ttdoc">Tête pointant sur la racine de l&#39;arbre. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dfe/treeavl_8h_source.html#l00060">treeavl.h:60</a></div></div>
+<div class="ttc" id="class_tree_a_v_l_html"><div class="ttname"><a href="../../da/d53/class_tree_a_v_l.html">TreeAVL</a></div><div class="ttdoc">Classe permettant de simplifier l&#39;utilisation des arbres AVL. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dfe/treeavl_8h_source.html#l00013">treeavl.h:13</a></div></div>
+<div class="ttc" id="class_tree_a_v_l_html_a43c4c69a41c5dc84010d2a265def4120"><div class="ttname"><a href="../../da/d53/class_tree_a_v_l.html#a43c4c69a41c5dc84010d2a265def4120">TreeAVL::TreeAVL</a></div><div class="ttdeci">TreeAVL()</div><div class="ttdoc">Créé un support pour un arbre AVL. </div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de7/treeavl_8hpp_source.html#l00004">treeavl.hpp:4</a></div></div>
+<div class="ttc" id="treeavl_8hpp_html"><div class="ttname"><a href="../../d5/de7/treeavl_8hpp.html">treeavl.hpp</a></div></div>
+<div class="ttc" id="class_tree_a_v_l_html_a0fe5b522c1b6e620e3a6092c3a96b76c"><div class="ttname"><a href="../../da/d53/class_tree_a_v_l.html#a0fe5b522c1b6e620e3a6092c3a96b76c">TreeAVL::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">Efface la racine de l&#39;arbre, qui a pour concequence de supprimer la totalité de l&#39;arbre;. </div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de7/treeavl_8hpp_source.html#l00044">treeavl.hpp:44</a></div></div>
+<div class="ttc" id="class_tree_a_v_l_html_a4a6c318a68ff6823d5ff8a5cb662b5b1"><div class="ttname"><a href="../../da/d53/class_tree_a_v_l.html#a4a6c318a68ff6823d5ff8a5cb662b5b1">TreeAVL::insert</a></div><div class="ttdeci">void insert(T value)</div><div class="ttdoc">Ajoute un élément dans l&#39;arbre à partir de la racine. </div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de7/treeavl_8hpp_source.html#l00010">treeavl.hpp:10</a></div></div>
+<div class="ttc" id="avl_8h_html"><div class="ttname"><a href="../../d3/d51/avl_8h.html">avl.h</a></div></div>
+<div class="ttc" id="class_tree_a_v_l_html_af511d72bca244f41fc2bc86ad4348d3f"><div class="ttname"><a href="../../da/d53/class_tree_a_v_l.html#af511d72bca244f41fc2bc86ad4348d3f">TreeAVL::relocateHead</a></div><div class="ttdeci">void relocateHead()</div><div class="ttdoc">Replace la tête à la racine de l&#39;arbre. </div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de7/treeavl_8hpp_source.html#l00052">treeavl.hpp:52</a></div></div>
+<div class="ttc" id="class_a_v_l_html"><div class="ttname"><a href="../../db/d15/class_a_v_l.html">AVL</a></div><div class="ttdoc">Structure minimal d&#39;un arbre AVL. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d51/avl_8h_source.html#l00012">avl.h:12</a></div></div>
+<div class="ttc" id="class_tree_a_v_l_html_a7f5167c9fbbbb74301698fb96194d66d"><div class="ttname"><a href="../../da/d53/class_tree_a_v_l.html#a7f5167c9fbbbb74301698fb96194d66d">TreeAVL::contains</a></div><div class="ttdeci">bool contains(T val)</div><div class="ttdoc">Cherche dans tout l&#39;arbre si l&#39;élément val existe. </div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de7/treeavl_8hpp_source.html#l00024">treeavl.hpp:24</a></div></div>
+<div class="ttc" id="class_tree_a_v_l_html_ab065c613fb398873257f3ec2aa708fd6"><div class="ttname"><a href="../../da/d53/class_tree_a_v_l.html#ab065c613fb398873257f3ec2aa708fd6">TreeAVL::drawGraph</a></div><div class="ttdeci">void drawGraph(std::ofstream &amp;fs)</div><div class="ttdoc">Produit un fichier au format DOT, affichant l&#39;arbre AVL, à partir de la racine. </div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de7/treeavl_8hpp_source.html#l00034">treeavl.hpp:34</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../dc/dfe/treeavl_8h.html">treeavl.h</a></li>
-    <li class="footer">Généré le Vendredi 10 Octobre 2014 08:49:15 pour TP Arbre AVL par
+    <li class="footer">Généré le Lundi 3 Novembre 2014 10:23:24 pour TP Arbre AVL par
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
   </ul>

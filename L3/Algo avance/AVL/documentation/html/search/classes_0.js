@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['treeavl',['TreeAVL',['../da/d53/class_tree_a_v_l.html',1,'']]]
+  ['avl',['AVL',['../db/d15/class_a_v_l.html',1,'']]]
 ];

@@ -1,75 +1,71 @@
-#ifndef __ARBREAVL_H__
-#define __ARBREAVL_H__
+#ifndef __TREEAVL_H__
+#define __TREEAVL_H__
 
-#include <vector>
+#include "avl.h"
+#include <fstream>
+
 
 /**
- * \class TreeAVL __ARBREAVL_H__ arbreavl.h
- * \brief Structure minimal d'un arbre AVL
+ * \class TreeAVL __TREEAVVL_H__ treeavl.h
+ * \brief Classe permettant de simplifier l'utilisation des arbres AVL
  **/
-template< typename T > 
+template< typename T >
 class TreeAVL
 {
     public:
         /**
-         * \fn TreeAVL( T value, TreeAVL parent, TreeAVL left, TreeAVL right )
-         * \brief Créé une structure d'arbre AVL avec une valeur et une branche gauche
-         * \param value Valeur attribuée à la structure
-         * \param parent Arbre parent du nouvel arbre
-         * \param left Arbre enfant positionné à gauche
-         * \param right Arbre enfant positionné à droite
+         * \fn TreeAVL()
+         * \brief Créé un support pour un arbre AVL
          **/
-        TreeAVL( T value, TreeAVL * parent = NULL, TreeAVL * left = NULL, TreeAVL * right = NULL);
-
+        TreeAVL();
+        
         /**
-         * \fn ~TreeAVL()
-         * \brief Destructeur de la classe
+         * \fn void insert( T value )
+         * \brief Ajoute un élément dans l'arbre à partir de la racine
+         * \param value Valeur à ajouter 
          **/
-        virtual ~TreeAVL();
-
+        void insert( T value );
+        
         /**
-         * \fn int getLevel()
-         * \brief Accesseur à la donnée membre level
-         * \return Un entier représentant la hauteur de l'arbre
-         **/
-        int getLevel();
-
-        /**
-         * \fn bool contains( T val )
-         * \brief Recherche la présence d'un élément dans l'arbre
-         * \param val Valeur à rechercher
+         * \fn bool contains( T val );
+         * \brief Cherche dans tout l'arbre si l'élément val existe
+         * \param val Valeur à chercher
          * \return TRUE si l'élément est dans l'arbre, FALSE dans le cas
          * contraire
          **/
         bool contains( T val );
 
         /**
-         * \fn void insert( T val )
-         * \brief Ajoute un élément dans l'arbre
-         * \param val Valeur à ajouter
+         * \fn void drawGraph( std::ostream & fs )
+         * \brief Edite l'arbre AVL au format DOT, à partir de la racine
+         * \param fs Flux dans lequel écrire
          **/
-        void insert( T val );
+        void drawGraph( std::ostream & fs );
 
         /**
-         * \fn void updateLevel()
-         * \brief Calcule le niveau du noeud
+         * \fn void drawGraph( const char * file )
+         * \brief Edite l'arbre dans un fichier, au format DOT, à partir de la
+         * racine
+         * \param file Nom du fichier à créer, si le fichier existe il sera
+         * effacé
          **/
-        void updateLevel();
-        
+        void drawGraph( const char * file );
+
         /**
-         * \fn void afficher()
-         * \brief Affiche l'arbre sur la sortie standard formaté en DOT
+         * \fn void clear()
+         * \brief Efface la racine de l'arbre, qui a pour concequence de
+         * supprimer la totalité de l'arbre;
          **/
-        void affiche();
-        
-        T value;           ///< Valeur de la noeud
-        TreeAVL * left;    ///< Arbre enfant positionné à droite
-        TreeAVL * right;   ///< Arbre enfant positionné à gauche
-        TreeAVL * parent;  ///< Noeud parent
+        void clear();
 
     private:
-        int level;  ///< Hauteur du noeud
+        /**
+         * \fn void relocateHead()
+         * \brief Replace la tête à la racine de l'arbre
+         **/
+        void relocateHead();
 
+        AVL<T> * head; ///< Tête pointant sur la racine de l'arbre
 };
 
 #include "treeavl.hpp"

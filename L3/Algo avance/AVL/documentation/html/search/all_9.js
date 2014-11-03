@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7etreeavl',['~TreeAVL',['../da/d53/class_tree_a_v_l.html#a2dc6a2719238fbbe39a5e62385aae57f',1,'TreeAVL']]]
+  ['parent',['parent',['../db/d15/class_a_v_l.html#a3978c23794aa5e11eb37473e1cebe4e5',1,'AVL']]]
 ];
