@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 #include "utils.h"
-#include "insertseq.h"
+#include "insertdicho.h"
 
 #define TAB_TEST_SIZE   20
 
@@ -11,7 +11,7 @@ int main( int argc, char** argv )
     (void) argv;
     printf( "TODO:\
             \n\t1. Tri par insertion séquentieli **DONE**\
-            \n\t2. Tri par insertion dichotomique\
+            \n\t2. Tri par insertion dichotomique **TEST**\
             \n\t3. Tri par selection-permutation\
             \n\t4. Tri à bulle\
             \n\t5. Tri par fusion\
@@ -30,8 +30,9 @@ int main( int argc, char** argv )
         printf( "%d ", t[i] );
     printf( "\n" );
 
-    printf (" TRI ICI " );
-    
+    //printf (" TRI ICI\n" );
+    ID_insertionDichotomique( t, TAB_TEST_SIZE );
+
     for( int i = 0; i < TAB_TEST_SIZE; ++i)
         printf( "%d ", t[i] );
     printf( "\n" );

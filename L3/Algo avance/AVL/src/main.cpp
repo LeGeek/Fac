@@ -124,7 +124,7 @@ int main( int argc, char** argv )
 
     TreeAVL<int> avl;
     //unbalancedLeftIntern( avl );
-    randomFill( 100, 1, 1000000, avl );
+    randomFill( 01000, 1, 1000000, avl );
 
     cout << "Gen graph" << endl;
     avl.drawGraph( argv[1] );

@@ -1,0 +1,310 @@
+\hypertarget{class_a_v_l}{\section{Référence du modèle de la classe A\-V\-L$<$ T $>$}
+\label{class_a_v_l}\index{A\-V\-L$<$ T $>$@{A\-V\-L$<$ T $>$}}
+}
+
+
+Structure minimal d'un arbre \hyperlink{class_a_v_l}{A\-V\-L}.  
+
+
+
+
+{\ttfamily \#include $<$avl.\-h$>$}
+
+\subsection*{Fonctions membres publiques}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_a_v_l_abbcd7c80b69cdf8caab9ea79b51163d9}{A\-V\-L} (T \hyperlink{class_a_v_l_a3f5c40790a92e0ebd93a187812d6b698}{value}, \hyperlink{class_a_v_l}{A\-V\-L} $\ast$\hyperlink{class_a_v_l_a3978c23794aa5e11eb37473e1cebe4e5}{parent}=N\-U\-L\-L, \hyperlink{class_a_v_l}{A\-V\-L} $\ast$\hyperlink{class_a_v_l_aa1ea6df15798ce98461729e2b1deeb87}{left}=N\-U\-L\-L, \hyperlink{class_a_v_l}{A\-V\-L} $\ast$\hyperlink{class_a_v_l_ac02dee89f769588763a80be6176af37b}{right}=N\-U\-L\-L)
+\begin{DoxyCompactList}\small\item\em Créé une structure d'arbre \hyperlink{class_a_v_l}{A\-V\-L} avec une valeur et une branche gauche. \end{DoxyCompactList}\item 
+virtual \hyperlink{class_a_v_l_a07d2694a7bb1f26f9990f01acf29c5af}{$\sim$\-A\-V\-L} ()
+\begin{DoxyCompactList}\small\item\em Destructeur de la classe. \end{DoxyCompactList}\item 
+int \hyperlink{class_a_v_l_a2c7b07714a761de62798b87856d5827a}{get\-Level} ()
+\begin{DoxyCompactList}\small\item\em Accesseur à la donnée membre level. \end{DoxyCompactList}\item 
+bool \hyperlink{class_a_v_l_a1d9cd2afeb001a6a4fc9f90964d66b0d}{contains} (T val)
+\begin{DoxyCompactList}\small\item\em Recherche la présence d'un élément dans l'arbre. \end{DoxyCompactList}\item 
+void \hyperlink{class_a_v_l_aa6459425ad7772fe9bff79caadeac7d4}{insert} (T val)
+\begin{DoxyCompactList}\small\item\em Ajoute un élément dans l'arbre. \end{DoxyCompactList}\item 
+void \hyperlink{class_a_v_l_adcea8d3f61ef24eef897e3cdf4952374}{update\-Level} ()
+\begin{DoxyCompactList}\small\item\em Calcule le niveau du noeud. \end{DoxyCompactList}\item 
+void \hyperlink{class_a_v_l_a88990625197e11f57df2e7bcf559e8f9}{balance} ()
+\begin{DoxyCompactList}\small\item\em Equilibre l'arbre si besoin. \end{DoxyCompactList}\item 
+void \hyperlink{class_a_v_l_ac9656f86066f929391364edd6e23083f}{draw\-Graph} (std\-::ofstream \&fs)
+\begin{DoxyCompactList}\small\item\em draw\-Graph l'arbre sur la sortie standard formaté en D\-O\-T \end{DoxyCompactList}\item 
+void \hyperlink{class_a_v_l_a4785b0ae1023d3dee584ffbbc45057a3}{rotate\-Right} ()
+\begin{DoxyCompactList}\small\item\em Effectue une rotation vers la droite. \end{DoxyCompactList}\item 
+void \hyperlink{class_a_v_l_ac972995f3084d8876eb143916ccf8f8e}{rotate\-Left} ()
+\begin{DoxyCompactList}\small\item\em Effectue une rotation vers la gauche. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Attributs publics}
+\begin{DoxyCompactItemize}
+\item 
+T \hyperlink{class_a_v_l_a3f5c40790a92e0ebd93a187812d6b698}{value}
+\begin{DoxyCompactList}\small\item\em Valeur de la noeud. \end{DoxyCompactList}\item 
+\hyperlink{class_a_v_l}{A\-V\-L} $\ast$ \hyperlink{class_a_v_l_aa1ea6df15798ce98461729e2b1deeb87}{left}
+\begin{DoxyCompactList}\small\item\em Arbre enfant positionné à droite. \end{DoxyCompactList}\item 
+\hyperlink{class_a_v_l}{A\-V\-L} $\ast$ \hyperlink{class_a_v_l_ac02dee89f769588763a80be6176af37b}{right}
+\begin{DoxyCompactList}\small\item\em Arbre enfant positionné à gauche. \end{DoxyCompactList}\item 
+\hyperlink{class_a_v_l}{A\-V\-L} $\ast$ \hyperlink{class_a_v_l_a3978c23794aa5e11eb37473e1cebe4e5}{parent}
+\begin{DoxyCompactList}\small\item\em Noeud parent. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Attributs privés}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{class_a_v_l_aa5309553367542c5683df0fae61bfc0a}{level}
+\begin{DoxyCompactList}\small\item\em Hauteur du noeud. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Description détaillée}
+\subsubsection*{template$<$typename T$>$class A\-V\-L$<$ T $>$}
+
+Structure minimal d'un arbre \hyperlink{class_a_v_l}{A\-V\-L}. 
+
+Définition à la ligne 12 du fichier avl.\-h.
+
+
+
+\subsection{Documentation des constructeurs et destructeur}
+\hypertarget{class_a_v_l_abbcd7c80b69cdf8caab9ea79b51163d9}{\index{A\-V\-L@{A\-V\-L}!A\-V\-L@{A\-V\-L}}
+\index{A\-V\-L@{A\-V\-L}!AVL@{A\-V\-L}}
+\subsubsection[{A\-V\-L}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf A\-V\-L}$<$ T $>$\-::{\bf A\-V\-L} (
+\begin{DoxyParamCaption}
+\item[{T}]{value, }
+\item[{{\bf A\-V\-L}$<$ T $>$ $\ast$}]{parent = {\ttfamily NULL}, }
+\item[{{\bf A\-V\-L}$<$ T $>$ $\ast$}]{left = {\ttfamily NULL}, }
+\item[{{\bf A\-V\-L}$<$ T $>$ $\ast$}]{right = {\ttfamily NULL}}
+\end{DoxyParamCaption}
+)}}\label{class_a_v_l_abbcd7c80b69cdf8caab9ea79b51163d9}
+
+
+Créé une structure d'arbre \hyperlink{class_a_v_l}{A\-V\-L} avec une valeur et une branche gauche. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em value} & Valeur attribuée à la structure \\
+\hline
+{\em parent} & Arbre parent du nouvel arbre \\
+\hline
+{\em left} & Arbre enfant positionné à gauche \\
+\hline
+{\em right} & Arbre enfant positionné à droite \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 12 du fichier avl.\-hpp.
+
+\hypertarget{class_a_v_l_a07d2694a7bb1f26f9990f01acf29c5af}{\index{A\-V\-L@{A\-V\-L}!$\sim$\-A\-V\-L@{$\sim$\-A\-V\-L}}
+\index{$\sim$\-A\-V\-L@{$\sim$\-A\-V\-L}!AVL@{A\-V\-L}}
+\subsubsection[{$\sim$\-A\-V\-L}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf A\-V\-L}$<$ T $>$\-::$\sim${\bf A\-V\-L} (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [virtual]}}}\label{class_a_v_l_a07d2694a7bb1f26f9990f01acf29c5af}
+
+
+Destructeur de la classe. 
+
+
+
+Définition à la ligne 20 du fichier avl.\-hpp.
+
+
+
+\subsection{Documentation des fonctions membres}
+\hypertarget{class_a_v_l_a88990625197e11f57df2e7bcf559e8f9}{\index{A\-V\-L@{A\-V\-L}!balance@{balance}}
+\index{balance@{balance}!AVL@{A\-V\-L}}
+\subsubsection[{balance}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf A\-V\-L}$<$ T $>$\-::balance (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_a_v_l_a88990625197e11f57df2e7bcf559e8f9}
+
+
+Equilibre l'arbre si besoin. 
+
+
+
+Définition à la ligne 141 du fichier avl.\-hpp.
+
+\hypertarget{class_a_v_l_a1d9cd2afeb001a6a4fc9f90964d66b0d}{\index{A\-V\-L@{A\-V\-L}!contains@{contains}}
+\index{contains@{contains}!AVL@{A\-V\-L}}
+\subsubsection[{contains}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf A\-V\-L}$<$ T $>$\-::contains (
+\begin{DoxyParamCaption}
+\item[{T}]{val}
+\end{DoxyParamCaption}
+)}}\label{class_a_v_l_a1d9cd2afeb001a6a4fc9f90964d66b0d}
+
+
+Recherche la présence d'un élément dans l'arbre. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em val} & Valeur à rechercher \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+T\-R\-U\-E si l'élément est dans l'arbre, F\-A\-L\-S\-E dans le cas contraire 
+\end{DoxyReturn}
+
+
+Définition à la ligne 33 du fichier avl.\-hpp.
+
+\hypertarget{class_a_v_l_ac9656f86066f929391364edd6e23083f}{\index{A\-V\-L@{A\-V\-L}!draw\-Graph@{draw\-Graph}}
+\index{draw\-Graph@{draw\-Graph}!AVL@{A\-V\-L}}
+\subsubsection[{draw\-Graph}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf A\-V\-L}$<$ T $>$\-::draw\-Graph (
+\begin{DoxyParamCaption}
+\item[{std\-::ofstream \&}]{fs}
+\end{DoxyParamCaption}
+)}}\label{class_a_v_l_ac9656f86066f929391364edd6e23083f}
+
+
+draw\-Graph l'arbre sur la sortie standard formaté en D\-O\-T 
+
+
+
+Définition à la ligne 87 du fichier avl.\-hpp.
+
+\hypertarget{class_a_v_l_a2c7b07714a761de62798b87856d5827a}{\index{A\-V\-L@{A\-V\-L}!get\-Level@{get\-Level}}
+\index{get\-Level@{get\-Level}!AVL@{A\-V\-L}}
+\subsubsection[{get\-Level}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ int {\bf A\-V\-L}$<$ T $>$\-::get\-Level (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_a_v_l_a2c7b07714a761de62798b87856d5827a}
+
+
+Accesseur à la donnée membre level. 
+
+\begin{DoxyReturn}{Renvoie}
+Un entier représentant la hauteur de l'arbre 
+\end{DoxyReturn}
+
+
+Définition à la ligne 27 du fichier avl.\-hpp.
+
+\hypertarget{class_a_v_l_aa6459425ad7772fe9bff79caadeac7d4}{\index{A\-V\-L@{A\-V\-L}!insert@{insert}}
+\index{insert@{insert}!AVL@{A\-V\-L}}
+\subsubsection[{insert}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf A\-V\-L}$<$ T $>$\-::insert (
+\begin{DoxyParamCaption}
+\item[{T}]{val}
+\end{DoxyParamCaption}
+)}}\label{class_a_v_l_aa6459425ad7772fe9bff79caadeac7d4}
+
+
+Ajoute un élément dans l'arbre. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em val} & Valeur à ajouter \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 48 du fichier avl.\-hpp.
+
+\hypertarget{class_a_v_l_ac972995f3084d8876eb143916ccf8f8e}{\index{A\-V\-L@{A\-V\-L}!rotate\-Left@{rotate\-Left}}
+\index{rotate\-Left@{rotate\-Left}!AVL@{A\-V\-L}}
+\subsubsection[{rotate\-Left}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf A\-V\-L}$<$ T $>$\-::rotate\-Left (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_a_v_l_ac972995f3084d8876eb143916ccf8f8e}
+
+
+Effectue une rotation vers la gauche. 
+
+
+
+Définition à la ligne 209 du fichier avl.\-hpp.
+
+\hypertarget{class_a_v_l_a4785b0ae1023d3dee584ffbbc45057a3}{\index{A\-V\-L@{A\-V\-L}!rotate\-Right@{rotate\-Right}}
+\index{rotate\-Right@{rotate\-Right}!AVL@{A\-V\-L}}
+\subsubsection[{rotate\-Right}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf A\-V\-L}$<$ T $>$\-::rotate\-Right (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_a_v_l_a4785b0ae1023d3dee584ffbbc45057a3}
+
+
+Effectue une rotation vers la droite. 
+
+
+
+Définition à la ligne 186 du fichier avl.\-hpp.
+
+\hypertarget{class_a_v_l_adcea8d3f61ef24eef897e3cdf4952374}{\index{A\-V\-L@{A\-V\-L}!update\-Level@{update\-Level}}
+\index{update\-Level@{update\-Level}!AVL@{A\-V\-L}}
+\subsubsection[{update\-Level}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf A\-V\-L}$<$ T $>$\-::update\-Level (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_a_v_l_adcea8d3f61ef24eef897e3cdf4952374}
+
+
+Calcule le niveau du noeud. 
+
+
+
+Définition à la ligne 120 du fichier avl.\-hpp.
+
+
+
+\subsection{Documentation des données membres}
+\hypertarget{class_a_v_l_aa1ea6df15798ce98461729e2b1deeb87}{\index{A\-V\-L@{A\-V\-L}!left@{left}}
+\index{left@{left}!AVL@{A\-V\-L}}
+\subsubsection[{left}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf A\-V\-L}$\ast$ {\bf A\-V\-L}$<$ T $>$\-::left}}\label{class_a_v_l_aa1ea6df15798ce98461729e2b1deeb87}
+
+
+Arbre enfant positionné à droite. 
+
+
+
+Définition à la ligne 85 du fichier avl.\-h.
+
+\hypertarget{class_a_v_l_aa5309553367542c5683df0fae61bfc0a}{\index{A\-V\-L@{A\-V\-L}!level@{level}}
+\index{level@{level}!AVL@{A\-V\-L}}
+\subsubsection[{level}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ int {\bf A\-V\-L}$<$ T $>$\-::level\hspace{0.3cm}{\ttfamily [private]}}}\label{class_a_v_l_aa5309553367542c5683df0fae61bfc0a}
+
+
+Hauteur du noeud. 
+
+
+
+Définition à la ligne 90 du fichier avl.\-h.
+
+\hypertarget{class_a_v_l_a3978c23794aa5e11eb37473e1cebe4e5}{\index{A\-V\-L@{A\-V\-L}!parent@{parent}}
+\index{parent@{parent}!AVL@{A\-V\-L}}
+\subsubsection[{parent}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf A\-V\-L}$\ast$ {\bf A\-V\-L}$<$ T $>$\-::parent}}\label{class_a_v_l_a3978c23794aa5e11eb37473e1cebe4e5}
+
+
+Noeud parent. 
+
+
+
+Définition à la ligne 87 du fichier avl.\-h.
+
+\hypertarget{class_a_v_l_ac02dee89f769588763a80be6176af37b}{\index{A\-V\-L@{A\-V\-L}!right@{right}}
+\index{right@{right}!AVL@{A\-V\-L}}
+\subsubsection[{right}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf A\-V\-L}$\ast$ {\bf A\-V\-L}$<$ T $>$\-::right}}\label{class_a_v_l_ac02dee89f769588763a80be6176af37b}
+
+
+Arbre enfant positionné à gauche. 
+
+
+
+Définition à la ligne 86 du fichier avl.\-h.
+
+\hypertarget{class_a_v_l_a3f5c40790a92e0ebd93a187812d6b698}{\index{A\-V\-L@{A\-V\-L}!value@{value}}
+\index{value@{value}!AVL@{A\-V\-L}}
+\subsubsection[{value}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ T {\bf A\-V\-L}$<$ T $>$\-::value}}\label{class_a_v_l_a3f5c40790a92e0ebd93a187812d6b698}
+
+
+Valeur de la noeud. 
+
+
+
+Définition à la ligne 84 du fichier avl.\-h.
+
+
+
+La documentation de cette classe a été générée à partir des fichiers suivants \-:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{avl_8h}{avl.\-h}\item 
+include/\hyperlink{avl_8hpp}{avl.\-hpp}\end{DoxyCompactItemize}

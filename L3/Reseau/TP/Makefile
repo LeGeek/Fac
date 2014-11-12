@@ -14,7 +14,7 @@ LIBS   =
 EXECS = 
 
 # pour compiler avec bor-util.c
-EXECSUTIL = rebourfils heritub redir2tub mEtMme-cli
+EXECSUTIL = rebourfils heritub redir2tub mEtMme-cli daytime-cli
 
 # pour compiler avec bor-util.c et bor-timer.c
 EXECSTIMER = 

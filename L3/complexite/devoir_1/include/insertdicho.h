@@ -10,14 +10,15 @@
 void ID_insertionDichotomique( int * tab, int taille );
 
 /**
- * \fn int ID_chercherPetit( const int * tab, int debut, int fin )
- * \brief Cherche l'élément le plus petit, de manière dichotomique
+ * \fn int ID_chercherPosition( int value, const int * tab, int debut, int fin )
+ * \brief Cherche la position d'un élément de manière dichotomique
+ * \param[in] value Element dont la position est à trouver
  * \param[in] tab Le tableau dans lequel rechercher
  * \param[in] debut L'indice de début de recherche
  * \param[in] fin L'indice de fin de recherche
- * \return L'indice de l'élément le plus petit
+ * \return L'indice de la position de l'élément
  **/
-int ID_chercherPetit( const int * tab, int debut, int fin );
+int ID_chercherPosition( int value, const int * tab, int debut, int fin );
 
 
 
