@@ -6,7 +6,7 @@
 
 /**
  * \class AVL __AVL_H__ avl.h
- * \brief Structure minimal d'un arbre AVL
+ * \brief Structure minimal d'un arbre
  **/
 template< typename T > 
 class AVL
@@ -59,11 +59,19 @@ class AVL
         bool contains( T val );
 
         /**
-         * \fn void insert( T val )
+         * \fn bool insert( T val )
          * \brief Ajoute un élément dans l'arbre
          * \param val Valeur à ajouter
+         * \return TRUE si l'insertion à réussie, FALSE dans le cas inverse
          **/
-        void insert( T val );
+        bool insert( T val );
+
+        /**
+         * \fn void remove()
+         * \brief Supprime un élément de l'arbre
+         * \param val Element à supprimer
+         **/
+        void remove( T val );
 
         /**
          * \fn void updateLevel()

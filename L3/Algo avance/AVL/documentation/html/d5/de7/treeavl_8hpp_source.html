@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.6"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
 <title>TP Arbre AVL:  Fichier source de include/treeavl.hpp</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -39,7 +39,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.6 -->
+<!-- Généré par Doxygen 1.8.8 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "../../search",false,'Recherche');
 </script>
@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('d5/de7/treeavl_8hpp_source.html','../.
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -115,77 +115,109 @@ $(document).ready(function(){initNavTree('d5/de7/treeavl_8hpp_source.html','../.
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;}</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="../../da/d53/class_tree_a_v_l.html#a4a6c318a68ff6823d5ff8a5cb662b5b1">   10</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../da/d53/class_tree_a_v_l.html#a4a6c318a68ff6823d5ff8a5cb662b5b1">TreeAVL&lt;T&gt;::insert</a>( T value )</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="../../da/d53/class_tree_a_v_l.html#ad815e21378bcaf35201a786fa0921a73">   10</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../da/d53/class_tree_a_v_l.html#ad815e21378bcaf35201a786fa0921a73">TreeAVL&lt;T&gt;::insert</a>( T value )</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keywordflow">if</span>( head == NULL )</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        head = <span class="keyword">new</span> <a class="code" href="../../db/d15/class_a_v_l.html">AVL&lt;T&gt;</a>( value );</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    }</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        relocateHead();</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        head-&gt;insert( value );</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    }</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;}</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="../../da/d53/class_tree_a_v_l.html#a7f5167c9fbbbb74301698fb96194d66d">   24</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../da/d53/class_tree_a_v_l.html#a7f5167c9fbbbb74301698fb96194d66d">TreeAVL&lt;T&gt;::contains</a>( T val )</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;{</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">if</span>( head == NULL )</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    relocateHead();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordflow">return</span> head-&gt;contains( val );</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;}</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="../../da/d53/class_tree_a_v_l.html#ab065c613fb398873257f3ec2aa708fd6">   34</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../da/d53/class_tree_a_v_l.html#ab065c613fb398873257f3ec2aa708fd6">TreeAVL&lt;T&gt;::drawGraph</a>( std::ofstream &amp; fs)</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;{</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    relocateHead();</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    fs &lt;&lt; <span class="stringliteral">&quot;digraph G {&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    head-&gt;drawGraph( fs );</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    fs &lt;&lt; <span class="stringliteral">&quot;}\n&quot;</span> &lt;&lt; std::endl;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;}</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="../../da/d53/class_tree_a_v_l.html#a0fe5b522c1b6e620e3a6092c3a96b76c">   44</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../da/d53/class_tree_a_v_l.html#a0fe5b522c1b6e620e3a6092c3a96b76c">TreeAVL&lt;T&gt;::clear</a>()</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;{</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    relocateHead();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">delete</span> head;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    head = NULL;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="../../da/d53/class_tree_a_v_l.html#af511d72bca244f41fc2bc86ad4348d3f">   52</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../da/d53/class_tree_a_v_l.html#af511d72bca244f41fc2bc86ad4348d3f">TreeAVL&lt;T&gt;::relocateHead</a>()</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;{</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keywordflow">if</span>( head == NULL || head-&gt;parent == NULL)</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <span class="keywordflow">while</span>( head-&gt;parent != NULL )</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    {</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        head = head-&gt;parent;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;}</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    }</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        relocateHead();</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordflow">return</span> head-&gt;insert( value );</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;}</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="../../da/d53/class_tree_a_v_l.html#a5cc713f2b30f0de6cd24b850f51eb383">   25</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../da/d53/class_tree_a_v_l.html#a5cc713f2b30f0de6cd24b850f51eb383">TreeAVL&lt;T&gt;::remove</a>( T value )</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keywordflow">if</span>( head == NULL )</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        relocateHead();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        head-&gt;remove( value );</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="../../da/d53/class_tree_a_v_l.html#a7f5167c9fbbbb74301698fb96194d66d">   39</a></span>&#160;<span class="keywordtype">bool</span> <a class="code" href="../../da/d53/class_tree_a_v_l.html#a7f5167c9fbbbb74301698fb96194d66d">TreeAVL&lt;T&gt;::contains</a>( T val )</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;{</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keywordflow">if</span>( head == NULL )</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    relocateHead();</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">return</span> head-&gt;contains( val );</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="../../da/d53/class_tree_a_v_l.html#a55eceb0c95a94a590bd07d2e2c59ff14">   49</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../da/d53/class_tree_a_v_l.html#a55eceb0c95a94a590bd07d2e2c59ff14">TreeAVL&lt;T&gt;::drawGraph</a>( std::ostream &amp; fs)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;{</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    relocateHead();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    fs &lt;&lt; <span class="stringliteral">&quot;digraph G {&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    head-&gt;drawGraph( fs );</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    fs &lt;&lt; <span class="stringliteral">&quot;}\n&quot;</span> &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;}</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="../../da/d53/class_tree_a_v_l.html#a78c64a9f7c30be138d812569ce6bae3a">   59</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../da/d53/class_tree_a_v_l.html#a55eceb0c95a94a590bd07d2e2c59ff14">TreeAVL&lt;T&gt;::drawGraph</a>( <span class="keyword">const</span> <span class="keywordtype">char</span> * file )</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;{</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    std::ofstream f( file, std::ofstream::out | std::ofstream::trunc );</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    drawGraph( f );</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    f.close();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="../../da/d53/class_tree_a_v_l.html#a0fe5b522c1b6e620e3a6092c3a96b76c">   67</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../da/d53/class_tree_a_v_l.html#a0fe5b522c1b6e620e3a6092c3a96b76c">TreeAVL&lt;T&gt;::clear</a>()</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;{</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    relocateHead();</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">delete</span> head;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    head = NULL;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="../../da/d53/class_tree_a_v_l.html#a92bb11a553775814dfee115f2aa5e16d">   75</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../da/d53/class_tree_a_v_l.html#a92bb11a553775814dfee115f2aa5e16d">TreeAVL&lt;T&gt;::getLevel</a>()</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;{</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    relocateHead();</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    <span class="keywordflow">return</span> head-&gt;getLevel();</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="keyword">template</span>&lt; <span class="keyword">typename</span> T &gt;</div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="../../da/d53/class_tree_a_v_l.html#af511d72bca244f41fc2bc86ad4348d3f">   82</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="../../da/d53/class_tree_a_v_l.html#af511d72bca244f41fc2bc86ad4348d3f">TreeAVL&lt;T&gt;::relocateHead</a>()</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;{</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordflow">if</span>( head == NULL || head-&gt;parent == NULL)</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keywordflow">while</span>( head-&gt;parent != NULL )</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        head = head-&gt;parent;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="ttc" id="class_tree_a_v_l_html_ad815e21378bcaf35201a786fa0921a73"><div class="ttname"><a href="../../da/d53/class_tree_a_v_l.html#ad815e21378bcaf35201a786fa0921a73">TreeAVL::insert</a></div><div class="ttdeci">bool insert(T value)</div><div class="ttdoc">Ajoute un élément dans l&#39;arbre à partir de la racine. </div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de7/treeavl_8hpp_source.html#l00010">treeavl.hpp:10</a></div></div>
 <div class="ttc" id="class_tree_a_v_l_html_a43c4c69a41c5dc84010d2a265def4120"><div class="ttname"><a href="../../da/d53/class_tree_a_v_l.html#a43c4c69a41c5dc84010d2a265def4120">TreeAVL::TreeAVL</a></div><div class="ttdeci">TreeAVL()</div><div class="ttdoc">Créé un support pour un arbre AVL. </div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de7/treeavl_8hpp_source.html#l00004">treeavl.hpp:4</a></div></div>
-<div class="ttc" id="class_tree_a_v_l_html_a0fe5b522c1b6e620e3a6092c3a96b76c"><div class="ttname"><a href="../../da/d53/class_tree_a_v_l.html#a0fe5b522c1b6e620e3a6092c3a96b76c">TreeAVL::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">Efface la racine de l&#39;arbre, qui a pour concequence de supprimer la totalité de l&#39;arbre;. </div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de7/treeavl_8hpp_source.html#l00044">treeavl.hpp:44</a></div></div>
-<div class="ttc" id="class_tree_a_v_l_html_a4a6c318a68ff6823d5ff8a5cb662b5b1"><div class="ttname"><a href="../../da/d53/class_tree_a_v_l.html#a4a6c318a68ff6823d5ff8a5cb662b5b1">TreeAVL::insert</a></div><div class="ttdeci">void insert(T value)</div><div class="ttdoc">Ajoute un élément dans l&#39;arbre à partir de la racine. </div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de7/treeavl_8hpp_source.html#l00010">treeavl.hpp:10</a></div></div>
-<div class="ttc" id="class_tree_a_v_l_html_af511d72bca244f41fc2bc86ad4348d3f"><div class="ttname"><a href="../../da/d53/class_tree_a_v_l.html#af511d72bca244f41fc2bc86ad4348d3f">TreeAVL::relocateHead</a></div><div class="ttdeci">void relocateHead()</div><div class="ttdoc">Replace la tête à la racine de l&#39;arbre. </div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de7/treeavl_8hpp_source.html#l00052">treeavl.hpp:52</a></div></div>
-<div class="ttc" id="class_a_v_l_html"><div class="ttname"><a href="../../db/d15/class_a_v_l.html">AVL</a></div><div class="ttdoc">Structure minimal d&#39;un arbre AVL. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d51/avl_8h_source.html#l00012">avl.h:12</a></div></div>
+<div class="ttc" id="class_tree_a_v_l_html_a0fe5b522c1b6e620e3a6092c3a96b76c"><div class="ttname"><a href="../../da/d53/class_tree_a_v_l.html#a0fe5b522c1b6e620e3a6092c3a96b76c">TreeAVL::clear</a></div><div class="ttdeci">void clear()</div><div class="ttdoc">Efface la racine de l&#39;arbre, qui a pour concequence de supprimer la totalité de l&#39;arbre;. </div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de7/treeavl_8hpp_source.html#l00067">treeavl.hpp:67</a></div></div>
+<div class="ttc" id="class_tree_a_v_l_html_af511d72bca244f41fc2bc86ad4348d3f"><div class="ttname"><a href="../../da/d53/class_tree_a_v_l.html#af511d72bca244f41fc2bc86ad4348d3f">TreeAVL::relocateHead</a></div><div class="ttdeci">void relocateHead()</div><div class="ttdoc">Replace la tête à la racine de l&#39;arbre. </div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de7/treeavl_8hpp_source.html#l00082">treeavl.hpp:82</a></div></div>
+<div class="ttc" id="class_tree_a_v_l_html_a5cc713f2b30f0de6cd24b850f51eb383"><div class="ttname"><a href="../../da/d53/class_tree_a_v_l.html#a5cc713f2b30f0de6cd24b850f51eb383">TreeAVL::remove</a></div><div class="ttdeci">void remove(T value)</div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de7/treeavl_8hpp_source.html#l00025">treeavl.hpp:25</a></div></div>
+<div class="ttc" id="class_a_v_l_html"><div class="ttname"><a href="../../db/d15/class_a_v_l.html">AVL</a></div><div class="ttdoc">Structure minimal d&#39;un arbre. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d51/avl_8h_source.html#l00012">avl.h:12</a></div></div>
 <div class="ttc" id="treeavl_8h_html"><div class="ttname"><a href="../../dc/dfe/treeavl_8h.html">treeavl.h</a></div></div>
-<div class="ttc" id="class_tree_a_v_l_html_a7f5167c9fbbbb74301698fb96194d66d"><div class="ttname"><a href="../../da/d53/class_tree_a_v_l.html#a7f5167c9fbbbb74301698fb96194d66d">TreeAVL::contains</a></div><div class="ttdeci">bool contains(T val)</div><div class="ttdoc">Cherche dans tout l&#39;arbre si l&#39;élément val existe. </div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de7/treeavl_8hpp_source.html#l00024">treeavl.hpp:24</a></div></div>
-<div class="ttc" id="class_tree_a_v_l_html_ab065c613fb398873257f3ec2aa708fd6"><div class="ttname"><a href="../../da/d53/class_tree_a_v_l.html#ab065c613fb398873257f3ec2aa708fd6">TreeAVL::drawGraph</a></div><div class="ttdeci">void drawGraph(std::ofstream &amp;fs)</div><div class="ttdoc">Produit un fichier au format DOT, affichant l&#39;arbre AVL, à partir de la racine. </div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de7/treeavl_8hpp_source.html#l00034">treeavl.hpp:34</a></div></div>
+<div class="ttc" id="class_tree_a_v_l_html_a7f5167c9fbbbb74301698fb96194d66d"><div class="ttname"><a href="../../da/d53/class_tree_a_v_l.html#a7f5167c9fbbbb74301698fb96194d66d">TreeAVL::contains</a></div><div class="ttdeci">bool contains(T val)</div><div class="ttdoc">Cherche dans tout l&#39;arbre si l&#39;élément val existe. </div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de7/treeavl_8hpp_source.html#l00039">treeavl.hpp:39</a></div></div>
+<div class="ttc" id="class_tree_a_v_l_html_a55eceb0c95a94a590bd07d2e2c59ff14"><div class="ttname"><a href="../../da/d53/class_tree_a_v_l.html#a55eceb0c95a94a590bd07d2e2c59ff14">TreeAVL::drawGraph</a></div><div class="ttdeci">void drawGraph(std::ostream &amp;fs)</div><div class="ttdoc">Edite l&#39;arbre AVL au format DOT, à partir de la racine. </div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de7/treeavl_8hpp_source.html#l00049">treeavl.hpp:49</a></div></div>
+<div class="ttc" id="class_tree_a_v_l_html_a92bb11a553775814dfee115f2aa5e16d"><div class="ttname"><a href="../../da/d53/class_tree_a_v_l.html#a92bb11a553775814dfee115f2aa5e16d">TreeAVL::getLevel</a></div><div class="ttdeci">int getLevel()</div><div class="ttdoc">Retourne la hauteur de l&#39;arbre, soit la hauteur de la racine. </div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de7/treeavl_8hpp_source.html#l00075">treeavl.hpp:75</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../d5/de7/treeavl_8hpp.html">treeavl.hpp</a></li>
-    <li class="footer">Généré le Lundi 3 Novembre 2014 10:23:24 pour TP Arbre AVL par
+    <li class="footer">Généré le Jeudi 13 Novembre 2014 18:57:58 pour TP Arbre AVL par
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>
 </div>
 </body>

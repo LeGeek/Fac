@@ -2,6 +2,7 @@
 #include <iostream>
 #include <ctime>
 #include <cstdlib>
+#include <cmath>
 
 #include "treeavl.h"
 
@@ -101,35 +102,151 @@ void unbalancedLeftIntern( TreeAVL<int> & avl )
     avl.insert( 11 );
 }
 
+void remove1( TreeAVL<int> & avl )
+{
+    avl.clear();
+    avl.insert( 10 );
+    avl.insert( 5 );
+    avl.insert( 15 );
+    avl.insert( 1 );
+
+    avl.remove( 5 );
+}
+
+void remove2( TreeAVL<int> & avl )
+{
+    avl.clear();
+    avl.insert( 10 );
+    avl.insert( 5 );
+    avl.insert( 15 );
+    avl.insert( 6 );
+
+    avl.remove( 5 );
+}
+
+void remove3( TreeAVL<int> & avl )
+{
+    avl.clear();
+    avl.insert( 3 );
+    avl.insert( 1 );
+    avl.insert( 5 );
+    avl.insert( 4 );
+
+    avl.remove( 5 );
+}
+
+void remove4( TreeAVL<int> & avl )
+{
+    avl.clear();
+    avl.insert( 4 );
+    avl.insert( 1 );
+    avl.insert( 5 );
+    avl.insert( 6 );
+
+    avl.remove( 5 );
+}
+
+void remove5( TreeAVL<int> & avl )
+{
+    avl.clear();
+    avl.insert( 10 );
+    avl.insert( 5 );
+    avl.insert( 15 );
+    avl.insert( 1 );
+    avl.insert( 6 );
+    avl.insert( 11 );
+    avl.insert( 16 );
+
+    avl.remove( 5 );
+}
+
+void remove6( TreeAVL<int> & avl )
+{
+    avl.clear();
+    avl.insert( 3 );
+    avl.insert( 1 );
+    avl.insert( 5 );
+    avl.insert( 0 );
+    avl.insert( 2 );
+    avl.insert( 4 );
+    avl.insert( 6 );
+
+    avl.remove( 5 );
+}
+
+void remove7( TreeAVL<int> & avl )
+{
+    avl.clear();
+    avl.insert( 5 );
+    avl.insert( 4 );
+    avl.insert( 6 );
+
+    avl.remove( 5 );
+}
+
+void remove8( TreeAVL<int> & avl )
+{
+    avl.clear();
+    avl.insert( 10 );
+    avl.insert( 5 );
+    avl.insert( 15 );
+
+    avl.remove( 5 );
+}
+
+void remove9( TreeAVL<int> & avl )
+{
+    avl.clear();
+    avl.insert( 4 );
+    avl.insert( 3 );
+    avl.insert( 5 );
+
+    avl.remove( 5 );
+}
+
 void randomFill( int nb, int min, int max, TreeAVL<int> & avl )
 {
+    if( nb >= max )
+    {
+        cerr << "Le nombre d'élément est trop d'important, par rapport au nombre MAX !" << endl;
+        return;
+    }
+
     avl.clear();
     srand( time( NULL ) );
 
-    int a = 0;
-    for( int i = 0; i < nb; ++i )
+    int a = 0, i = 0;
+    while( i < nb )
     {
         a = rand()%(max-min) + min;
-        avl.insert( a );
+        if( avl.insert( a ) )
+            ++i;
     }
 }
 
 int main( int argc, char** argv )
 {
-    if( argc != 2 )
+    if( argc != 3 )
     {
-        cout << "Usage : avl graph_file" << endl;
+        cout << "Usage : avl nb_element graph_file" << endl;
         return 1;
     }
 
+    int n = atoi( argv[1] );
+
     TreeAVL<int> avl;
-    //unbalancedLeftIntern( avl );
-    randomFill( 01000, 1, 1000000, avl );
+    randomFill( n, 1, 2147483647, avl );
 
     cout << "Gen graph" << endl;
-    avl.drawGraph( argv[1] );
+    avl.drawGraph( argv[2] );
     //avl.drawGraph( cout );
-    cout << "\"" << argv[1] << "\" generated" << endl;
+    cout << "\"" << argv[2] << "\" generated" << endl;
+
+    cout << "Rapport : \n" <<
+        "\tNombre d'élément (n) : " << n << '\n' <<
+        "\tHauteur : " << avl.getLevel() << '\n' <<
+        "\t1.45*log2( n ) = " << 1.45*log2( n ) << '\n' <<
+        "\tValeur Moyenne : " << avl.getLevel()/log2( n ) << endl;
 
     return 0;
 }

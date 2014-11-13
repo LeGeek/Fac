@@ -1,71 +1,77 @@
-\hypertarget{class_tree_a_v_l}{\section{Référence du modèle de la classe Tree\-A\-V\-L$<$ T $>$}
-\label{class_tree_a_v_l}\index{Tree\-A\-V\-L$<$ T $>$@{Tree\-A\-V\-L$<$ T $>$}}
+\hypertarget{class_tree_a_v_l}{\section{Référence du modèle de la classe Tree\+A\+V\+L$<$ T $>$}
+\label{class_tree_a_v_l}\index{Tree\+A\+V\+L$<$ T $>$@{Tree\+A\+V\+L$<$ T $>$}}
 }
 
 
-Classe permettant de simplifier l'utilisation des arbres \hyperlink{class_a_v_l}{A\-V\-L}.  
+Classe permettant de simplifier l'utilisation des arbres \hyperlink{class_a_v_l}{A\+V\+L}.  
 
 
 
 
-{\ttfamily \#include $<$treeavl.\-h$>$}
+{\ttfamily \#include $<$treeavl.\+h$>$}
 
 \subsection*{Fonctions membres publiques}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_tree_a_v_l_a43c4c69a41c5dc84010d2a265def4120}{Tree\-A\-V\-L} ()
-\begin{DoxyCompactList}\small\item\em Créé un support pour un arbre \hyperlink{class_a_v_l}{A\-V\-L}. \end{DoxyCompactList}\item 
-void \hyperlink{class_tree_a_v_l_a4a6c318a68ff6823d5ff8a5cb662b5b1}{insert} (T value)
+\hyperlink{class_tree_a_v_l_a43c4c69a41c5dc84010d2a265def4120}{Tree\+A\+V\+L} ()
+\begin{DoxyCompactList}\small\item\em Créé un support pour un arbre \hyperlink{class_a_v_l}{A\+V\+L}. \end{DoxyCompactList}\item 
+bool \hyperlink{class_tree_a_v_l_ad815e21378bcaf35201a786fa0921a73}{insert} (T value)
 \begin{DoxyCompactList}\small\item\em Ajoute un élément dans l'arbre à partir de la racine. \end{DoxyCompactList}\item 
+void \hyperlink{class_tree_a_v_l_a5cc713f2b30f0de6cd24b850f51eb383}{remove} (T value)
+\item 
 bool \hyperlink{class_tree_a_v_l_a7f5167c9fbbbb74301698fb96194d66d}{contains} (T val)
 \begin{DoxyCompactList}\small\item\em Cherche dans tout l'arbre si l'élément val existe. \end{DoxyCompactList}\item 
-void \hyperlink{class_tree_a_v_l_ab065c613fb398873257f3ec2aa708fd6}{draw\-Graph} (std\-::ofstream \&fs)
-\begin{DoxyCompactList}\small\item\em Produit un fichier au format D\-O\-T, affichant l'arbre \hyperlink{class_a_v_l}{A\-V\-L}, à partir de la racine. \end{DoxyCompactList}\item 
+void \hyperlink{class_tree_a_v_l_a55eceb0c95a94a590bd07d2e2c59ff14}{draw\+Graph} (std\+::ostream \&fs)
+\begin{DoxyCompactList}\small\item\em Edite l'arbre \hyperlink{class_a_v_l}{A\+V\+L} au format D\+O\+T, à partir de la racine. \end{DoxyCompactList}\item 
+void \hyperlink{class_tree_a_v_l_a78c64a9f7c30be138d812569ce6bae3a}{draw\+Graph} (const char $\ast$file)
+\begin{DoxyCompactList}\small\item\em Edite l'arbre dans un fichier, au format D\+O\+T, à partir de la racine. \end{DoxyCompactList}\item 
 void \hyperlink{class_tree_a_v_l_a0fe5b522c1b6e620e3a6092c3a96b76c}{clear} ()
-\begin{DoxyCompactList}\small\item\em Efface la racine de l'arbre, qui a pour concequence de supprimer la totalité de l'arbre;. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Efface la racine de l'arbre, qui a pour concequence de supprimer la totalité de l'arbre;. \end{DoxyCompactList}\item 
+int \hyperlink{class_tree_a_v_l_a92bb11a553775814dfee115f2aa5e16d}{get\+Level} ()
+\begin{DoxyCompactList}\small\item\em Retourne la hauteur de l'arbre, soit la hauteur de la racine. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Fonctions membres privées}
 \begin{DoxyCompactItemize}
 \item 
-void \hyperlink{class_tree_a_v_l_af511d72bca244f41fc2bc86ad4348d3f}{relocate\-Head} ()
+void \hyperlink{class_tree_a_v_l_af511d72bca244f41fc2bc86ad4348d3f}{relocate\+Head} ()
 \begin{DoxyCompactList}\small\item\em Replace la tête à la racine de l'arbre. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Attributs privés}
 \begin{DoxyCompactItemize}
 \item 
-\hyperlink{class_a_v_l}{A\-V\-L}$<$ T $>$ $\ast$ \hyperlink{class_tree_a_v_l_a7d77c489adc9149acc336c101086ca24}{head}
+\hyperlink{class_a_v_l}{A\+V\+L}$<$ T $>$ $\ast$ \hyperlink{class_tree_a_v_l_a7d77c489adc9149acc336c101086ca24}{head}
 \begin{DoxyCompactList}\small\item\em Tête pointant sur la racine de l'arbre. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Description détaillée}
-\subsubsection*{template$<$typename T$>$class Tree\-A\-V\-L$<$ T $>$}
+\subsubsection*{template$<$typename T$>$class Tree\+A\+V\+L$<$ T $>$}
 
-Classe permettant de simplifier l'utilisation des arbres \hyperlink{class_a_v_l}{A\-V\-L}. 
+Classe permettant de simplifier l'utilisation des arbres \hyperlink{class_a_v_l}{A\+V\+L}. 
 
-Définition à la ligne 13 du fichier treeavl.\-h.
+Définition à la ligne 13 du fichier treeavl.\+h.
 
 
 
 \subsection{Documentation des constructeurs et destructeur}
-\hypertarget{class_tree_a_v_l_a43c4c69a41c5dc84010d2a265def4120}{\index{Tree\-A\-V\-L@{Tree\-A\-V\-L}!Tree\-A\-V\-L@{Tree\-A\-V\-L}}
-\index{Tree\-A\-V\-L@{Tree\-A\-V\-L}!TreeAVL@{Tree\-A\-V\-L}}
-\subsubsection[{Tree\-A\-V\-L}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Tree\-A\-V\-L}$<$ T $>$\-::{\bf Tree\-A\-V\-L} (
+\hypertarget{class_tree_a_v_l_a43c4c69a41c5dc84010d2a265def4120}{\index{Tree\+A\+V\+L@{Tree\+A\+V\+L}!Tree\+A\+V\+L@{Tree\+A\+V\+L}}
+\index{Tree\+A\+V\+L@{Tree\+A\+V\+L}!Tree\+A\+V\+L@{Tree\+A\+V\+L}}
+\subsubsection[{Tree\+A\+V\+L}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ {\bf Tree\+A\+V\+L}$<$ T $>$\+::{\bf Tree\+A\+V\+L} (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )}}\label{class_tree_a_v_l_a43c4c69a41c5dc84010d2a265def4120}
 
 
-Créé un support pour un arbre \hyperlink{class_a_v_l}{A\-V\-L}. 
+Créé un support pour un arbre \hyperlink{class_a_v_l}{A\+V\+L}. 
 
 
 
-Définition à la ligne 4 du fichier treeavl.\-hpp.
+Définition à la ligne 4 du fichier treeavl.\+hpp.
 
 
 
 \subsection{Documentation des fonctions membres}
-\hypertarget{class_tree_a_v_l_a0fe5b522c1b6e620e3a6092c3a96b76c}{\index{Tree\-A\-V\-L@{Tree\-A\-V\-L}!clear@{clear}}
-\index{clear@{clear}!TreeAVL@{Tree\-A\-V\-L}}
-\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Tree\-A\-V\-L}$<$ T $>$\-::clear (
+\hypertarget{class_tree_a_v_l_a0fe5b522c1b6e620e3a6092c3a96b76c}{\index{Tree\+A\+V\+L@{Tree\+A\+V\+L}!clear@{clear}}
+\index{clear@{clear}!Tree\+A\+V\+L@{Tree\+A\+V\+L}}
+\subsubsection[{clear}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Tree\+A\+V\+L}$<$ T $>$\+::clear (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
@@ -76,11 +82,11 @@ Efface la racine de l'arbre, qui a pour concequence de supprimer la totalité de
 
 
 
-Définition à la ligne 44 du fichier treeavl.\-hpp.
+Définition à la ligne 67 du fichier treeavl.\+hpp.
 
-\hypertarget{class_tree_a_v_l_a7f5167c9fbbbb74301698fb96194d66d}{\index{Tree\-A\-V\-L@{Tree\-A\-V\-L}!contains@{contains}}
-\index{contains@{contains}!TreeAVL@{Tree\-A\-V\-L}}
-\subsubsection[{contains}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf Tree\-A\-V\-L}$<$ T $>$\-::contains (
+\hypertarget{class_tree_a_v_l_a7f5167c9fbbbb74301698fb96194d66d}{\index{Tree\+A\+V\+L@{Tree\+A\+V\+L}!contains@{contains}}
+\index{contains@{contains}!Tree\+A\+V\+L@{Tree\+A\+V\+L}}
+\subsubsection[{contains}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf Tree\+A\+V\+L}$<$ T $>$\+::contains (
 \begin{DoxyParamCaption}
 \item[{T}]{val}
 \end{DoxyParamCaption}
@@ -95,39 +101,77 @@ Cherche dans tout l'arbre si l'élément val existe.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Renvoie}
-T\-R\-U\-E si l'élément est dans l'arbre, F\-A\-L\-S\-E dans le cas contraire 
+T\+R\+U\+E si l'élément est dans l'arbre, F\+A\+L\+S\+E dans le cas contraire 
 \end{DoxyReturn}
 
 
-Définition à la ligne 24 du fichier treeavl.\-hpp.
+Définition à la ligne 39 du fichier treeavl.\+hpp.
 
-\hypertarget{class_tree_a_v_l_ab065c613fb398873257f3ec2aa708fd6}{\index{Tree\-A\-V\-L@{Tree\-A\-V\-L}!draw\-Graph@{draw\-Graph}}
-\index{draw\-Graph@{draw\-Graph}!TreeAVL@{Tree\-A\-V\-L}}
-\subsubsection[{draw\-Graph}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Tree\-A\-V\-L}$<$ T $>$\-::draw\-Graph (
+\hypertarget{class_tree_a_v_l_a55eceb0c95a94a590bd07d2e2c59ff14}{\index{Tree\+A\+V\+L@{Tree\+A\+V\+L}!draw\+Graph@{draw\+Graph}}
+\index{draw\+Graph@{draw\+Graph}!Tree\+A\+V\+L@{Tree\+A\+V\+L}}
+\subsubsection[{draw\+Graph}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Tree\+A\+V\+L}$<$ T $>$\+::draw\+Graph (
 \begin{DoxyParamCaption}
-\item[{std\-::ofstream \&}]{fs}
+\item[{std\+::ostream \&}]{fs}
 \end{DoxyParamCaption}
-)}}\label{class_tree_a_v_l_ab065c613fb398873257f3ec2aa708fd6}
+)}}\label{class_tree_a_v_l_a55eceb0c95a94a590bd07d2e2c59ff14}
 
 
-Produit un fichier au format D\-O\-T, affichant l'arbre \hyperlink{class_a_v_l}{A\-V\-L}, à partir de la racine. 
+Edite l'arbre \hyperlink{class_a_v_l}{A\+V\+L} au format D\+O\+T, à partir de la racine. 
 
 
 \begin{DoxyParams}{Paramètres}
-{\em fs} & Fichier dans lequel écrire \\
+{\em fs} & Flux dans lequel écrire \\
 \hline
 \end{DoxyParams}
 
 
-Définition à la ligne 34 du fichier treeavl.\-hpp.
+Définition à la ligne 49 du fichier treeavl.\+hpp.
 
-\hypertarget{class_tree_a_v_l_a4a6c318a68ff6823d5ff8a5cb662b5b1}{\index{Tree\-A\-V\-L@{Tree\-A\-V\-L}!insert@{insert}}
-\index{insert@{insert}!TreeAVL@{Tree\-A\-V\-L}}
-\subsubsection[{insert}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Tree\-A\-V\-L}$<$ T $>$\-::insert (
+\hypertarget{class_tree_a_v_l_a78c64a9f7c30be138d812569ce6bae3a}{\index{Tree\+A\+V\+L@{Tree\+A\+V\+L}!draw\+Graph@{draw\+Graph}}
+\index{draw\+Graph@{draw\+Graph}!Tree\+A\+V\+L@{Tree\+A\+V\+L}}
+\subsubsection[{draw\+Graph}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Tree\+A\+V\+L}$<$ T $>$\+::draw\+Graph (
+\begin{DoxyParamCaption}
+\item[{const char $\ast$}]{file}
+\end{DoxyParamCaption}
+)}}\label{class_tree_a_v_l_a78c64a9f7c30be138d812569ce6bae3a}
+
+
+Edite l'arbre dans un fichier, au format D\+O\+T, à partir de la racine. 
+
+
+\begin{DoxyParams}{Paramètres}
+{\em file} & Nom du fichier à créer, si le fichier existe il sera effacé \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 59 du fichier treeavl.\+hpp.
+
+\hypertarget{class_tree_a_v_l_a92bb11a553775814dfee115f2aa5e16d}{\index{Tree\+A\+V\+L@{Tree\+A\+V\+L}!get\+Level@{get\+Level}}
+\index{get\+Level@{get\+Level}!Tree\+A\+V\+L@{Tree\+A\+V\+L}}
+\subsubsection[{get\+Level}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ int {\bf Tree\+A\+V\+L}$<$ T $>$\+::get\+Level (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_tree_a_v_l_a92bb11a553775814dfee115f2aa5e16d}
+
+
+Retourne la hauteur de l'arbre, soit la hauteur de la racine. 
+
+\begin{DoxyReturn}{Renvoie}
+Un entier 
+\end{DoxyReturn}
+
+
+Définition à la ligne 75 du fichier treeavl.\+hpp.
+
+\hypertarget{class_tree_a_v_l_ad815e21378bcaf35201a786fa0921a73}{\index{Tree\+A\+V\+L@{Tree\+A\+V\+L}!insert@{insert}}
+\index{insert@{insert}!Tree\+A\+V\+L@{Tree\+A\+V\+L}}
+\subsubsection[{insert}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ bool {\bf Tree\+A\+V\+L}$<$ T $>$\+::insert (
 \begin{DoxyParamCaption}
 \item[{T}]{value}
 \end{DoxyParamCaption}
-)}}\label{class_tree_a_v_l_a4a6c318a68ff6823d5ff8a5cb662b5b1}
+)}}\label{class_tree_a_v_l_ad815e21378bcaf35201a786fa0921a73}
 
 
 Ajoute un élément dans l'arbre à partir de la racine. 
@@ -137,13 +181,16 @@ Ajoute un élément dans l'arbre à partir de la racine.
 {\em value} & Valeur à ajouter \\
 \hline
 \end{DoxyParams}
+\begin{DoxyReturn}{Renvoie}
+T\+R\+U\+S si l'insertion a réussie, F\+A\+L\+S\+E dans le cas inverse 
+\end{DoxyReturn}
 
 
-Définition à la ligne 10 du fichier treeavl.\-hpp.
+Définition à la ligne 10 du fichier treeavl.\+hpp.
 
-\hypertarget{class_tree_a_v_l_af511d72bca244f41fc2bc86ad4348d3f}{\index{Tree\-A\-V\-L@{Tree\-A\-V\-L}!relocate\-Head@{relocate\-Head}}
-\index{relocate\-Head@{relocate\-Head}!TreeAVL@{Tree\-A\-V\-L}}
-\subsubsection[{relocate\-Head}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Tree\-A\-V\-L}$<$ T $>$\-::relocate\-Head (
+\hypertarget{class_tree_a_v_l_af511d72bca244f41fc2bc86ad4348d3f}{\index{Tree\+A\+V\+L@{Tree\+A\+V\+L}!relocate\+Head@{relocate\+Head}}
+\index{relocate\+Head@{relocate\+Head}!Tree\+A\+V\+L@{Tree\+A\+V\+L}}
+\subsubsection[{relocate\+Head}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Tree\+A\+V\+L}$<$ T $>$\+::relocate\+Head (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
@@ -154,25 +201,41 @@ Replace la tête à la racine de l'arbre.
 
 
 
-Définition à la ligne 52 du fichier treeavl.\-hpp.
+Définition à la ligne 82 du fichier treeavl.\+hpp.
+
+\hypertarget{class_tree_a_v_l_a5cc713f2b30f0de6cd24b850f51eb383}{\index{Tree\+A\+V\+L@{Tree\+A\+V\+L}!remove@{remove}}
+\index{remove@{remove}!Tree\+A\+V\+L@{Tree\+A\+V\+L}}
+\subsubsection[{remove}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T $>$ void {\bf Tree\+A\+V\+L}$<$ T $>$\+::remove (
+\begin{DoxyParamCaption}
+\item[{T}]{value}
+\end{DoxyParamCaption}
+)}}\label{class_tree_a_v_l_a5cc713f2b30f0de6cd24b850f51eb383}
+Retire un élément dans l'arbre à partir de la racine 
+\begin{DoxyParams}{Paramètres}
+{\em value} & Valeur à supprimer \\
+\hline
+\end{DoxyParams}
+
+
+Définition à la ligne 25 du fichier treeavl.\+hpp.
 
 
 
 \subsection{Documentation des données membres}
-\hypertarget{class_tree_a_v_l_a7d77c489adc9149acc336c101086ca24}{\index{Tree\-A\-V\-L@{Tree\-A\-V\-L}!head@{head}}
-\index{head@{head}!TreeAVL@{Tree\-A\-V\-L}}
-\subsubsection[{head}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf A\-V\-L}$<$T$>$$\ast$ {\bf Tree\-A\-V\-L}$<$ T $>$\-::head\hspace{0.3cm}{\ttfamily [private]}}}\label{class_tree_a_v_l_a7d77c489adc9149acc336c101086ca24}
+\hypertarget{class_tree_a_v_l_a7d77c489adc9149acc336c101086ca24}{\index{Tree\+A\+V\+L@{Tree\+A\+V\+L}!head@{head}}
+\index{head@{head}!Tree\+A\+V\+L@{Tree\+A\+V\+L}}
+\subsubsection[{head}]{\setlength{\rightskip}{0pt plus 5cm}template$<$typename T$>$ {\bf A\+V\+L}$<$T$>$$\ast$ {\bf Tree\+A\+V\+L}$<$ T $>$\+::head\hspace{0.3cm}{\ttfamily [private]}}}\label{class_tree_a_v_l_a7d77c489adc9149acc336c101086ca24}
 
 
 Tête pointant sur la racine de l'arbre. 
 
 
 
-Définition à la ligne 60 du fichier treeavl.\-h.
+Définition à la ligne 83 du fichier treeavl.\+h.
 
 
 
-La documentation de cette classe a été générée à partir des fichiers suivants \-:\begin{DoxyCompactItemize}
+La documentation de cette classe a été générée à partir des fichiers suivants \+:\begin{DoxyCompactItemize}
 \item 
-include/\hyperlink{treeavl_8h}{treeavl.\-h}\item 
-include/\hyperlink{treeavl_8hpp}{treeavl.\-hpp}\end{DoxyCompactItemize}
+include/\hyperlink{treeavl_8h}{treeavl.\+h}\item 
+include/\hyperlink{treeavl_8hpp}{treeavl.\+hpp}\end{DoxyCompactItemize}

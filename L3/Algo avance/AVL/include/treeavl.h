@@ -20,12 +20,20 @@ class TreeAVL
         TreeAVL();
         
         /**
-         * \fn void insert( T value )
+         * \fn bool insert( T value )
          * \brief Ajoute un élément dans l'arbre à partir de la racine
          * \param value Valeur à ajouter 
+         * \return TRUS si l'insertion a réussie, FALSE dans le cas inverse
          **/
-        void insert( T value );
-        
+        bool insert( T value );
+
+        /**
+         * \fn void remove( T value )
+         * \breif Retire un élément dans l'arbre à partir de la racine
+         * \param value Valeur à supprimer
+         **/
+        void remove( T value );
+
         /**
          * \fn bool contains( T val );
          * \brief Cherche dans tout l'arbre si l'élément val existe
@@ -57,6 +65,13 @@ class TreeAVL
          * supprimer la totalité de l'arbre;
          **/
         void clear();
+
+        /**
+         * \fn void getLevel()
+         * \brief Retourne la hauteur de l'arbre, soit la hauteur de la racine
+         * \return Un entier
+         **/
+        int getLevel();
 
     private:
         /**

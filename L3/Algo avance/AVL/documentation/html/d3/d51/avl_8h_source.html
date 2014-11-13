@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.6"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
 <title>TP Arbre AVL:  Fichier source de include/avl.h</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -39,7 +39,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.6 -->
+<!-- Généré par Doxygen 1.8.8 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "../../search",false,'Recherche');
 </script>
@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('d3/d51/avl_8h_source.html','../../');}
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -107,8 +107,8 @@ $(document).ready(function(){initNavTree('d3/d51/avl_8h_source.html','../../');}
 </div><!--header-->
 <div class="contents">
 <a href="../../d3/d51/avl_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __AVL_H__</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define __AVL_H__</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __AVL_H__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;fstream&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
@@ -122,59 +122,67 @@ $(document).ready(function(){initNavTree('d3/d51/avl_8h_source.html','../../');}
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="../../db/d15/class_a_v_l.html#a2c7b07714a761de62798b87856d5827a">getLevel</a>();</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="../../db/d15/class_a_v_l.html#a1d9cd2afeb001a6a4fc9f90964d66b0d">contains</a>( T val );</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../db/d15/class_a_v_l.html#aa6459425ad7772fe9bff79caadeac7d4">insert</a>( T val );</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../db/d15/class_a_v_l.html#adcea8d3f61ef24eef897e3cdf4952374">updateLevel</a>();</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../db/d15/class_a_v_l.html#a88990625197e11f57df2e7bcf559e8f9">balance</a>();</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../db/d15/class_a_v_l.html#ac9656f86066f929391364edd6e23083f">drawGraph</a>( std::ofstream &amp; fs);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../db/d15/class_a_v_l.html#a4785b0ae1023d3dee584ffbbc45057a3">rotateRight</a>();</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../db/d15/class_a_v_l.html#ac972995f3084d8876eb143916ccf8f8e">rotateLeft</a>();</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        </div>
-<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="../../db/d15/class_a_v_l.html#a3f5c40790a92e0ebd93a187812d6b698">   84</a></span>&#160;        T <a class="code" href="../../db/d15/class_a_v_l.html#a3f5c40790a92e0ebd93a187812d6b698">value</a>;           </div>
-<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="../../db/d15/class_a_v_l.html#aa1ea6df15798ce98461729e2b1deeb87">   85</a></span>&#160;        <a class="code" href="../../db/d15/class_a_v_l.html">AVL</a> * <a class="code" href="../../db/d15/class_a_v_l.html#aa1ea6df15798ce98461729e2b1deeb87">left</a>;    </div>
-<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="../../db/d15/class_a_v_l.html#ac02dee89f769588763a80be6176af37b">   86</a></span>&#160;        <a class="code" href="../../db/d15/class_a_v_l.html">AVL</a> * <a class="code" href="../../db/d15/class_a_v_l.html#ac02dee89f769588763a80be6176af37b">right</a>;   </div>
-<div class="line"><a name="l00087"></a><span class="lineno"><a class="line" href="../../db/d15/class_a_v_l.html#a3978c23794aa5e11eb37473e1cebe4e5">   87</a></span>&#160;        <a class="code" href="../../db/d15/class_a_v_l.html">AVL</a> * <a class="code" href="../../db/d15/class_a_v_l.html#a3978c23794aa5e11eb37473e1cebe4e5">parent</a>;  </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="../../db/d15/class_a_v_l.html#aa5309553367542c5683df0fae61bfc0a">   90</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="../../db/d15/class_a_v_l.html#aa5309553367542c5683df0fae61bfc0a">level</a>;  </div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;};</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dc/dfe/avl_8hpp.html">avl.hpp</a>&quot;</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="class_a_v_l_html_a2c7b07714a761de62798b87856d5827a"><div class="ttname"><a href="../../db/d15/class_a_v_l.html#a2c7b07714a761de62798b87856d5827a">AVL::getLevel</a></div><div class="ttdeci">int getLevel()</div><div class="ttdoc">Accesseur à la donnée membre level. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dfe/avl_8hpp_source.html#l00027">avl.hpp:27</a></div></div>
-<div class="ttc" id="class_a_v_l_html_a3f5c40790a92e0ebd93a187812d6b698"><div class="ttname"><a href="../../db/d15/class_a_v_l.html#a3f5c40790a92e0ebd93a187812d6b698">AVL::value</a></div><div class="ttdeci">T value</div><div class="ttdoc">Valeur de la noeud. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d51/avl_8h_source.html#l00084">avl.h:84</a></div></div>
-<div class="ttc" id="class_a_v_l_html_ac972995f3084d8876eb143916ccf8f8e"><div class="ttname"><a href="../../db/d15/class_a_v_l.html#ac972995f3084d8876eb143916ccf8f8e">AVL::rotateLeft</a></div><div class="ttdeci">void rotateLeft()</div><div class="ttdoc">Effectue une rotation vers la gauche. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dfe/avl_8hpp_source.html#l00209">avl.hpp:209</a></div></div>
-<div class="ttc" id="class_a_v_l_html_adcea8d3f61ef24eef897e3cdf4952374"><div class="ttname"><a href="../../db/d15/class_a_v_l.html#adcea8d3f61ef24eef897e3cdf4952374">AVL::updateLevel</a></div><div class="ttdeci">void updateLevel()</div><div class="ttdoc">Calcule le niveau du noeud. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dfe/avl_8hpp_source.html#l00120">avl.hpp:120</a></div></div>
-<div class="ttc" id="class_a_v_l_html_abbcd7c80b69cdf8caab9ea79b51163d9"><div class="ttname"><a href="../../db/d15/class_a_v_l.html#abbcd7c80b69cdf8caab9ea79b51163d9">AVL::AVL</a></div><div class="ttdeci">AVL(T value, AVL *parent=NULL, AVL *left=NULL, AVL *right=NULL)</div><div class="ttdoc">Créé une structure d&#39;arbre AVL avec une valeur et une branche gauche. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dfe/avl_8hpp_source.html#l00012">avl.hpp:12</a></div></div>
-<div class="ttc" id="class_a_v_l_html_aa1ea6df15798ce98461729e2b1deeb87"><div class="ttname"><a href="../../db/d15/class_a_v_l.html#aa1ea6df15798ce98461729e2b1deeb87">AVL::left</a></div><div class="ttdeci">AVL * left</div><div class="ttdoc">Arbre enfant positionné à droite. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d51/avl_8h_source.html#l00085">avl.h:85</a></div></div>
-<div class="ttc" id="class_a_v_l_html_a1d9cd2afeb001a6a4fc9f90964d66b0d"><div class="ttname"><a href="../../db/d15/class_a_v_l.html#a1d9cd2afeb001a6a4fc9f90964d66b0d">AVL::contains</a></div><div class="ttdeci">bool contains(T val)</div><div class="ttdoc">Recherche la présence d&#39;un élément dans l&#39;arbre. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dfe/avl_8hpp_source.html#l00033">avl.hpp:33</a></div></div>
-<div class="ttc" id="class_a_v_l_html_aa5309553367542c5683df0fae61bfc0a"><div class="ttname"><a href="../../db/d15/class_a_v_l.html#aa5309553367542c5683df0fae61bfc0a">AVL::level</a></div><div class="ttdeci">int level</div><div class="ttdoc">Hauteur du noeud. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d51/avl_8h_source.html#l00090">avl.h:90</a></div></div>
-<div class="ttc" id="class_a_v_l_html"><div class="ttname"><a href="../../db/d15/class_a_v_l.html">AVL</a></div><div class="ttdoc">Structure minimal d&#39;un arbre AVL. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d51/avl_8h_source.html#l00012">avl.h:12</a></div></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="../../db/d15/class_a_v_l.html#af8991c233258f711d45560206fe9e4cb">getLeftLevel</a>();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordtype">int</span> <a class="code" href="../../db/d15/class_a_v_l.html#aa5d2114f9ac858f584b45882acff29a4">getRightLevel</a>();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="../../db/d15/class_a_v_l.html#a1d9cd2afeb001a6a4fc9f90964d66b0d">contains</a>( T val );</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="keywordtype">bool</span> <a class="code" href="../../db/d15/class_a_v_l.html#a2d2a25555c9663fad061fdbd5d1cdb70">insert</a>( T val );</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordtype">void</span> <span class="keyword">remove</span>( T val );</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../db/d15/class_a_v_l.html#adcea8d3f61ef24eef897e3cdf4952374">updateLevel</a>();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../db/d15/class_a_v_l.html#a88990625197e11f57df2e7bcf559e8f9">balance</a>();</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../db/d15/class_a_v_l.html#a4b62e0576e9c74e70b43348ca1d86081">drawGraph</a>( std::ostream &amp; fs);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../db/d15/class_a_v_l.html#a4785b0ae1023d3dee584ffbbc45057a3">rotateRight</a>();</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordtype">void</span> <a class="code" href="../../db/d15/class_a_v_l.html#ac972995f3084d8876eb143916ccf8f8e">rotateLeft</a>();</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        </div>
+<div class="line"><a name="l00107"></a><span class="lineno"><a class="line" href="../../db/d15/class_a_v_l.html#a3f5c40790a92e0ebd93a187812d6b698">  107</a></span>&#160;        T <a class="code" href="../../db/d15/class_a_v_l.html#a3f5c40790a92e0ebd93a187812d6b698">value</a>;           </div>
+<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="../../db/d15/class_a_v_l.html#aa1ea6df15798ce98461729e2b1deeb87">  108</a></span>&#160;        <a class="code" href="../../db/d15/class_a_v_l.html">AVL</a> * <a class="code" href="../../db/d15/class_a_v_l.html#aa1ea6df15798ce98461729e2b1deeb87">left</a>;    </div>
+<div class="line"><a name="l00109"></a><span class="lineno"><a class="line" href="../../db/d15/class_a_v_l.html#ac02dee89f769588763a80be6176af37b">  109</a></span>&#160;        <a class="code" href="../../db/d15/class_a_v_l.html">AVL</a> * <a class="code" href="../../db/d15/class_a_v_l.html#ac02dee89f769588763a80be6176af37b">right</a>;   </div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="../../db/d15/class_a_v_l.html#a3978c23794aa5e11eb37473e1cebe4e5">  110</a></span>&#160;        <a class="code" href="../../db/d15/class_a_v_l.html">AVL</a> * <a class="code" href="../../db/d15/class_a_v_l.html#a3978c23794aa5e11eb37473e1cebe4e5">parent</a>;  </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00113"></a><span class="lineno"><a class="line" href="../../db/d15/class_a_v_l.html#aa5309553367542c5683df0fae61bfc0a">  113</a></span>&#160;        <span class="keywordtype">int</span> <a class="code" href="../../db/d15/class_a_v_l.html#aa5309553367542c5683df0fae61bfc0a">level</a>;  </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;};</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="../../dc/dfe/avl_8hpp.html">avl.hpp</a>&quot;</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="class_a_v_l_html_a2c7b07714a761de62798b87856d5827a"><div class="ttname"><a href="../../db/d15/class_a_v_l.html#a2c7b07714a761de62798b87856d5827a">AVL::getLevel</a></div><div class="ttdeci">int getLevel()</div><div class="ttdoc">Accesseur à la donnée membre level. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dfe/avl_8hpp_source.html#l00029">avl.hpp:29</a></div></div>
+<div class="ttc" id="class_a_v_l_html_a3f5c40790a92e0ebd93a187812d6b698"><div class="ttname"><a href="../../db/d15/class_a_v_l.html#a3f5c40790a92e0ebd93a187812d6b698">AVL::value</a></div><div class="ttdeci">T value</div><div class="ttdoc">Valeur de la noeud. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d51/avl_8h_source.html#l00107">avl.h:107</a></div></div>
+<div class="ttc" id="class_a_v_l_html_a4b62e0576e9c74e70b43348ca1d86081"><div class="ttname"><a href="../../db/d15/class_a_v_l.html#a4b62e0576e9c74e70b43348ca1d86081">AVL::drawGraph</a></div><div class="ttdeci">void drawGraph(std::ostream &amp;fs)</div><div class="ttdoc">Edit l&#39;arbre au format DOT, sur un flux. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dfe/avl_8hpp_source.html#l00191">avl.hpp:191</a></div></div>
+<div class="ttc" id="class_a_v_l_html_ac972995f3084d8876eb143916ccf8f8e"><div class="ttname"><a href="../../db/d15/class_a_v_l.html#ac972995f3084d8876eb143916ccf8f8e">AVL::rotateLeft</a></div><div class="ttdeci">void rotateLeft()</div><div class="ttdoc">Effectue une rotation vers la gauche. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dfe/avl_8hpp_source.html#l00317">avl.hpp:317</a></div></div>
+<div class="ttc" id="class_a_v_l_html_adcea8d3f61ef24eef897e3cdf4952374"><div class="ttname"><a href="../../db/d15/class_a_v_l.html#adcea8d3f61ef24eef897e3cdf4952374">AVL::updateLevel</a></div><div class="ttdeci">void updateLevel()</div><div class="ttdoc">Calcule le niveau du noeud. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dfe/avl_8hpp_source.html#l00224">avl.hpp:224</a></div></div>
+<div class="ttc" id="class_a_v_l_html_abbcd7c80b69cdf8caab9ea79b51163d9"><div class="ttname"><a href="../../db/d15/class_a_v_l.html#abbcd7c80b69cdf8caab9ea79b51163d9">AVL::AVL</a></div><div class="ttdeci">AVL(T value, AVL *parent=NULL, AVL *left=NULL, AVL *right=NULL)</div><div class="ttdoc">Créé une structure d&#39;arbre AVL avec une valeur et une branche gauche. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dfe/avl_8hpp_source.html#l00014">avl.hpp:14</a></div></div>
+<div class="ttc" id="class_a_v_l_html_aa1ea6df15798ce98461729e2b1deeb87"><div class="ttname"><a href="../../db/d15/class_a_v_l.html#aa1ea6df15798ce98461729e2b1deeb87">AVL::left</a></div><div class="ttdeci">AVL * left</div><div class="ttdoc">Arbre enfant positionné à droite. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d51/avl_8h_source.html#l00108">avl.h:108</a></div></div>
+<div class="ttc" id="class_a_v_l_html_a1d9cd2afeb001a6a4fc9f90964d66b0d"><div class="ttname"><a href="../../db/d15/class_a_v_l.html#a1d9cd2afeb001a6a4fc9f90964d66b0d">AVL::contains</a></div><div class="ttdeci">bool contains(T val)</div><div class="ttdoc">Recherche la présence d&#39;un élément dans l&#39;arbre. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dfe/avl_8hpp_source.html#l00053">avl.hpp:53</a></div></div>
+<div class="ttc" id="class_a_v_l_html_aa5309553367542c5683df0fae61bfc0a"><div class="ttname"><a href="../../db/d15/class_a_v_l.html#aa5309553367542c5683df0fae61bfc0a">AVL::level</a></div><div class="ttdeci">int level</div><div class="ttdoc">Hauteur du noeud. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d51/avl_8h_source.html#l00113">avl.h:113</a></div></div>
+<div class="ttc" id="class_a_v_l_html_a2d2a25555c9663fad061fdbd5d1cdb70"><div class="ttname"><a href="../../db/d15/class_a_v_l.html#a2d2a25555c9663fad061fdbd5d1cdb70">AVL::insert</a></div><div class="ttdeci">bool insert(T val)</div><div class="ttdoc">Ajoute un élément dans l&#39;arbre. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dfe/avl_8hpp_source.html#l00068">avl.hpp:68</a></div></div>
+<div class="ttc" id="class_a_v_l_html"><div class="ttname"><a href="../../db/d15/class_a_v_l.html">AVL</a></div><div class="ttdoc">Structure minimal d&#39;un arbre. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d51/avl_8h_source.html#l00012">avl.h:12</a></div></div>
 <div class="ttc" id="avl_8hpp_html"><div class="ttname"><a href="../../dc/dfe/avl_8hpp.html">avl.hpp</a></div></div>
-<div class="ttc" id="class_a_v_l_html_a88990625197e11f57df2e7bcf559e8f9"><div class="ttname"><a href="../../db/d15/class_a_v_l.html#a88990625197e11f57df2e7bcf559e8f9">AVL::balance</a></div><div class="ttdeci">void balance()</div><div class="ttdoc">Equilibre l&#39;arbre si besoin. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dfe/avl_8hpp_source.html#l00141">avl.hpp:141</a></div></div>
-<div class="ttc" id="class_a_v_l_html_aa6459425ad7772fe9bff79caadeac7d4"><div class="ttname"><a href="../../db/d15/class_a_v_l.html#aa6459425ad7772fe9bff79caadeac7d4">AVL::insert</a></div><div class="ttdeci">void insert(T val)</div><div class="ttdoc">Ajoute un élément dans l&#39;arbre. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dfe/avl_8hpp_source.html#l00048">avl.hpp:48</a></div></div>
-<div class="ttc" id="class_a_v_l_html_a3978c23794aa5e11eb37473e1cebe4e5"><div class="ttname"><a href="../../db/d15/class_a_v_l.html#a3978c23794aa5e11eb37473e1cebe4e5">AVL::parent</a></div><div class="ttdeci">AVL * parent</div><div class="ttdoc">Noeud parent. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d51/avl_8h_source.html#l00087">avl.h:87</a></div></div>
-<div class="ttc" id="class_a_v_l_html_a07d2694a7bb1f26f9990f01acf29c5af"><div class="ttname"><a href="../../db/d15/class_a_v_l.html#a07d2694a7bb1f26f9990f01acf29c5af">AVL::~AVL</a></div><div class="ttdeci">virtual ~AVL()</div><div class="ttdoc">Destructeur de la classe. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dfe/avl_8hpp_source.html#l00020">avl.hpp:20</a></div></div>
-<div class="ttc" id="class_a_v_l_html_ac02dee89f769588763a80be6176af37b"><div class="ttname"><a href="../../db/d15/class_a_v_l.html#ac02dee89f769588763a80be6176af37b">AVL::right</a></div><div class="ttdeci">AVL * right</div><div class="ttdoc">Arbre enfant positionné à gauche. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d51/avl_8h_source.html#l00086">avl.h:86</a></div></div>
-<div class="ttc" id="class_a_v_l_html_ac9656f86066f929391364edd6e23083f"><div class="ttname"><a href="../../db/d15/class_a_v_l.html#ac9656f86066f929391364edd6e23083f">AVL::drawGraph</a></div><div class="ttdeci">void drawGraph(std::ofstream &amp;fs)</div><div class="ttdoc">drawGraph l&#39;arbre sur la sortie standard formaté en DOT </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dfe/avl_8hpp_source.html#l00087">avl.hpp:87</a></div></div>
-<div class="ttc" id="class_a_v_l_html_a4785b0ae1023d3dee584ffbbc45057a3"><div class="ttname"><a href="../../db/d15/class_a_v_l.html#a4785b0ae1023d3dee584ffbbc45057a3">AVL::rotateRight</a></div><div class="ttdeci">void rotateRight()</div><div class="ttdoc">Effectue une rotation vers la droite. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dfe/avl_8hpp_source.html#l00186">avl.hpp:186</a></div></div>
+<div class="ttc" id="class_a_v_l_html_a88990625197e11f57df2e7bcf559e8f9"><div class="ttname"><a href="../../db/d15/class_a_v_l.html#a88990625197e11f57df2e7bcf559e8f9">AVL::balance</a></div><div class="ttdeci">void balance()</div><div class="ttdoc">Equilibre l&#39;arbre si besoin. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dfe/avl_8hpp_source.html#l00245">avl.hpp:245</a></div></div>
+<div class="ttc" id="class_a_v_l_html_af8991c233258f711d45560206fe9e4cb"><div class="ttname"><a href="../../db/d15/class_a_v_l.html#af8991c233258f711d45560206fe9e4cb">AVL::getLeftLevel</a></div><div class="ttdeci">int getLeftLevel()</div><div class="ttdoc">Retourne le niveau du fils gauche. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dfe/avl_8hpp_source.html#l00035">avl.hpp:35</a></div></div>
+<div class="ttc" id="class_a_v_l_html_aa5d2114f9ac858f584b45882acff29a4"><div class="ttname"><a href="../../db/d15/class_a_v_l.html#aa5d2114f9ac858f584b45882acff29a4">AVL::getRightLevel</a></div><div class="ttdeci">int getRightLevel()</div><div class="ttdoc">Retourne le niveau du fils droit. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dfe/avl_8hpp_source.html#l00044">avl.hpp:44</a></div></div>
+<div class="ttc" id="class_a_v_l_html_a3978c23794aa5e11eb37473e1cebe4e5"><div class="ttname"><a href="../../db/d15/class_a_v_l.html#a3978c23794aa5e11eb37473e1cebe4e5">AVL::parent</a></div><div class="ttdeci">AVL * parent</div><div class="ttdoc">Noeud parent. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d51/avl_8h_source.html#l00110">avl.h:110</a></div></div>
+<div class="ttc" id="class_a_v_l_html_a07d2694a7bb1f26f9990f01acf29c5af"><div class="ttname"><a href="../../db/d15/class_a_v_l.html#a07d2694a7bb1f26f9990f01acf29c5af">AVL::~AVL</a></div><div class="ttdeci">virtual ~AVL()</div><div class="ttdoc">Destructeur de la classe. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dfe/avl_8hpp_source.html#l00022">avl.hpp:22</a></div></div>
+<div class="ttc" id="class_a_v_l_html_ac02dee89f769588763a80be6176af37b"><div class="ttname"><a href="../../db/d15/class_a_v_l.html#ac02dee89f769588763a80be6176af37b">AVL::right</a></div><div class="ttdeci">AVL * right</div><div class="ttdoc">Arbre enfant positionné à gauche. </div><div class="ttdef"><b>Definition:</b> <a href="../../d3/d51/avl_8h_source.html#l00109">avl.h:109</a></div></div>
+<div class="ttc" id="class_a_v_l_html_a4785b0ae1023d3dee584ffbbc45057a3"><div class="ttname"><a href="../../db/d15/class_a_v_l.html#a4785b0ae1023d3dee584ffbbc45057a3">AVL::rotateRight</a></div><div class="ttdeci">void rotateRight()</div><div class="ttdoc">Effectue une rotation vers la droite. </div><div class="ttdef"><b>Definition:</b> <a href="../../dc/dfe/avl_8hpp_source.html#l00293">avl.hpp:293</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="../../d3/d51/avl_8h.html">avl.h</a></li>
-    <li class="footer">Généré le Lundi 3 Novembre 2014 10:23:24 pour TP Arbre AVL par
+    <li class="footer">Généré le Jeudi 13 Novembre 2014 18:57:58 pour TP Arbre AVL par
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>
 </div>
 </body>

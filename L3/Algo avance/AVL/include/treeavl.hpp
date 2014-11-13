@@ -7,16 +7,31 @@ TreeAVL<T>::TreeAVL()
 }
 
 template< typename T >
-void TreeAVL<T>::insert( T value )
+bool TreeAVL<T>::insert( T value )
 {
     if( head == NULL )
     {
         head = new AVL<T>( value );
+        return true;
     }
     else
     {
         relocateHead();
-        head->insert( value );
+        return head->insert( value );
+    }
+}
+
+template< typename T >
+void TreeAVL<T>::remove( T value )
+{
+    if( head == NULL )
+    {
+        return;
+    }
+    else
+    {
+        relocateHead();
+        head->remove( value );
     }
 }
 
@@ -54,6 +69,13 @@ void TreeAVL<T>::clear()
     relocateHead();
     delete head;
     head = NULL;
+}
+
+template< typename T >
+int TreeAVL<T>::getLevel()
+{
+    relocateHead();
+    return head->getLevel();
 }
 
 template< typename T >

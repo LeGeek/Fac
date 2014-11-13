@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.6"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
 <title>TP Arbre AVL: Référence du fichier src/main.cpp</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
@@ -39,7 +39,7 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.6 -->
+<!-- Généré par Doxygen 1.8.8 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "../../search",false,'Recherche');
 </script>
@@ -92,7 +92,7 @@ $(document).ready(function(){initNavTree('df/d0a/main_8cpp.html','../../');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -108,8 +108,11 @@ $(document).ready(function(){initNavTree('df/d0a/main_8cpp.html','../../');});
 <div class="title">Référence du fichier main.cpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;iostream&gt;</code><br/>
-<code>#include &quot;<a class="el" href="../../dc/dfe/treeavl_8h_source.html">treeavl.h</a>&quot;</code><br/>
+<div class="textblock"><code>#include &lt;iostream&gt;</code><br />
+<code>#include &lt;ctime&gt;</code><br />
+<code>#include &lt;cstdlib&gt;</code><br />
+<code>#include &lt;cmath&gt;</code><br />
+<code>#include &quot;<a class="el" href="../../dc/dfe/treeavl_8h_source.html">treeavl.h</a>&quot;</code><br />
 </div>
 <p><a href="../../df/d0a/main_8cpp_source.html">Aller au code source de ce fichier.</a></p>
 <table class="memberdecls">
@@ -117,14 +120,36 @@ $(document).ready(function(){initNavTree('df/d0a/main_8cpp.html','../../');});
 Fonctions</h2></td></tr>
 <tr class="memitem:ab37fb4ef56612f41f58b95098ad22e1d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/main_8cpp.html#ab37fb4ef56612f41f58b95098ad22e1d">unbalancedRight</a> (<a class="el" href="../../da/d53/class_tree_a_v_l.html">TreeAVL</a>&lt; int &gt; &amp;avl)</td></tr>
 <tr class="separator:ab37fb4ef56612f41f58b95098ad22e1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a0f3a3438105a5692aa58baa5be84c699"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/main_8cpp.html#a0f3a3438105a5692aa58baa5be84c699">unbalancedLeftIntern</a> (<a class="el" href="../../da/d53/class_tree_a_v_l.html">TreeAVL</a>&lt; int &gt; &amp;avl)</td></tr>
-<tr class="separator:a0f3a3438105a5692aa58baa5be84c699"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab890478812b250fe49d1cb518d86128e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/main_8cpp.html#ab890478812b250fe49d1cb518d86128e">unbalancedRightIntern</a> (<a class="el" href="../../da/d53/class_tree_a_v_l.html">TreeAVL</a>&lt; int &gt; &amp;avl)</td></tr>
+<tr class="separator:ab890478812b250fe49d1cb518d86128e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d4c227bfca929902174e0e8fff72c3d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/main_8cpp.html#a4d4c227bfca929902174e0e8fff72c3d">unbalancedRight2</a> (<a class="el" href="../../da/d53/class_tree_a_v_l.html">TreeAVL</a>&lt; int &gt; &amp;avl)</td></tr>
 <tr class="separator:a4d4c227bfca929902174e0e8fff72c3d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a60a697d1134730bb35b3eab65e6f8521"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/main_8cpp.html#a60a697d1134730bb35b3eab65e6f8521">unbalancedLeft</a> (<a class="el" href="../../da/d53/class_tree_a_v_l.html">TreeAVL</a>&lt; int &gt; &amp;avl)</td></tr>
 <tr class="separator:a60a697d1134730bb35b3eab65e6f8521"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2901e4bbd97653c94cfd97f0e9399d39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/main_8cpp.html#a2901e4bbd97653c94cfd97f0e9399d39">unbalancedLeft2</a> (<a class="el" href="../../da/d53/class_tree_a_v_l.html">TreeAVL</a>&lt; int &gt; &amp;avl)</td></tr>
 <tr class="separator:a2901e4bbd97653c94cfd97f0e9399d39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f3a3438105a5692aa58baa5be84c699"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/main_8cpp.html#a0f3a3438105a5692aa58baa5be84c699">unbalancedLeftIntern</a> (<a class="el" href="../../da/d53/class_tree_a_v_l.html">TreeAVL</a>&lt; int &gt; &amp;avl)</td></tr>
+<tr class="separator:a0f3a3438105a5692aa58baa5be84c699"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af1d532778265546b63521f10a82a8fa9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/main_8cpp.html#af1d532778265546b63521f10a82a8fa9">remove1</a> (<a class="el" href="../../da/d53/class_tree_a_v_l.html">TreeAVL</a>&lt; int &gt; &amp;avl)</td></tr>
+<tr class="separator:af1d532778265546b63521f10a82a8fa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a650c91f5c66a65440c2045c25db1d87f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/main_8cpp.html#a650c91f5c66a65440c2045c25db1d87f">remove2</a> (<a class="el" href="../../da/d53/class_tree_a_v_l.html">TreeAVL</a>&lt; int &gt; &amp;avl)</td></tr>
+<tr class="separator:a650c91f5c66a65440c2045c25db1d87f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e16c4c1c2164e03a30e683a000be834"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/main_8cpp.html#a5e16c4c1c2164e03a30e683a000be834">remove3</a> (<a class="el" href="../../da/d53/class_tree_a_v_l.html">TreeAVL</a>&lt; int &gt; &amp;avl)</td></tr>
+<tr class="separator:a5e16c4c1c2164e03a30e683a000be834"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acefc39d0acced36c6c97032dc29e4c11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/main_8cpp.html#acefc39d0acced36c6c97032dc29e4c11">remove4</a> (<a class="el" href="../../da/d53/class_tree_a_v_l.html">TreeAVL</a>&lt; int &gt; &amp;avl)</td></tr>
+<tr class="separator:acefc39d0acced36c6c97032dc29e4c11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afa9adf7ec6008a3104a54c41b145ae6a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/main_8cpp.html#afa9adf7ec6008a3104a54c41b145ae6a">remove5</a> (<a class="el" href="../../da/d53/class_tree_a_v_l.html">TreeAVL</a>&lt; int &gt; &amp;avl)</td></tr>
+<tr class="separator:afa9adf7ec6008a3104a54c41b145ae6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa847eee244f868e950536c583245f249"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/main_8cpp.html#aa847eee244f868e950536c583245f249">remove6</a> (<a class="el" href="../../da/d53/class_tree_a_v_l.html">TreeAVL</a>&lt; int &gt; &amp;avl)</td></tr>
+<tr class="separator:aa847eee244f868e950536c583245f249"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff7150a81432547671cabdebb2ad1bbb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/main_8cpp.html#aff7150a81432547671cabdebb2ad1bbb">remove7</a> (<a class="el" href="../../da/d53/class_tree_a_v_l.html">TreeAVL</a>&lt; int &gt; &amp;avl)</td></tr>
+<tr class="separator:aff7150a81432547671cabdebb2ad1bbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1459111627d579c705f15a3cf2d1fee8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/main_8cpp.html#a1459111627d579c705f15a3cf2d1fee8">remove8</a> (<a class="el" href="../../da/d53/class_tree_a_v_l.html">TreeAVL</a>&lt; int &gt; &amp;avl)</td></tr>
+<tr class="separator:a1459111627d579c705f15a3cf2d1fee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7273b41fc3bbf03d16ea33d1fc1c0d44"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/main_8cpp.html#a7273b41fc3bbf03d16ea33d1fc1c0d44">remove9</a> (<a class="el" href="../../da/d53/class_tree_a_v_l.html">TreeAVL</a>&lt; int &gt; &amp;avl)</td></tr>
+<tr class="separator:a7273b41fc3bbf03d16ea33d1fc1c0d44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0357abcf9803374407409eb551137899"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/main_8cpp.html#a0357abcf9803374407409eb551137899">randomFill</a> (int nb, int min, int max, <a class="el" href="../../da/d53/class_tree_a_v_l.html">TreeAVL</a>&lt; int &gt; &amp;avl)</td></tr>
+<tr class="separator:a0357abcf9803374407409eb551137899"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../df/d0a/main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
 <tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -153,7 +178,209 @@ Fonctions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Définition à la ligne <a class="el" href="../../df/d0a/main_8cpp_source.html#l00086">86</a> du fichier <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
+<p>Définition à la ligne <a class="el" href="../../df/d0a/main_8cpp_source.html#l00227">227</a> du fichier <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a0357abcf9803374407409eb551137899"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void randomFill </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>nb</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="../../da/d53/class_tree_a_v_l.html">TreeAVL</a>&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>avl</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="../../df/d0a/main_8cpp_source.html#l00207">207</a> du fichier <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af1d532778265546b63521f10a82a8fa9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void remove1 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../da/d53/class_tree_a_v_l.html">TreeAVL</a>&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>avl</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="../../df/d0a/main_8cpp_source.html#l00105">105</a> du fichier <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a650c91f5c66a65440c2045c25db1d87f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void remove2 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../da/d53/class_tree_a_v_l.html">TreeAVL</a>&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>avl</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="../../df/d0a/main_8cpp_source.html#l00116">116</a> du fichier <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5e16c4c1c2164e03a30e683a000be834"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void remove3 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../da/d53/class_tree_a_v_l.html">TreeAVL</a>&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>avl</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="../../df/d0a/main_8cpp_source.html#l00127">127</a> du fichier <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acefc39d0acced36c6c97032dc29e4c11"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void remove4 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../da/d53/class_tree_a_v_l.html">TreeAVL</a>&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>avl</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="../../df/d0a/main_8cpp_source.html#l00138">138</a> du fichier <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="afa9adf7ec6008a3104a54c41b145ae6a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void remove5 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../da/d53/class_tree_a_v_l.html">TreeAVL</a>&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>avl</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="../../df/d0a/main_8cpp_source.html#l00149">149</a> du fichier <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aa847eee244f868e950536c583245f249"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void remove6 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../da/d53/class_tree_a_v_l.html">TreeAVL</a>&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>avl</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="../../df/d0a/main_8cpp_source.html#l00163">163</a> du fichier <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aff7150a81432547671cabdebb2ad1bbb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void remove7 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../da/d53/class_tree_a_v_l.html">TreeAVL</a>&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>avl</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="../../df/d0a/main_8cpp_source.html#l00177">177</a> du fichier <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a1459111627d579c705f15a3cf2d1fee8"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void remove8 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../da/d53/class_tree_a_v_l.html">TreeAVL</a>&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>avl</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="../../df/d0a/main_8cpp_source.html#l00187">187</a> du fichier <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a7273b41fc3bbf03d16ea33d1fc1c0d44"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void remove9 </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../da/d53/class_tree_a_v_l.html">TreeAVL</a>&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>avl</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="../../df/d0a/main_8cpp_source.html#l00197">197</a> du fichier <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
@@ -171,7 +398,7 @@ Fonctions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Définition à la ligne <a class="el" href="../../df/d0a/main_8cpp_source.html#l00055">55</a> du fichier <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
+<p>Définition à la ligne <a class="el" href="../../df/d0a/main_8cpp_source.html#l00058">58</a> du fichier <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
@@ -189,7 +416,7 @@ Fonctions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Définition à la ligne <a class="el" href="../../df/d0a/main_8cpp_source.html#l00071">71</a> du fichier <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
+<p>Définition à la ligne <a class="el" href="../../df/d0a/main_8cpp_source.html#l00074">74</a> du fichier <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
@@ -207,7 +434,7 @@ Fonctions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Définition à la ligne <a class="el" href="../../df/d0a/main_8cpp_source.html#l00024">24</a> du fichier <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
+<p>Définition à la ligne <a class="el" href="../../df/d0a/main_8cpp_source.html#l00089">89</a> du fichier <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
@@ -225,7 +452,7 @@ Fonctions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Définition à la ligne <a class="el" href="../../df/d0a/main_8cpp_source.html#l00008">8</a> du fichier <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
+<p>Définition à la ligne <a class="el" href="../../df/d0a/main_8cpp_source.html#l00011">11</a> du fichier <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
@@ -243,7 +470,25 @@ Fonctions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Définition à la ligne <a class="el" href="../../df/d0a/main_8cpp_source.html#l00040">40</a> du fichier <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
+<p>Définition à la ligne <a class="el" href="../../df/d0a/main_8cpp_source.html#l00043">43</a> du fichier <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab890478812b250fe49d1cb518d86128e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void unbalancedRightIntern </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="../../da/d53/class_tree_a_v_l.html">TreeAVL</a>&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>avl</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="../../df/d0a/main_8cpp_source.html#l00027">27</a> du fichier <a class="el" href="../../df/d0a/main_8cpp_source.html">main.cpp</a>.</p>
 
 </div>
 </div>
@@ -253,9 +498,9 @@ Fonctions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../df/d0a/main_8cpp.html">main.cpp</a></li>
-    <li class="footer">Généré le Lundi 3 Novembre 2014 10:23:24 pour TP Arbre AVL par
+    <li class="footer">Généré le Jeudi 13 Novembre 2014 18:57:59 pour TP Arbre AVL par
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+    <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>
 </div>
 </body>

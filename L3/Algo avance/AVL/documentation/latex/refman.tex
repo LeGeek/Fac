@@ -1,6 +1,7 @@
 \documentclass[twoside]{book}
 
 % Packages required by doxygen
+\usepackage{fixltx2e}
 \usepackage{calc}
 \usepackage{doxygen}
 \usepackage{graphicx}
@@ -8,7 +9,9 @@
 \usepackage{makeidx}
 \usepackage{multicol}
 \usepackage{multirow}
+\PassOptionsToPackage{warn}{textcomp}
 \usepackage{textcomp}
+\usepackage[nointegrals]{wasysym}
 \usepackage[table]{xcolor}
 
 % NLS support packages
@@ -30,6 +33,7 @@
   \fontseries{bc}\selectfont%
   \color{darkgray}%
 }
+\newcommand{\+}{\discretionary{\mbox{\scriptsize$\hookleftarrow$}}{}{}}
 
 % Page & text layout
 \usepackage{geometry}
@@ -70,8 +74,8 @@
 \fancyhead[RO]{\fancyplain{}{\bfseries\thepage}}
 \fancyfoot[LE]{\fancyplain{}{}}
 \fancyfoot[CE]{\fancyplain{}{}}
-\fancyfoot[RE]{\fancyplain{}{\bfseries\scriptsize Généré le Lundi 3 Novembre 2014 10\-:23\-:24 pour T\-P Arbre A\-V\-L par Doxygen }}
-\fancyfoot[LO]{\fancyplain{}{\bfseries\scriptsize Généré le Lundi 3 Novembre 2014 10\-:23\-:24 pour T\-P Arbre A\-V\-L par Doxygen }}
+\fancyfoot[RE]{\fancyplain{}{\bfseries\scriptsize Généré le Jeudi 13 Novembre 2014 18\+:57\+:59 pour T\+P Arbre A\+V\+L par Doxygen }}
+\fancyfoot[LO]{\fancyplain{}{\bfseries\scriptsize Généré le Jeudi 13 Novembre 2014 18\+:57\+:59 pour T\+P Arbre A\+V\+L par Doxygen }}
 \fancyfoot[CO]{\fancyplain{}{}}
 \fancyfoot[RO]{\fancyplain{}{}}
 \renewcommand{\footrulewidth}{0.4pt}
@@ -114,16 +118,20 @@
 \begin{document}
 
 % Titlepage & ToC
-\hypersetup{pageanchor=false}
+\hypersetup{pageanchor=false,
+             bookmarks=true,
+             bookmarksnumbered=true,
+             pdfencoding=unicode
+            }
 \pagenumbering{roman}
 \begin{titlepage}
 \vspace*{7cm}
 \begin{center}%
-{\Large T\-P Arbre A\-V\-L }\\
+{\Large T\+P Arbre A\+V\+L }\\
 \vspace*{1cm}
-{\large Généré par Doxygen 1.8.6}\\
+{\large Généré par Doxygen 1.8.8}\\
 \vspace*{0.5cm}
-{\small Lundi 3 Novembre 2014 10:23:24}\\
+{\small Jeudi 13 Novembre 2014 18:57:59}\\
 \end{center}
 \end{titlepage}
 \clearemptydoublepage

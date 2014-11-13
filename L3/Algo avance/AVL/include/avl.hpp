@@ -65,7 +65,7 @@ bool AVL<T>::contains( T val )
 }
 
 template< typename T >
-void AVL<T>::insert( T val )
+bool AVL<T>::insert( T val )
 {
     AVL<T> * cursor = this;
 
@@ -78,7 +78,7 @@ void AVL<T>::insert( T val )
                 cursor->left = new AVL( val, cursor );
                 cursor->left->updateLevel();
                 cursor->left->balance();
-                break;
+                return true;
             }
 
             cursor = cursor->left;
@@ -90,7 +90,7 @@ void AVL<T>::insert( T val )
                 cursor->right = new AVL( val, cursor );
                 cursor->right->updateLevel();
                 cursor->right->balance();
-                break;
+                return true;
             }
 
             cursor = cursor->right;
@@ -98,12 +98,96 @@ void AVL<T>::insert( T val )
         else
         {
             std::cerr << "'" << val << "' is already in the tree !" << std::endl;
-            break;
+            return false;
         }
     }
 }
 
-template< typename T>
+template< typename T >
+void AVL<T>::remove( T val )
+{
+    AVL<T> * cursor = this;
+
+    while( cursor != NULL )
+    {
+        if( cursor->value > val )
+        {
+            cursor = cursor->left;
+        }
+        else if( cursor->value < val )
+        {
+            cursor = cursor->right;
+        }
+        else
+        {
+            if( cursor->right == NULL && cursor->left == NULL )
+            {
+                if( cursor->parent->right == cursor )
+                    cursor->parent->right = NULL;
+                else
+                    cursor->parent->left = NULL;
+            }
+            else if( cursor->right == NULL && cursor->left != NULL )
+            {
+                if( cursor->parent != NULL )
+                {
+                    if( cursor->parent->right == cursor )
+                        cursor->parent->right = cursor->left;
+                    else
+                        cursor->parent->left = cursor->left;
+                }
+
+                cursor->left->parent = cursor->parent;
+            }
+            else if( cursor->right != NULL && cursor->left == NULL )
+            {
+                if( cursor->parent != NULL )
+                {
+                    if( cursor->parent->right == cursor )
+                        cursor->parent->right = cursor->right;
+                    else
+                        cursor->parent->left = cursor->right;
+                }
+
+                cursor->right->parent = cursor->parent;
+            }
+            else
+            {
+                AVL<T> * savePtr = cursor;
+
+                cursor = cursor->left;
+                while( cursor->right != NULL )
+                    cursor = cursor->right;
+
+                if( cursor->parent->value != val )
+                    cursor->parent->right = cursor->left;
+
+                if( cursor->left != NULL )
+                {
+                    cursor->left->parent = cursor->parent;
+                    if( cursor->parent->right == cursor )
+                        cursor->parent->right = cursor->left;
+                    else
+                        cursor->parent->left = cursor->left;
+                }
+                else
+                {
+                    savePtr->left = NULL;
+                }
+
+                savePtr->value = cursor->value;
+            }
+
+            cursor->parent->updateLevel();
+            cursor->left = NULL;
+            cursor->right = NULL;
+            delete cursor;
+            return;
+        }
+    }
+}
+
+template< typename T >
 void AVL<T>::drawGraph(std::ostream & fs)
 {
     fs << value << "[label=\"" << value << " (" << level << ")\"]" << std::endl;
@@ -160,11 +244,6 @@ void AVL<T>::updateLevel()
 template< typename T >
 void AVL<T>::balance()
 {
-    //std::cout << value << " : " << 
-    //    (left == NULL ? 0 : left->getLevel()) << 
-    //    " - " << 
-    //    (right == NULL ? 0 : right->getLevel()) << std::endl; 
-
     if( left == NULL && right == NULL )
     {
         if( parent != NULL )
@@ -172,7 +251,6 @@ void AVL<T>::balance()
     }
     else if( left == NULL && right->getLevel() > 1 )
     {
-        //std::cout << value << " unbalanced left!" << std::endl;
         if( right->getLeftLevel() > right->getRightLevel() )
             right->rotateRight();
 
@@ -180,7 +258,6 @@ void AVL<T>::balance()
     }
     else if( right == NULL && left->getLevel() > 1 )
     {
-        //std::cout << value << " unbalanced right!" << std::endl;
         if( left->getRightLevel() > left->getLeftLevel() )
             left->rotateLeft();
 
@@ -190,7 +267,6 @@ void AVL<T>::balance()
     {
         if( left->getLevel() - right->getLevel() > 1 )
         {
-            //std::cout << value << " unbalanced right !" << std::endl;
             if( left->getRightLevel() > left->getLeftLevel() )
                 left->rotateLeft();
 
@@ -198,7 +274,6 @@ void AVL<T>::balance()
         }
         else if( right->getLevel() - left->getLevel() > 1 )
         {
-            //std::cout << value << " unbalanced left !" << std::endl;
             if( right->getLeftLevel() > right->getRightLevel() )
                 right->rotateRight();
 
