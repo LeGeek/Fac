@@ -179,6 +179,8 @@ void AVL<T>::remove( T val )
             }
 
             cursor->parent->updateLevel();
+            cursor->parent->balance();
+
             cursor->left = NULL;
             cursor->right = NULL;
             delete cursor;
