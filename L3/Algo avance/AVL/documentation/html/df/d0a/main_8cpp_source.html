@@ -334,31 +334,33 @@ $(document).ready(function(){initNavTree('df/d0a/main_8cpp_source.html','../../'
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;</div>
 <div class="line"><a name="l00227"></a><span class="lineno"><a class="line" href="../../df/d0a/main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">  227</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="../../df/d0a/main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a>( <span class="keywordtype">int</span> argc, <span class="keywordtype">char</span>** argv )</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;{</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keywordflow">if</span>( argc != 3 )</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    <span class="keywordflow">if</span>( argc != 5 )</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    {</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;Usage : avl nb_element graph_file&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;        cout &lt;&lt; <span class="stringliteral">&quot;Usage : avl nb_element val_min val_max graph_file&quot;</span> &lt;&lt; endl;</div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        <span class="keywordflow">return</span> 1;</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;    }</div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;</div>
 <div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;    <span class="keywordtype">int</span> n = atoi( argv[1] );</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <a class="code" href="../../da/d53/class_tree_a_v_l.html">TreeAVL&lt;int&gt;</a> avl;</div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;    <a class="code" href="../../df/d0a/main_8cpp.html#a0357abcf9803374407409eb551137899">randomFill</a>( n, 1, 2147483647, avl );</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;Gen graph&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    avl.<a class="code" href="../../da/d53/class_tree_a_v_l.html#a55eceb0c95a94a590bd07d2e2c59ff14">drawGraph</a>( argv[2] );</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    <span class="comment">//avl.drawGraph( cout );</span></div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;\&quot;&quot;</span> &lt;&lt; argv[2] &lt;&lt; <span class="stringliteral">&quot;\&quot; generated&quot;</span> &lt;&lt; endl;</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;Rapport : \n&quot;</span> &lt;&lt;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        <span class="stringliteral">&quot;\tNombre d&#39;élément (n) : &quot;</span> &lt;&lt; n &lt;&lt; <span class="charliteral">&#39;\n&#39;</span> &lt;&lt;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;        <span class="stringliteral">&quot;\tHauteur : &quot;</span> &lt;&lt; avl.<a class="code" href="../../da/d53/class_tree_a_v_l.html#a92bb11a553775814dfee115f2aa5e16d">getLevel</a>() &lt;&lt; <span class="charliteral">&#39;\n&#39;</span> &lt;&lt;</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        <span class="stringliteral">&quot;\t1.45*log2( n ) = &quot;</span> &lt;&lt; 1.45*log2( n ) &lt;&lt; <span class="charliteral">&#39;\n&#39;</span> &lt;&lt;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="stringliteral">&quot;\tValeur Moyenne : &quot;</span> &lt;&lt; avl.<a class="code" href="../../da/d53/class_tree_a_v_l.html#a92bb11a553775814dfee115f2aa5e16d">getLevel</a>()/log2( n ) &lt;&lt; endl;</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;}</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;    <span class="keywordtype">int</span> min = atoi( argv[2] );</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;    <span class="keywordtype">int</span> max = atoi( argv[3] );  <span class="comment">//Taille max INT : 2 147 483 647</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;    <a class="code" href="../../da/d53/class_tree_a_v_l.html">TreeAVL&lt;int&gt;</a> avl;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    <a class="code" href="../../df/d0a/main_8cpp.html#a0357abcf9803374407409eb551137899">randomFill</a>( n, min, max, avl );</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;Gen graph&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    avl.<a class="code" href="../../da/d53/class_tree_a_v_l.html#a55eceb0c95a94a590bd07d2e2c59ff14">drawGraph</a>( argv[4] );</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;    <span class="comment">//avl.drawGraph( cout );</span></div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;\&quot;&quot;</span> &lt;&lt; argv[4] &lt;&lt; <span class="stringliteral">&quot;\&quot; generated&quot;</span> &lt;&lt; endl;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;    cout &lt;&lt; <span class="stringliteral">&quot;Rapport : \n&quot;</span> &lt;&lt;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;        <span class="stringliteral">&quot;\tNombre d&#39;élément (n) : &quot;</span> &lt;&lt; n &lt;&lt; <span class="charliteral">&#39;\n&#39;</span> &lt;&lt;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;        <span class="stringliteral">&quot;\tHauteur : &quot;</span> &lt;&lt; avl.<a class="code" href="../../da/d53/class_tree_a_v_l.html#a92bb11a553775814dfee115f2aa5e16d">getLevel</a>() &lt;&lt; <span class="charliteral">&#39;\n&#39;</span> &lt;&lt;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        <span class="stringliteral">&quot;\t1.45*log2( n ) = &quot;</span> &lt;&lt; 1.45*log2( n ) &lt;&lt; <span class="charliteral">&#39;\n&#39;</span> &lt;&lt;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        <span class="stringliteral">&quot;\tValeur Moyenne : &quot;</span> &lt;&lt; avl.<a class="code" href="../../da/d53/class_tree_a_v_l.html#a92bb11a553775814dfee115f2aa5e16d">getLevel</a>()/log2( n ) &lt;&lt; endl;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;}</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;</div>
 <div class="ttc" id="main_8cpp_html_ab37fb4ef56612f41f58b95098ad22e1d"><div class="ttname"><a href="../../df/d0a/main_8cpp.html#ab37fb4ef56612f41f58b95098ad22e1d">unbalancedRight</a></div><div class="ttdeci">void unbalancedRight(TreeAVL&lt; int &gt; &amp;avl)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d0a/main_8cpp_source.html#l00011">main.cpp:11</a></div></div>
 <div class="ttc" id="main_8cpp_html_afa9adf7ec6008a3104a54c41b145ae6a"><div class="ttname"><a href="../../df/d0a/main_8cpp.html#afa9adf7ec6008a3104a54c41b145ae6a">remove5</a></div><div class="ttdeci">void remove5(TreeAVL&lt; int &gt; &amp;avl)</div><div class="ttdef"><b>Definition:</b> <a href="../../df/d0a/main_8cpp_source.html#l00149">main.cpp:149</a></div></div>
 <div class="ttc" id="class_tree_a_v_l_html_ad815e21378bcaf35201a786fa0921a73"><div class="ttname"><a href="../../da/d53/class_tree_a_v_l.html#ad815e21378bcaf35201a786fa0921a73">TreeAVL::insert</a></div><div class="ttdeci">bool insert(T value)</div><div class="ttdoc">Ajoute un élément dans l&#39;arbre à partir de la racine. </div><div class="ttdef"><b>Definition:</b> <a href="../../d5/de7/treeavl_8hpp_source.html#l00010">treeavl.hpp:10</a></div></div>
@@ -390,7 +392,7 @@ $(document).ready(function(){initNavTree('df/d0a/main_8cpp_source.html','../../'
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="../../dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="../../df/d0a/main_8cpp.html">main.cpp</a></li>
-    <li class="footer">Généré le Dimanche 16 Novembre 2014 12:30:45 pour TP Arbre AVL par
+    <li class="footer">Généré le Dimanche 16 Novembre 2014 12:35:27 pour TP Arbre AVL par
     <a href="http://www.doxygen.org/index.html">
     <img class="footer" src="../../doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>

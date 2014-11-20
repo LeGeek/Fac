@@ -226,21 +226,23 @@ void randomFill( int nb, int min, int max, TreeAVL<int> & avl )
 
 int main( int argc, char** argv )
 {
-    if( argc != 3 )
+    if( argc != 5 )
     {
-        cout << "Usage : avl nb_element graph_file" << endl;
+        cout << "Usage : avl nb_element val_min val_max graph_file" << endl;
         return 1;
     }
 
     int n = atoi( argv[1] );
+    int min = atoi( argv[2] );
+    int max = atoi( argv[3] );  //Taille max INT : 2 147 483 647
 
     TreeAVL<int> avl;
-    randomFill( n, 1, 2147483647, avl );
+    randomFill( n, min, max, avl );
 
     cout << "Gen graph" << endl;
-    avl.drawGraph( argv[2] );
+    avl.drawGraph( argv[4] );
     //avl.drawGraph( cout );
-    cout << "\"" << argv[2] << "\" generated" << endl;
+    cout << "\"" << argv[4] << "\" generated" << endl;
 
     cout << "Rapport : \n" <<
         "\tNombre d'élément (n) : " << n << '\n' <<
