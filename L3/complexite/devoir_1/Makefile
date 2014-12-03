@@ -1,6 +1,6 @@
 CC=gcc
-CCFLAGS=-W -Wall -pedantic -std=c99 -I./include
-LDFLAGS=
+CCFLAGS=-W -Wall -pedantic -std=gnu99 -I./include -I/usr/include
+LDFLAGS= -pthread -lpthread
 
 SRC=$(wildcard src/*.c)
 OBJ=$(SRC:.c=.o)

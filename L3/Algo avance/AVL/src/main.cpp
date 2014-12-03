@@ -236,8 +236,16 @@ int main( int argc, char** argv )
     int min = atoi( argv[2] );
     int max = atoi( argv[3] );  //Taille max INT : 2 147 483 647
 
+    unsigned moy = 0;
     TreeAVL<int> avl;
-    randomFill( n, min, max, avl );
+    for( int i = 0; i < 1000000; ++i )
+    {
+        avl.clear();
+        randomFill( n, min, max, avl );
+        moy += avl.getLevel();
+    }
+
+    moy /= 1000000;
 
     cout << "Gen graph" << endl;
     avl.drawGraph( argv[4] );
@@ -248,7 +256,8 @@ int main( int argc, char** argv )
         "\tNombre d'élément (n) : " << n << '\n' <<
         "\tHauteur : " << avl.getLevel() << '\n' <<
         "\t1.45*log2( n ) = " << 1.45*log2( n ) << '\n' <<
-        "\tValeur Moyenne : " << avl.getLevel()/log2( n ) << endl;
+        "\tValeur Moyenne : " << avl.getLevel()/log2( n ) << '\n' <<
+        "\tValeur Moyenne sur 1000 AVL : " << moy/log2( n ) << endl;
 
     return 0;
 }

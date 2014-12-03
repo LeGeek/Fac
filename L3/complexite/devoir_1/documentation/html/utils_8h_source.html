@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.6"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
 <title>Devoir:  Fichier source de include/utils.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -39,13 +39,14 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.6 -->
+<!-- Généré par Doxygen 1.8.8 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
       <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -91,7 +92,7 @@ $(document).ready(function(){initNavTree('utils_8h_source.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Définitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -106,37 +107,40 @@ $(document).ready(function(){initNavTree('utils_8h_source.html','');});
 </div><!--header-->
 <div class="contents">
 <a href="utils_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __UTILS_H__</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define __UTILS_H__</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __UTILS_H__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;stdbool.h&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;stdlib.h&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;stdio.h&gt;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;time.h&gt;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">static</span> <span class="keywordtype">bool</span> utils_seedChange = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">int</span> * <a class="code" href="utils_8h.html#a0a754587804d0a60c2055a2bd8df5caa">genererTableau</a>( <span class="keywordtype">int</span> size, <span class="keywordtype">bool</span> init );</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keywordtype">int</span> <a class="code" href="utils_8h.html#ad5755de87d8b9181d2d4f9915dd918b4">random</a>( <span class="keywordtype">int</span> min, <span class="keywordtype">int</span> max );</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keywordtype">void</span> <a class="code" href="utils_8h.html#acf8a7708934f619e4efba30329f9431d">swapi</a>( <span class="keywordtype">int</span> * a, <span class="keywordtype">int</span> * b);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keywordtype">void</span> <a class="code" href="utils_8h.html#a1a1574a2081496a53830c609ab4908c8">decalerTableau</a>( <span class="keywordtype">int</span> * tab, <span class="keywordtype">int</span> debut, <span class="keywordtype">int</span> fin );</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="utils_8h_html_a1a1574a2081496a53830c609ab4908c8"><div class="ttname"><a href="utils_8h.html#a1a1574a2081496a53830c609ab4908c8">decalerTableau</a></div><div class="ttdeci">void decalerTableau(int *tab, int debut, int fin)</div><div class="ttdoc">Décale le contenue d&#39;un tableau à partir d&#39;un indice de début, jusqu&#39;a l&#39;indice de fin...</div><div class="ttdef"><b>Definition:</b> <a href="utils_8c_source.html#l00030">utils.c:30</a></div></div>
-<div class="ttc" id="utils_8h_html_acf8a7708934f619e4efba30329f9431d"><div class="ttname"><a href="utils_8h.html#acf8a7708934f619e4efba30329f9431d">swapi</a></div><div class="ttdeci">void swapi(int *a, int *b)</div><div class="ttdoc">Echange deux éléments entre eux. </div><div class="ttdef"><b>Definition:</b> <a href="utils_8c_source.html#l00023">utils.c:23</a></div></div>
-<div class="ttc" id="utils_8h_html_ad5755de87d8b9181d2d4f9915dd918b4"><div class="ttname"><a href="utils_8h.html#ad5755de87d8b9181d2d4f9915dd918b4">random</a></div><div class="ttdeci">int random(int min, int max)</div><div class="ttdoc">Génère un nombre aléatoire. </div><div class="ttdef"><b>Definition:</b> <a href="utils_8c_source.html#l00012">utils.c:12</a></div></div>
-<div class="ttc" id="utils_8h_html_a0a754587804d0a60c2055a2bd8df5caa"><div class="ttname"><a href="utils_8h.html#a0a754587804d0a60c2055a2bd8df5caa">genererTableau</a></div><div class="ttdeci">int * genererTableau(int size, bool init)</div><div class="ttdoc">Génére un tableau à la taille voulu. </div><div class="ttdef"><b>Definition:</b> <a href="utils_8c_source.html#l00004">utils.c:4</a></div></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">int</span> * <a class="code" href="utils_8h.html#abec6a291f1d9f2a89011d7a2bfe56f35">genererTableau</a>( <span class="keywordtype">int</span> taille, <span class="keywordtype">bool</span> init );</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keywordtype">int</span> <a class="code" href="utils_8h.html#a1b4eddb8da3a6048c9fb2e679966dec4">randomMinMax</a>( <span class="keywordtype">int</span> min, <span class="keywordtype">int</span> max );</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keywordtype">void</span> <a class="code" href="utils_8h.html#acf8a7708934f619e4efba30329f9431d">swapi</a>( <span class="keywordtype">int</span> * a, <span class="keywordtype">int</span> * b);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keywordtype">void</span> <a class="code" href="utils_8h.html#a1a1574a2081496a53830c609ab4908c8">decalerTableau</a>( <span class="keywordtype">int</span> * tab, <span class="keywordtype">int</span> debut, <span class="keywordtype">int</span> fin );</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="keywordtype">int</span> <a class="code" href="utils_8h.html#a936c3dc0d18eb4876fa6b024f0e8ce5b">chercherPetit</a>( <span class="keyword">const</span> <span class="keywordtype">int</span> * tab, <span class="keywordtype">int</span> debut, <span class="keywordtype">int</span> fin );</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="utils_8h_html_a1a1574a2081496a53830c609ab4908c8"><div class="ttname"><a href="utils_8h.html#a1a1574a2081496a53830c609ab4908c8">decalerTableau</a></div><div class="ttdeci">void decalerTableau(int *tab, int debut, int fin)</div><div class="ttdoc">Décale le contenue d&#39;un tableau à partir d&#39;un indice de début, jusqu&#39;a l&#39;indice de fin...</div><div class="ttdef"><b>Definition:</b> <a href="utils_8c_source.html#l00031">utils.c:31</a></div></div>
+<div class="ttc" id="utils_8h_html_abec6a291f1d9f2a89011d7a2bfe56f35"><div class="ttname"><a href="utils_8h.html#abec6a291f1d9f2a89011d7a2bfe56f35">genererTableau</a></div><div class="ttdeci">int * genererTableau(int taille, bool init)</div><div class="ttdoc">Génére un tableau à la taille voulu. </div><div class="ttdef"><b>Definition:</b> <a href="utils_8c_source.html#l00003">utils.c:3</a></div></div>
+<div class="ttc" id="utils_8h_html_acf8a7708934f619e4efba30329f9431d"><div class="ttname"><a href="utils_8h.html#acf8a7708934f619e4efba30329f9431d">swapi</a></div><div class="ttdeci">void swapi(int *a, int *b)</div><div class="ttdoc">Echange deux éléments entre eux. </div><div class="ttdef"><b>Definition:</b> <a href="utils_8c_source.html#l00024">utils.c:24</a></div></div>
+<div class="ttc" id="utils_8h_html_a936c3dc0d18eb4876fa6b024f0e8ce5b"><div class="ttname"><a href="utils_8h.html#a936c3dc0d18eb4876fa6b024f0e8ce5b">chercherPetit</a></div><div class="ttdeci">int chercherPetit(const int *tab, int debut, int fin)</div><div class="ttdoc">Cherche l&#39;élément le plus petit dans le tableau à partir d&#39;une position de départ jusqu&#39;à une positio...</div><div class="ttdef"><b>Definition:</b> <a href="utils_8c_source.html#l00039">utils.c:39</a></div></div>
+<div class="ttc" id="utils_8h_html_a1b4eddb8da3a6048c9fb2e679966dec4"><div class="ttname"><a href="utils_8h.html#a1b4eddb8da3a6048c9fb2e679966dec4">randomMinMax</a></div><div class="ttdeci">int randomMinMax(int min, int max)</div><div class="ttdoc">Génère un nombre aléatoire. </div><div class="ttdef"><b>Definition:</b> <a href="utils_8c_source.html#l00011">utils.c:11</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="utils_8h.html">utils.h</a></li>
-    <li class="footer">Généré le Lundi 13 Octobre 2014 17:01:11 pour Devoir par
+    <li class="footer">Généré le Lundi 1 Décembre 2014 16:27:33 pour Devoir par
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>
 </div>
 </body>

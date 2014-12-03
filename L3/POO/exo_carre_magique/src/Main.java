@@ -8,7 +8,7 @@ import java.awt.event.ActionListener;
  */
 public class Main extends JFrame {
     Main(){
-        super( "Taille du taquin" );
+        super( "Taille du carre magique" );
         setDefaultCloseOperation( EXIT_ON_CLOSE );
         setLayout( new FlowLayout() );
 

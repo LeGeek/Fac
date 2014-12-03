@@ -177,9 +177,12 @@ void AVL<T>::remove( T val )
 
                 savePtr->value = cursor->value;
             }
-
-            cursor->parent->updateLevel();
-            cursor->parent->balance();
+            
+            if( cursor->parent != NULL )
+            {
+                cursor->parent->updateLevel();
+                cursor->parent->balance();
+            }
 
             cursor->left = NULL;
             cursor->right = NULL;

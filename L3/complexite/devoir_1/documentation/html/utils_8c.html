@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.6"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
 <title>Devoir: Référence du fichier src/utils.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -39,13 +39,14 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.6 -->
+<!-- Généré par Doxygen 1.8.8 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
       <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -91,7 +92,7 @@ $(document).ready(function(){initNavTree('utils_8c.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Définitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -110,30 +111,78 @@ $(document).ready(function(){initNavTree('utils_8c.html','');});
 
 <p>Le fichier utils fournit quelque outils utilent afin de faciliter le développement.  
 <a href="#details">Plus de détails...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="utils_8h_source.html">utils.h</a>&quot;</code><br/>
+<div class="textblock"><code>#include &quot;<a class="el" href="utils_8h_source.html">utils.h</a>&quot;</code><br />
 </div>
 <p><a href="utils_8c_source.html">Aller au code source de ce fichier.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Fonctions</h2></td></tr>
-<tr class="memitem:acbe96940be2926c2bfdc678eaee10691"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8c.html#acbe96940be2926c2bfdc678eaee10691">genererTableau</a> (int size, bool init)</td></tr>
-<tr class="memdesc:acbe96940be2926c2bfdc678eaee10691"><td class="mdescLeft">&#160;</td><td class="mdescRight">Génére un tableau à la taille voulu.  <a href="#acbe96940be2926c2bfdc678eaee10691">Plus de détails...</a><br/></td></tr>
-<tr class="separator:acbe96940be2926c2bfdc678eaee10691"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad5755de87d8b9181d2d4f9915dd918b4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8c.html#ad5755de87d8b9181d2d4f9915dd918b4">random</a> (int min, int max)</td></tr>
-<tr class="memdesc:ad5755de87d8b9181d2d4f9915dd918b4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Génère un nombre aléatoire.  <a href="#ad5755de87d8b9181d2d4f9915dd918b4">Plus de détails...</a><br/></td></tr>
-<tr class="separator:ad5755de87d8b9181d2d4f9915dd918b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e4efdbf8245554bf90c4fd8a97ddf1a"><td class="memItemLeft" align="right" valign="top">int *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8c.html#a3e4efdbf8245554bf90c4fd8a97ddf1a">genererTableau</a> (int taille, bool init)</td></tr>
+<tr class="memdesc:a3e4efdbf8245554bf90c4fd8a97ddf1a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Génére un tableau à la taille voulu.  <a href="#a3e4efdbf8245554bf90c4fd8a97ddf1a">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a3e4efdbf8245554bf90c4fd8a97ddf1a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b4eddb8da3a6048c9fb2e679966dec4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8c.html#a1b4eddb8da3a6048c9fb2e679966dec4">randomMinMax</a> (int min, int max)</td></tr>
+<tr class="memdesc:a1b4eddb8da3a6048c9fb2e679966dec4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Génère un nombre aléatoire.  <a href="#a1b4eddb8da3a6048c9fb2e679966dec4">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a1b4eddb8da3a6048c9fb2e679966dec4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acf8a7708934f619e4efba30329f9431d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8c.html#acf8a7708934f619e4efba30329f9431d">swapi</a> (int *a, int *b)</td></tr>
-<tr class="memdesc:acf8a7708934f619e4efba30329f9431d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Echange deux éléments entre eux.  <a href="#acf8a7708934f619e4efba30329f9431d">Plus de détails...</a><br/></td></tr>
+<tr class="memdesc:acf8a7708934f619e4efba30329f9431d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Echange deux éléments entre eux.  <a href="#acf8a7708934f619e4efba30329f9431d">Plus de détails...</a><br /></td></tr>
 <tr class="separator:acf8a7708934f619e4efba30329f9431d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b624c10f970bee26820dc80f360daa3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8c.html#a1b624c10f970bee26820dc80f360daa3">decalerTableau</a> (int *tab, int debut, int fin)</td></tr>
-<tr class="memdesc:a1b624c10f970bee26820dc80f360daa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Décale le contenue d'un tableau à partir d'un indice de début, jusqu'a l'indice de fin.  <a href="#a1b624c10f970bee26820dc80f360daa3">Plus de détails...</a><br/></td></tr>
+<tr class="memdesc:a1b624c10f970bee26820dc80f360daa3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Décale le contenue d'un tableau à partir d'un indice de début, jusqu'a l'indice de fin.  <a href="#a1b624c10f970bee26820dc80f360daa3">Plus de détails...</a><br /></td></tr>
 <tr class="separator:a1b624c10f970bee26820dc80f360daa3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a936c3dc0d18eb4876fa6b024f0e8ce5b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="utils_8c.html#a936c3dc0d18eb4876fa6b024f0e8ce5b">chercherPetit</a> (const int *tab, int debut, int fin)</td></tr>
+<tr class="memdesc:a936c3dc0d18eb4876fa6b024f0e8ce5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Cherche l'élément le plus petit dans le tableau à partir d'une position de départ jusqu'à une position de fin.  <a href="#a936c3dc0d18eb4876fa6b024f0e8ce5b">Plus de détails...</a><br /></td></tr>
+<tr class="separator:a936c3dc0d18eb4876fa6b024f0e8ce5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Description détaillée</h2>
 <div class="textblock"><p>Le fichier utils fournit quelque outils utilent afin de faciliter le développement. </p>
 
 <p>Définition dans le fichier <a class="el" href="utils_8c_source.html">utils.c</a>.</p>
 </div><h2 class="groupheader">Documentation des fonctions</h2>
+<a class="anchor" id="a936c3dc0d18eb4876fa6b024f0e8ce5b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int chercherPetit </td>
+          <td>(</td>
+          <td class="paramtype">const int *&#160;</td>
+          <td class="paramname"><em>tab</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>debut</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>fin</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Cherche l'élément le plus petit dans le tableau à partir d'une position de départ jusqu'à une position de fin. </p>
+<dl class="params"><dt>Paramètres</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">tab</td><td>Le tableau dans lequel il faut rechercher </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">debut</td><td>La position de départ </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">fin</td><td>La position de fin </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Renvoie</dt><dd>L'indice de la plus petite valeur </dd></dl>
+
+<p>Définition à la ligne <a class="el" href="utils_8c_source.html#l00039">39</a> du fichier <a class="el" href="utils_8c_source.html">utils.c</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a1b624c10f970bee26820dc80f360daa3"></a>
 <div class="memitem">
 <div class="memproto">
@@ -174,11 +223,11 @@ Fonctions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Définition à la ligne <a class="el" href="utils_8c_source.html#l00030">30</a> du fichier <a class="el" href="utils_8c_source.html">utils.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="utils_8c_source.html#l00031">31</a> du fichier <a class="el" href="utils_8c_source.html">utils.c</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="acbe96940be2926c2bfdc678eaee10691"></a>
+<a class="anchor" id="a3e4efdbf8245554bf90c4fd8a97ddf1a"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -186,7 +235,7 @@ Fonctions</h2></td></tr>
           <td class="memname">int* genererTableau </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>size</em>, </td>
+          <td class="paramname"><em>taille</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -205,23 +254,23 @@ Fonctions</h2></td></tr>
 <p>Génére un tableau à la taille voulu. </p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">taille</td><td>La taille du tableau généré </td></tr>
-    <tr><td class="paramname">init</td><td>Indique si les valeur du tableau doivent être initialisées à la valeur par défaut (ex. 0, NULL, ...) </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">taille</td><td>La taille du tableau généré </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">init</td><td>Indique si les valeur du tableau doivent être initialisées à la valeur par défaut (ex. 0, NULL, ...) </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>le tableau généré initialisé </dd></dl>
 
-<p>Définition à la ligne <a class="el" href="utils_8c_source.html#l00004">4</a> du fichier <a class="el" href="utils_8c_source.html">utils.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="utils_8c_source.html#l00003">3</a> du fichier <a class="el" href="utils_8c_source.html">utils.c</a>.</p>
 
 </div>
 </div>
-<a class="anchor" id="ad5755de87d8b9181d2d4f9915dd918b4"></a>
+<a class="anchor" id="a1b4eddb8da3a6048c9fb2e679966dec4"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int random </td>
+          <td class="memname">int randomMinMax </td>
           <td>(</td>
           <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>min</em>, </td>
@@ -243,14 +292,14 @@ Fonctions</h2></td></tr>
 <p>Génère un nombre aléatoire. </p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">min</td><td>Borne minimale </td></tr>
-    <tr><td class="paramname">max</td><td>Borne maximale </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">min</td><td>Borne minimale </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">max</td><td>Borne maximale </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Renvoie</dt><dd>Un nombre compris dans l'intervalle min, max </dd></dl>
 
-<p>Définition à la ligne <a class="el" href="utils_8c_source.html#l00012">12</a> du fichier <a class="el" href="utils_8c_source.html">utils.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="utils_8c_source.html#l00011">11</a> du fichier <a class="el" href="utils_8c_source.html">utils.c</a>.</p>
 
 </div>
 </div>
@@ -281,13 +330,13 @@ Fonctions</h2></td></tr>
 <p>Echange deux éléments entre eux. </p>
 <dl class="params"><dt>Paramètres</dt><dd>
   <table class="params">
-    <tr><td class="paramname">a</td><td>Element qui se retrouvera à la place de b </td></tr>
-    <tr><td class="paramname">b</td><td>Element qui se retrouvera à la palce de a </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">a</td><td>Element qui se retrouvera à la place de b </td></tr>
+    <tr><td class="paramdir">[in,out]</td><td class="paramname">b</td><td>Element qui se retrouvera à la palce de a </td></tr>
   </table>
   </dd>
 </dl>
 
-<p>Définition à la ligne <a class="el" href="utils_8c_source.html#l00023">23</a> du fichier <a class="el" href="utils_8c_source.html">utils.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="utils_8c_source.html#l00024">24</a> du fichier <a class="el" href="utils_8c_source.html">utils.c</a>.</p>
 
 </div>
 </div>
@@ -297,9 +346,9 @@ Fonctions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="utils_8c.html">utils.c</a></li>
-    <li class="footer">Généré le Lundi 13 Octobre 2014 17:01:11 pour Devoir par
+    <li class="footer">Généré le Lundi 1 Décembre 2014 16:27:33 pour Devoir par
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>
 </div>
 </body>

@@ -1,16 +1,17 @@
 #include "utils.h"
 
-
-int * genererTableau( int size, bool init )
+int * genererTableau( int taille, bool init )
 {
     if( init )
-        return (int*)malloc(size * sizeof( int ) );
+        return (int*)calloc(taille, sizeof( int ) );
     else
-        return (int*)calloc(size, sizeof( int ) );
+        return (int*)malloc(taille * sizeof( int ) );
 }
 
-int random( int min, int max )
+int randomMinMax( int min, int max )
 {
+    static bool utils_seedChange = false;
+    
     if( !utils_seedChange )
     {
         srand( time(NULL) );
@@ -33,5 +34,17 @@ void decalerTableau( int * tab, int debut, int fin )
     {
         tab[i] = tab[i-1];
     }
+}
+
+int chercherPetit( const int * tab, int debut, int fin )
+{
+    int p = debut;
+
+    for(int i = debut; i < fin; ++i )
+    {
+        if( tab[i] < tab[p] )
+            p = i;
+    }
+    return p;
 }
 

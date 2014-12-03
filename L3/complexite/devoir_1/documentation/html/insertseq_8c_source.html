@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.6"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
 <title>Devoir:  Fichier source de src/insertseq.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -39,13 +39,14 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.6 -->
+<!-- Généré par Doxygen 1.8.8 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
       <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -91,7 +92,7 @@ $(document).ready(function(){initNavTree('insertseq_8c_source.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Définitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -113,7 +114,7 @@ $(document).ready(function(){initNavTree('insertseq_8c_source.html','');});
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="keywordtype">int</span> x, p;</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = 0; i &lt; taille; ++i )</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    {</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        p = <a class="code" href="insertseq_8c.html#a17992e55644d9131fdae7e47f617873d">IS_cherchePetit</a>( tab, i, taille );</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;        p = <a class="code" href="utils_8h.html#a936c3dc0d18eb4876fa6b024f0e8ce5b">chercherPetit</a>( tab, i, taille );</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        x = tab[p];</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <a class="code" href="utils_8h.html#a1a1574a2081496a53830c609ab4908c8">decalerTableau</a>( tab, i, p );</div>
@@ -121,32 +122,21 @@ $(document).ready(function(){initNavTree('insertseq_8c_source.html','');});
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    }</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="insertseq_8c.html#a17992e55644d9131fdae7e47f617873d">   17</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="insertseq_8c.html#a17992e55644d9131fdae7e47f617873d">IS_cherchePetit</a>( <span class="keyword">const</span> <span class="keywordtype">int</span> * tab, <span class="keywordtype">int</span> debut, <span class="keywordtype">int</span> fin )</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordtype">int</span> p = debut;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i = debut; i &lt; fin; ++i )</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">if</span>( tab[i] &lt; tab[p] )</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            p = i;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordflow">return</span> p;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
-<div class="ttc" id="utils_8h_html_a1a1574a2081496a53830c609ab4908c8"><div class="ttname"><a href="utils_8h.html#a1a1574a2081496a53830c609ab4908c8">decalerTableau</a></div><div class="ttdeci">void decalerTableau(int *tab, int debut, int fin)</div><div class="ttdoc">Décale le contenue d&#39;un tableau à partir d&#39;un indice de début, jusqu&#39;a l&#39;indice de fin...</div><div class="ttdef"><b>Definition:</b> <a href="utils_8c_source.html#l00030">utils.c:30</a></div></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
+<div class="ttc" id="utils_8h_html_a1a1574a2081496a53830c609ab4908c8"><div class="ttname"><a href="utils_8h.html#a1a1574a2081496a53830c609ab4908c8">decalerTableau</a></div><div class="ttdeci">void decalerTableau(int *tab, int debut, int fin)</div><div class="ttdoc">Décale le contenue d&#39;un tableau à partir d&#39;un indice de début, jusqu&#39;a l&#39;indice de fin...</div><div class="ttdef"><b>Definition:</b> <a href="utils_8c_source.html#l00031">utils.c:31</a></div></div>
 <div class="ttc" id="insertseq_8c_html_a249be3f8ac4b8917c04118309c781c85"><div class="ttname"><a href="insertseq_8c.html#a249be3f8ac4b8917c04118309c781c85">IS_insertionSequentielle</a></div><div class="ttdeci">void IS_insertionSequentielle(int *tab, int taille)</div><div class="ttdoc">Tri le tableau avec l&#39;algorithme de l&#39;insertion séquentielle. </div><div class="ttdef"><b>Definition:</b> <a href="insertseq_8c_source.html#l00004">insertseq.c:4</a></div></div>
 <div class="ttc" id="insertseq_8h_html"><div class="ttname"><a href="insertseq_8h.html">insertseq.h</a></div></div>
 <div class="ttc" id="utils_8h_html"><div class="ttname"><a href="utils_8h.html">utils.h</a></div></div>
-<div class="ttc" id="insertseq_8c_html_a17992e55644d9131fdae7e47f617873d"><div class="ttname"><a href="insertseq_8c.html#a17992e55644d9131fdae7e47f617873d">IS_cherchePetit</a></div><div class="ttdeci">int IS_cherchePetit(const int *tab, int debut, int fin)</div><div class="ttdoc">Cherche l&#39;élément le plus petit dans le tableau à partir d&#39;une position de départ jusqu&#39;à une positio...</div><div class="ttdef"><b>Definition:</b> <a href="insertseq_8c_source.html#l00017">insertseq.c:17</a></div></div>
+<div class="ttc" id="utils_8h_html_a936c3dc0d18eb4876fa6b024f0e8ce5b"><div class="ttname"><a href="utils_8h.html#a936c3dc0d18eb4876fa6b024f0e8ce5b">chercherPetit</a></div><div class="ttdeci">int chercherPetit(const int *tab, int debut, int fin)</div><div class="ttdoc">Cherche l&#39;élément le plus petit dans le tableau à partir d&#39;une position de départ jusqu&#39;à une positio...</div><div class="ttdef"><b>Definition:</b> <a href="utils_8c_source.html#l00039">utils.c:39</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="insertseq_8c.html">insertseq.c</a></li>
-    <li class="footer">Généré le Lundi 13 Octobre 2014 17:01:11 pour Devoir par
+    <li class="footer">Généré le Lundi 1 Décembre 2014 16:27:33 pour Devoir par
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>
 </div>
 </body>

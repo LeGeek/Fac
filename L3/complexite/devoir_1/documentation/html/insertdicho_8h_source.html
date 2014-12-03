@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.6"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
 <title>Devoir:  Fichier source de include/insertdicho.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -39,13 +39,14 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.6 -->
+<!-- Généré par Doxygen 1.8.8 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
       <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -91,7 +92,7 @@ $(document).ready(function(){initNavTree('insertdicho_8h_source.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Définitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -106,26 +107,26 @@ $(document).ready(function(){initNavTree('insertdicho_8h_source.html','');});
 </div><!--header-->
 <div class="contents">
 <a href="insertdicho_8h.html">Aller à la documentation de ce fichier.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef __INSERTDICHO_H__</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor"></span><span class="preprocessor">#define __INSERTDICHO_H__</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor"></span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define __INSERTDICHO_H__</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keywordtype">void</span> <a class="code" href="insertdicho_8h.html#a00be457c228f467289a5b60526867967">ID_insertionDichotomique</a>( <span class="keywordtype">int</span> * tab, <span class="keywordtype">int</span> taille );</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">int</span> <a class="code" href="insertdicho_8h.html#a709bfdeff8747b94da1f1daa20ed6b96">ID_chercherPetit</a>( <span class="keyword">const</span> <span class="keywordtype">int</span> * tab, <span class="keywordtype">int</span> debut, <span class="keywordtype">int</span> fin );</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">int</span> <a class="code" href="insertdicho_8h.html#a5cb166089c57ac546e96566562d8fc38">ID_chercherPosition</a>( <span class="keywordtype">int</span> value, <span class="keyword">const</span> <span class="keywordtype">int</span> * tab, <span class="keywordtype">int</span> debut, <span class="keywordtype">int</span> fin );</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="insertdicho_8h_html_a709bfdeff8747b94da1f1daa20ed6b96"><div class="ttname"><a href="insertdicho_8h.html#a709bfdeff8747b94da1f1daa20ed6b96">ID_chercherPetit</a></div><div class="ttdeci">int ID_chercherPetit(const int *tab, int debut, int fin)</div><div class="ttdoc">Cherche l&#39;élément le plus petit, de manière dichotomique. </div></div>
-<div class="ttc" id="insertdicho_8h_html_a00be457c228f467289a5b60526867967"><div class="ttname"><a href="insertdicho_8h.html#a00be457c228f467289a5b60526867967">ID_insertionDichotomique</a></div><div class="ttdeci">void ID_insertionDichotomique(int *tab, int taille)</div><div class="ttdoc">Tri le tableau avec l&#39;algorithme d&#39;insertion dichotomique. </div></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="insertdicho_8h_html_a00be457c228f467289a5b60526867967"><div class="ttname"><a href="insertdicho_8h.html#a00be457c228f467289a5b60526867967">ID_insertionDichotomique</a></div><div class="ttdeci">void ID_insertionDichotomique(int *tab, int taille)</div><div class="ttdoc">Tri le tableau avec l&#39;algorithme d&#39;insertion dichotomique. </div><div class="ttdef"><b>Definition:</b> <a href="insertdicho_8c_source.html#l00004">insertdicho.c:4</a></div></div>
+<div class="ttc" id="insertdicho_8h_html_a5cb166089c57ac546e96566562d8fc38"><div class="ttname"><a href="insertdicho_8h.html#a5cb166089c57ac546e96566562d8fc38">ID_chercherPosition</a></div><div class="ttdeci">int ID_chercherPosition(int value, const int *tab, int debut, int fin)</div><div class="ttdoc">Cherche la position d&#39;un élément de manière dichotomique. </div><div class="ttdef"><b>Definition:</b> <a href="insertdicho_8c_source.html#l00017">insertdicho.c:17</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="insertdicho_8h.html">insertdicho.h</a></li>
-    <li class="footer">Généré le Lundi 13 Octobre 2014 17:01:11 pour Devoir par
+    <li class="footer">Généré le Lundi 1 Décembre 2014 16:27:33 pour Devoir par
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>
 </div>
 </body>

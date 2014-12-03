@@ -3,7 +3,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
-<meta name="generator" content="Doxygen 1.8.6"/>
+<meta name="generator" content="Doxygen 1.8.8"/>
 <title>Devoir: Référence du fichier src/main.c</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
@@ -39,13 +39,14 @@
 </table>
 </div>
 <!-- end header part -->
-<!-- Généré par Doxygen 1.8.6 -->
+<!-- Généré par Doxygen 1.8.8 -->
 <script type="text/javascript">
 var searchBox = new SearchBox("searchBox", "search",false,'Recherche');
 </script>
   <div id="navrow1" class="tabs">
     <ul class="tablist">
       <li><a href="index.html"><span>Page&#160;principale</span></a></li>
+      <li><a href="annotated.html"><span>Structures&#160;de&#160;données</span></a></li>
       <li class="current"><a href="files.html"><span>Fichiers</span></a></li>
       <li>
         <div id="MSearchBox" class="MSearchBoxInactive">
@@ -91,7 +92,7 @@ $(document).ready(function(){initNavTree('main_8c.html','');});
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Macros</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>Tout</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Structures de données</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Fichiers</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Fonctions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Définitions de type</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Macros</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -103,43 +104,173 @@ $(document).ready(function(){initNavTree('main_8c.html','');});
 <div class="header">
   <div class="summary">
 <a href="#define-members">Macros</a> &#124;
-<a href="#func-members">Fonctions</a>  </div>
+<a href="#typedef-members">Définitions de type</a> &#124;
+<a href="#func-members">Fonctions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">Référence du fichier main.c</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br/>
-<code>#include &quot;<a class="el" href="utils_8h_source.html">utils.h</a>&quot;</code><br/>
-<code>#include &quot;<a class="el" href="insertseq_8h_source.html">insertseq.h</a>&quot;</code><br/>
+<div class="textblock"><code>#include &lt;stdio.h&gt;</code><br />
+<code>#include &lt;stdlib.h&gt;</code><br />
+<code>#include &lt;signal.h&gt;</code><br />
+<code>#include &lt;pthread.h&gt;</code><br />
+<code>#include &lt;unistd.h&gt;</code><br />
+<code>#include &lt;sys/types.h&gt;</code><br />
+<code>#include &lt;sys/wait.h&gt;</code><br />
+<code>#include &quot;<a class="el" href="utils_8h_source.html">utils.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="abr_8h_source.html">abr.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="bulle_8h_source.html">bulle.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="fusion_8h_source.html">fusion.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="insertdicho_8h_source.html">insertdicho.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="insertseq_8h_source.html">insertseq.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="quick_8h_source.html">quick.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="selectpermut_8h_source.html">selectpermut.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="tas_8h_source.html">tas.h</a>&quot;</code><br />
 </div>
 <p><a href="main_8c_source.html">Aller au code source de ce fichier.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:aaa2aa31eb5255a9c1f11df20ad0f0a82"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#aaa2aa31eb5255a9c1f11df20ad0f0a82">TAB_TEST_SIZE</a>&#160;&#160;&#160;20</td></tr>
-<tr class="separator:aaa2aa31eb5255a9c1f11df20ad0f0a82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8edc7f1568d4c9e2bbefe13ca78f765f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a8edc7f1568d4c9e2bbefe13ca78f765f">NOMBRE_TEST_PAR_ALGO</a>&#160;&#160;&#160;(float)(20.0)</td></tr>
+<tr class="separator:a8edc7f1568d4c9e2bbefe13ca78f765f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab466a76a2512be47523e2d14d6e0b75b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ab466a76a2512be47523e2d14d6e0b75b">WATCHDOG_MAX_TIME</a>&#160;&#160;&#160;(5*60)*CLOCKS_PER_SEC</td></tr>
+<tr class="separator:ab466a76a2512be47523e2d14d6e0b75b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73bffd89afcb410bbc06add811efbaa7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a73bffd89afcb410bbc06add811efbaa7">TAB_VALUE_SIZE</a>&#160;&#160;&#160;15</td></tr>
+<tr class="separator:a73bffd89afcb410bbc06add811efbaa7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af5dc7ee77ae6086fb1f0339032ec5d9e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#af5dc7ee77ae6086fb1f0339032ec5d9e">TAB_FONCTION_SIZE</a>&#160;&#160;&#160;8</td></tr>
+<tr class="separator:af5dc7ee77ae6086fb1f0339032ec5d9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
+Définitions de type</h2></td></tr>
+<tr class="memitem:a58e0fab64d245396eed76aa718f604d3"><td class="memItemLeft" align="right" valign="top">typedef void(*&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a58e0fab64d245396eed76aa718f604d3">fonctionTri</a> )(int *, int)</td></tr>
+<tr class="separator:a58e0fab64d245396eed76aa718f604d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Fonctions</h2></td></tr>
+<tr class="memitem:ab2145ae6620327e9fa80e83886c298c5"><td class="memItemLeft" align="right" valign="top">void *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ab2145ae6620327e9fa80e83886c298c5">watchDog</a> (void *args)</td></tr>
+<tr class="separator:ab2145ae6620327e9fa80e83886c298c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af801c16793de830ca3865e8bb0343eaa"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#af801c16793de830ca3865e8bb0343eaa">testBienTrie</a> (int *tab, int size)</td></tr>
+<tr class="separator:af801c16793de830ca3865e8bb0343eaa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b5aa0697fb384b78e1c878ed0d12679"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a9b5aa0697fb384b78e1c878ed0d12679">afficheTableau</a> (const int *tab, int taille)</td></tr>
+<tr class="separator:a9b5aa0697fb384b78e1c878ed0d12679"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abca0c26729c5782f9441e77525ff0266"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#abca0c26729c5782f9441e77525ff0266">sort</a> (<a class="el" href="main_8c.html#a58e0fab64d245396eed76aa718f604d3">fonctionTri</a> f, const char *name)</td></tr>
+<tr class="separator:abca0c26729c5782f9441e77525ff0266"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a3c04138a5bfe5d72780bb7e82a18e627">main</a> (int argc, char **argv)</td></tr>
 <tr class="separator:a3c04138a5bfe5d72780bb7e82a18e627"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:aebcd3073046b8e6ba68ecff6d76594bd"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#aebcd3073046b8e6ba68ecff6d76594bd">TAB_VALUE</a> [<a class="el" href="main_8c.html#a73bffd89afcb410bbc06add811efbaa7">TAB_VALUE_SIZE</a>] = {100,500,5000,10000,50000,100000,200000,300000,400000,500000,600000,700000,800000,900000,1000000}</td></tr>
+<tr class="separator:aebcd3073046b8e6ba68ecff6d76594bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a834f014326513d48e081b1866efb958a"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="main_8c.html#a58e0fab64d245396eed76aa718f604d3">fonctionTri</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#a834f014326513d48e081b1866efb958a">TAB_FONCTION</a> [<a class="el" href="main_8c.html#af5dc7ee77ae6086fb1f0339032ec5d9e">TAB_FONCTION_SIZE</a>]</td></tr>
+<tr class="separator:a834f014326513d48e081b1866efb958a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad456ecf4ab1f38e3ba9a7980c5f0d08f"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#ad456ecf4ab1f38e3ba9a7980c5f0d08f">TAB_FONCTION_NAME</a> [<a class="el" href="main_8c.html#af5dc7ee77ae6086fb1f0339032ec5d9e">TAB_FONCTION_SIZE</a>]</td></tr>
+<tr class="separator:ad456ecf4ab1f38e3ba9a7980c5f0d08f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acbfac821962993b9dd9a9c2e1eb0dce0"><td class="memItemLeft" align="right" valign="top">pthread_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="main_8c.html#acbfac821962993b9dd9a9c2e1eb0dce0">watchdogThread</a></td></tr>
+<tr class="separator:acbfac821962993b9dd9a9c2e1eb0dce0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Documentation des macros</h2>
-<a class="anchor" id="aaa2aa31eb5255a9c1f11df20ad0f0a82"></a>
+<a class="anchor" id="a8edc7f1568d4c9e2bbefe13ca78f765f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">#define TAB_TEST_SIZE&#160;&#160;&#160;20</td>
+          <td class="memname">#define NOMBRE_TEST_PAR_ALGO&#160;&#160;&#160;(float)(20.0)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Définition à la ligne <a class="el" href="main_8c_source.html#l00006">6</a> du fichier <a class="el" href="main_8c_source.html">main.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="main_8c_source.html#l00021">21</a> du fichier <a class="el" href="main_8c_source.html">main.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af5dc7ee77ae6086fb1f0339032ec5d9e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TAB_FONCTION_SIZE&#160;&#160;&#160;8</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="main_8c_source.html#l00028">28</a> du fichier <a class="el" href="main_8c_source.html">main.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a73bffd89afcb410bbc06add811efbaa7"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define TAB_VALUE_SIZE&#160;&#160;&#160;15</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="main_8c_source.html#l00025">25</a> du fichier <a class="el" href="main_8c_source.html">main.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab466a76a2512be47523e2d14d6e0b75b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define WATCHDOG_MAX_TIME&#160;&#160;&#160;(5*60)*CLOCKS_PER_SEC</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="main_8c_source.html#l00023">23</a> du fichier <a class="el" href="main_8c_source.html">main.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des définitions de type</h2>
+<a class="anchor" id="a58e0fab64d245396eed76aa718f604d3"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">typedef void(* fonctionTri)(int *, int)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="main_8c_source.html#l00019">19</a> du fichier <a class="el" href="main_8c_source.html">main.c</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Documentation des fonctions</h2>
+<a class="anchor" id="a9b5aa0697fb384b78e1c878ed0d12679"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void afficheTableau </td>
+          <td>(</td>
+          <td class="paramtype">const int *&#160;</td>
+          <td class="paramname"><em>tab</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>taille</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="main_8c_source.html#l00063">63</a> du fichier <a class="el" href="main_8c_source.html">main.c</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a3c04138a5bfe5d72780bb7e82a18e627"></a>
 <div class="memitem">
 <div class="memproto">
@@ -164,7 +295,154 @@ Fonctions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Définition à la ligne <a class="el" href="main_8c_source.html#l00008">8</a> du fichier <a class="el" href="main_8c_source.html">main.c</a>.</p>
+<p>Définition à la ligne <a class="el" href="main_8c_source.html#l00114">114</a> du fichier <a class="el" href="main_8c_source.html">main.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="abca0c26729c5782f9441e77525ff0266"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void sort </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="main_8c.html#a58e0fab64d245396eed76aa718f604d3">fonctionTri</a>&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="main_8c_source.html#l00071">71</a> du fichier <a class="el" href="main_8c_source.html">main.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="af801c16793de830ca3865e8bb0343eaa"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool testBienTrie </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>tab</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="main_8c_source.html#l00054">54</a> du fichier <a class="el" href="main_8c_source.html">main.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab2145ae6620327e9fa80e83886c298c5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void* watchDog </td>
+          <td>(</td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>args</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="main_8c_source.html#l00042">42</a> du fichier <a class="el" href="main_8c_source.html">main.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Documentation des variables</h2>
+<a class="anchor" id="a834f014326513d48e081b1866efb958a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="main_8c.html#a58e0fab64d245396eed76aa718f604d3">fonctionTri</a> TAB_FONCTION[<a class="el" href="main_8c.html#af5dc7ee77ae6086fb1f0339032ec5d9e">TAB_FONCTION_SIZE</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">= {&amp;<a class="code" href="insertseq_8h.html#a249be3f8ac4b8917c04118309c781c85">IS_insertionSequentielle</a>, &amp;<a class="code" href="insertdicho_8h.html#a00be457c228f467289a5b60526867967">ID_insertionDichotomique</a>,</div>
+<div class="line">                                                    &amp;<a class="code" href="selectpermut_8h.html#ae10c01c4c3b1155979672e1fb58e144c">SP_selectionPermutation</a>, &amp;<a class="code" href="bulle_8h.html#a49a6c94dee5c479e2a672158f3cfc671">BL_bulle</a>, &amp;<a class="code" href="fusion_8h.html#a36589ab69aa772e9e4d1afd46e734ee7">FU_fusion</a>, </div>
+<div class="line">                                                    &amp;<a class="code" href="quick_8h.html#a8c6a2e6cf01cbbad30102c6c7c4f82a3">QS_quickSort</a>,</div>
+<div class="line">                                                    &amp;<a class="code" href="abr_8h.html#aeb5c3345f377923b81dcf98b6d8f500a">AR_arbreBinaire</a>,</div>
+<div class="line">                                                    &amp;<a class="code" href="tas_8h.html#a072041a8c8718cf00b626367dd79cd37">TS_triParTas</a>}</div>
+<div class="ttc" id="insertseq_8h_html_a249be3f8ac4b8917c04118309c781c85"><div class="ttname"><a href="insertseq_8h.html#a249be3f8ac4b8917c04118309c781c85">IS_insertionSequentielle</a></div><div class="ttdeci">void IS_insertionSequentielle(int *tab, int taille)</div><div class="ttdoc">Tri le tableau avec l&#39;algorithme de l&#39;insertion séquentielle. </div><div class="ttdef"><b>Definition:</b> <a href="insertseq_8c_source.html#l00004">insertseq.c:4</a></div></div>
+<div class="ttc" id="tas_8h_html_a072041a8c8718cf00b626367dd79cd37"><div class="ttname"><a href="tas_8h.html#a072041a8c8718cf00b626367dd79cd37">TS_triParTas</a></div><div class="ttdeci">void TS_triParTas(int *tab, int taille)</div><div class="ttdoc">Tri un tableau en utilisant le tri par tas. </div><div class="ttdef"><b>Definition:</b> <a href="tas_8c_source.html#l00004">tas.c:4</a></div></div>
+<div class="ttc" id="insertdicho_8h_html_a00be457c228f467289a5b60526867967"><div class="ttname"><a href="insertdicho_8h.html#a00be457c228f467289a5b60526867967">ID_insertionDichotomique</a></div><div class="ttdeci">void ID_insertionDichotomique(int *tab, int taille)</div><div class="ttdoc">Tri le tableau avec l&#39;algorithme d&#39;insertion dichotomique. </div><div class="ttdef"><b>Definition:</b> <a href="insertdicho_8c_source.html#l00004">insertdicho.c:4</a></div></div>
+<div class="ttc" id="abr_8h_html_aeb5c3345f377923b81dcf98b6d8f500a"><div class="ttname"><a href="abr_8h.html#aeb5c3345f377923b81dcf98b6d8f500a">AR_arbreBinaire</a></div><div class="ttdeci">void AR_arbreBinaire(int *tab, int taille)</div><div class="ttdoc">Tir un tableau en utilisant un arbre binaire de recherche. </div><div class="ttdef"><b>Definition:</b> <a href="abr_8c_source.html#l00004">abr.c:4</a></div></div>
+<div class="ttc" id="selectpermut_8h_html_ae10c01c4c3b1155979672e1fb58e144c"><div class="ttname"><a href="selectpermut_8h.html#ae10c01c4c3b1155979672e1fb58e144c">SP_selectionPermutation</a></div><div class="ttdeci">void SP_selectionPermutation(int *tab, int taille)</div><div class="ttdoc">Trie le tableau avec l&#39;algorithme de l&#39;algorithme de l&#39;insertion-permutation. </div><div class="ttdef"><b>Definition:</b> <a href="selectpermut_8c_source.html#l00004">selectpermut.c:4</a></div></div>
+<div class="ttc" id="bulle_8h_html_a49a6c94dee5c479e2a672158f3cfc671"><div class="ttname"><a href="bulle_8h.html#a49a6c94dee5c479e2a672158f3cfc671">BL_bulle</a></div><div class="ttdeci">void BL_bulle(int *tab, int taille)</div><div class="ttdoc">TRi le tableau avec l&#39;algorithme du tri à bulle. </div><div class="ttdef"><b>Definition:</b> <a href="bulle_8c_source.html#l00004">bulle.c:4</a></div></div>
+<div class="ttc" id="fusion_8h_html_a36589ab69aa772e9e4d1afd46e734ee7"><div class="ttname"><a href="fusion_8h.html#a36589ab69aa772e9e4d1afd46e734ee7">FU_fusion</a></div><div class="ttdeci">void FU_fusion(int *tab, int taille)</div><div class="ttdoc">Tri le tableau avec l&#39;algorithme de tri par fusion. </div><div class="ttdef"><b>Definition:</b> <a href="fusion_8c_source.html#l00004">fusion.c:4</a></div></div>
+<div class="ttc" id="quick_8h_html_a8c6a2e6cf01cbbad30102c6c7c4f82a3"><div class="ttname"><a href="quick_8h.html#a8c6a2e6cf01cbbad30102c6c7c4f82a3">QS_quickSort</a></div><div class="ttdeci">void QS_quickSort(int *tab, int taille)</div><div class="ttdoc">Trie le tableau avec l&#39;algorithme du tri rapide. </div><div class="ttdef"><b>Definition:</b> <a href="quick_8c_source.html#l00005">quick.c:5</a></div></div>
+</div><!-- fragment -->
+<p>Définition à la ligne <a class="el" href="main_8c_source.html#l00029">29</a> du fichier <a class="el" href="main_8c_source.html">main.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ad456ecf4ab1f38e3ba9a7980c5f0d08f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const char* TAB_FONCTION_NAME[<a class="el" href="main_8c.html#af5dc7ee77ae6086fb1f0339032ec5d9e">TAB_FONCTION_SIZE</a>]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Valeur initiale :</b><div class="fragment"><div class="line">= {<span class="stringliteral">&quot;Insertion sequentielle&quot;</span>, <span class="stringliteral">&quot;Insertion Dichotomique&quot;</span>,</div>
+<div class="line">                                                    <span class="stringliteral">&quot;Selection permutation&quot;</span>, <span class="stringliteral">&quot;Bulle&quot;</span>, <span class="stringliteral">&quot;Fusion&quot;</span>, </div>
+<div class="line">                                                    <span class="stringliteral">&quot;QuickSort&quot;</span>, <span class="stringliteral">&quot;Arbre binaire&quot;</span>, <span class="stringliteral">&quot;Par tas&quot;</span>}</div>
+</div><!-- fragment -->
+<p>Définition à la ligne <a class="el" href="main_8c_source.html#l00035">35</a> du fichier <a class="el" href="main_8c_source.html">main.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aebcd3073046b8e6ba68ecff6d76594bd"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int TAB_VALUE[<a class="el" href="main_8c.html#a73bffd89afcb410bbc06add811efbaa7">TAB_VALUE_SIZE</a>] = {100,500,5000,10000,50000,100000,200000,300000,400000,500000,600000,700000,800000,900000,1000000}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="main_8c_source.html#l00026">26</a> du fichier <a class="el" href="main_8c_source.html">main.c</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="acbfac821962993b9dd9a9c2e1eb0dce0"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">pthread_t watchdogThread</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Définition à la ligne <a class="el" href="main_8c_source.html#l00040">40</a> du fichier <a class="el" href="main_8c_source.html">main.c</a>.</p>
 
 </div>
 </div>
@@ -174,9 +452,9 @@ Fonctions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li><li class="navelem"><a class="el" href="main_8c.html">main.c</a></li>
-    <li class="footer">Généré le Lundi 13 Octobre 2014 17:01:11 pour Devoir par
+    <li class="footer">Généré le Lundi 1 Décembre 2014 16:27:33 pour Devoir par
     <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.6 </li>
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.8 </li>
   </ul>
 </div>
 </body>

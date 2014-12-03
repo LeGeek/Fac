@@ -9,9 +9,7 @@ void ID_insertionDichotomique( int * tab, int taille )
         val = tab[i];
         pos = ID_chercherPosition( val, tab, 0, i );
 
-        printf( "Position de %d en %d\n", val, pos );
-
-        decalerTableau( tab, i, pos );
+        decalerTableau( tab, pos, i );
         tab[pos] = val;
     }
 }

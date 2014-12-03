@@ -24,13 +24,14 @@ bool TreeAVL<T>::insert( T value )
 template< typename T >
 void TreeAVL<T>::remove( T value )
 {
+    relocateHead();
+
     if( head == NULL )
     {
         return;
     }
     else
     {
-        relocateHead();
         head->remove( value );
     }
 }
@@ -49,9 +50,12 @@ template< typename T >
 void TreeAVL<T>::drawGraph( std::ostream & fs)
 {
     relocateHead();
-    
+
     fs << "digraph G {" << std::endl;
-    head->drawGraph( fs );
+
+    if( head != NULL )
+        head->drawGraph( fs );
+
     fs << "}\n" << std::endl;
 }
 

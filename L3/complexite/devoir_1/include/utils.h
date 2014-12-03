@@ -12,33 +12,28 @@
  **/
 
 /**
- * \brief Permet de savoir si la Seed de rand a été paramétrée 
- **/
-static bool utils_seedChange = false;
-
-/**
- * \fn int * genererTableau( int size, bool init )
+ * \fn int * genererTableau( int taille, bool init )
  * \brief Génére un tableau à la taille voulu
- * \param taille La taille du tableau généré
- * \param init Indique si les valeur du tableau doivent être initialisées à la valeur par défaut (ex. 0, NULL, ...)
+ * \param[in] taille La taille du tableau généré
+ * \param[in] init Indique si les valeur du tableau doivent être initialisées à la valeur par défaut (ex. 0, NULL, ...)
  * \return le tableau généré initialisé
  */
-int * genererTableau( int size, bool init );
+int * genererTableau( int taille, bool init );
 
 /**
- * \fn int random( int min, int max )
+ * \fn int randomMinMax( int min, int max )
  * \brief Génère un nombre aléatoire
- * \param min Borne minimale
- * \param max Borne maximale
+ * \param[in] min Borne minimale
+ * \param[in] max Borne maximale
  * \return Un nombre compris dans l'intervalle min, max
  **/
-int random( int min, int max );
+int randomMinMax( int min, int max );
 
 /**
  * \fn void swapi( int * a, int * b )
  * \brief Echange deux éléments entre eux
- * \param a Element qui se retrouvera à la place de b
- * \param b Element qui se retrouvera à la palce de a
+ * \param[in, out] a Element qui se retrouvera à la place de b
+ * \param[in, out] b Element qui se retrouvera à la palce de a
  **/
 void swapi( int * a, int * b);
 
@@ -51,5 +46,19 @@ void swapi( int * a, int * b);
  * \param[in] fin L'indice de fin du décalage
  **/
 void decalerTableau( int * tab, int debut, int fin );
+
+
+/**
+ * \brief Cherche l'élément le plus petit dans le tableau à partir d'une
+ * position de départ
+ * jusqu'à une position de fin.
+ * \fn int chercherPetit( const int * tab, int debut, int fin )
+ * \param[in] tab Le tableau dans lequel il faut rechercher
+ * \param[in] debut La position de départ
+ * \param[in] fin La position de fin
+ * \return L'indice de la plus petite valeur
+ **/
+int chercherPetit( const int * tab, int debut, int fin );
+
 
 #endif
